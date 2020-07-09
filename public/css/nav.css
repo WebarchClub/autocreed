@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+:root {
+    /* color of sidebar  */
+    --navBg: rgb(46, 46, 46); /*Bg color of sidebar*/
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* image shadow when sidebar shows up   */
+.imgLogo{
+    filter: drop-shadow(5px 5px 4px #646464);
+    filter: drop-shadow(5px 5px 5px rgb(75, 75, 75));
+    filter: drop-shadow(2.5px 2.5px 5px #cf6b6b);
+}
+
+/* main logo text*/
+.logo{
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 4px;
+    font:italic 900 35px 'Bangers';
+ 
+    /* text-shadow: 3px 3px 0 rgba(0,0,0,1); */
+    text-shadow: 0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15),
+    0 30px 30px rgba(0,0,0,.15);
+}
+
+
+/* sidebar logo  */
+.nav-item .logo{
+    font:italic 900 23px 'Bangers';
+    color: rgb(238, 238, 238);
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.7);
+}
+
+
+/* .title{
+    display: block;
+    position: relative;
+    left: 40px;
+} */
+
+.nav-item{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Grenze Gotisch', cursive;
+    font-size: 22px;
+}
+
+/* nav-links hover effect 1*/
+
+
+/* add class 'fill' to <nav> instead of 'circle'*/
+/* nav.fill ul li a {
+    position: relative;
+    color: black!important;
+  }
+nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 1px;
+  }
+  nav.stroke ul li a:hover:after {
+    width: 100%;
+  }
+  
+  nav.fill ul li a {
+    transition: all 2s;
+  }
+  
+  nav.fill ul li a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+  }
+  nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+  }
+  nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+  }
+  
+@keyframes fill {
+    0% {
+      width: 0%;
+      height: 1px;
+    }
+    50% {
+      width: 100%;
+      height: 1px;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      background: rgb(179, 179, 179);
+      
+    }
+  } */
+
+
+
+/* ----------------------------------------  */
+
+  /* nav-links hover effect 2 */
+/* add class 'circle' to <nav> */
+
+  nav.circle ul li a {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s ease-in;
+    color: #E94B3CFF!important;
+    color: #ED372D!important;
+    color: rgb(0, 122, 122)!important;
+
+  }
+
+  nav.circle ul li a:after {
+    display: block;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '.';
+    color: transparent;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: transparent;
+  }
+
+    nav.circle ul li a:hover:after {
+        animation: circle 1.1s ease-in forwards;
+    }
+
+
+  
+  @keyframes circle {
+    0% {
+      width: 1px;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      height: 1px;
+      z-index: -1;
+      background: rgb(0, 202, 202); /*adjust bgcolor here*/
+      border-radius: 100%;
+    }
+    100% {
+      background: none;
+      height: 5000%;
+      width: 5000%;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-radius: 10px;
+    }
+  }
+
+
+  /* navbar-toggler effects for small screens*/
+
+/* navbar slide right to left  */
+@media (max-width: 768px) {
+    /* .navbar-brand{
+        margin-left: 40px; 
+        z-index: 9999;
+    } */
+
+
+    /* to align nav-links in center  */
+    .nav-item{
+      display: flex;
+      justify-content: center;
+      margin: 10px 0;
+      padding: 1px;
+    } 
+    .nav-item .nav-link{
+        width: 80%;
+    }
+    .firstLink{
+        margin-top: 60px;
+      }
+
+
+    /*slide left to right  */
+    .navbar-collapse {
+        position: absolute;
+        top: 0px;
+        /* left: 100%; */
+        /* left: -75%; */
+        /* padding: 0 10px 15px 10px; */
+        /* width: 100%; */
+        width: 60vw;
+        height: 100vh;
+        transition: all 0.3s ease;
+        background-color: var(--navBg);
+
+        /*fixed position of sideBar*/
+        position: fixed;
+        top: 0px;
+        left: -60vw!important;
+        font-weight: 900;
+        z-index: 1000;
+        padding: .5rem;
+    }
+   
+    .navbar-collapse.collapsing {
+        height: 100vh !important;
+        margin-right: 50%;
+        transition: all 0.3s ease;
+        display: block;
+    }
+    .navbar-collapse.show {
+        left: 0%!important;
+    }
+
+
+    /* placing hamburger icon  */
+
+    .navbar-toggler {
+        border: none;
+        outline: 0;
+        background: transparent !important;
+        /* position:relative;
+        left: 1px;
+        right:1px;
+        margin: 0 auto; */
+
+
+        /*fixed position of hamburger*/
+        position: fixed;
+        top: 15px;
+        right: 0!important;
+        font-weight: 900;
+        z-index: 1000;
+        transition: all 1s;
+      }
+    .navbar-toggler:hover {
+        background: transparent !important;
+        border: none;
+    }
+    .navbar-toggler:focus,
+    .navbar-toggler:active {
+        outline: 0;
+    } 
+    
+    /* hamburger to cross  */
+     
+    .icon-bar {
+        width: 22px; 
+        height: 2px;
+        background-color: #696868;
+        display: block;
+        transition: all 0.5s;
+        margin-top: 4px;
+    }
+
+
+    /* .disappear{
+        animation: disappear 1.2s ease;
+    }
+    @keyframes disappear {
+        0%,50%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+        
+    } */
+     
+    .navbar-toggler .top-bar {
+      transform: rotate(45deg);
+      transform-origin: 10% 10%;
+      /* transition-delay: 0.7s; */
+    }
+     
+    .navbar-toggler .middle-bar {
+      opacity: 0;
+      /* transition-delay: 0.7s; */
+    }
+     
+    .navbar-toggler .bottom-bar {
+      transform: rotate(-45deg);
+      /* transition-delay: 0.7s; */
+      transform-origin: 10% 90%;
+    }
+     
+    .navbar-toggler.collapsed .top-bar {
+      transform: rotate(0);
+    }
+     
+    .navbar-toggler.collapsed .middle-bar {
+      opacity: 1;
+    }
+     
+    .navbar-toggler.collapsed .bottom-bar {
+      transform: rotate(0);
+    }
+    
+    /* .newLocation{
+        opacity: 0;
+      }
+      .newLocation2{
+        opacity: 1;
+      } */
+}
+
+
+@media(min-width:768px){
+  .nav-item #sidebarLogo{
+    display: none!important;
+  }
+}
+@media(max-width:371px){
+  .nav-item #sidebarLogo{
+    width: 100%;
+    display: inline!important;
+  }
+}
+
+
+
+
+
