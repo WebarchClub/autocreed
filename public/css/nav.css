@@ -120,6 +120,11 @@
    width: 100%;
    opacity: 1;
 }
+
+#navigation #sidebarLogo:hover span{
+  letter-spacing: 6.5px;
+
+}
 /* .title{
     display: block;
     position: relative;
@@ -414,6 +419,11 @@
   #navigation .nav-link .logo{
     font-size:28px;
   }
+  
+#navigation #sidebarLogo:hover span{
+  letter-spacing: 6.15px;
+}
+  
 }
 @media(max-width:376px){
   #navigation .nav-link .logo{
