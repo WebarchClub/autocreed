@@ -5,3 +5,14 @@ $(document).click(function(e) {
         // $('.icon').toggleClass('newLocation');	    
     }
 });
+
+/* navbar bg changed after scrolling 50px */
+$(window).scroll(function() {
+    
+    if ($(document).scrollTop() > 50) {
+      $('.navbar').addClass('blurry');
+    } else {
+      $('.navbar').removeClass('blurry');
+
+    }
+  });
