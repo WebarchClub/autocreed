@@ -17,7 +17,7 @@ h3{
     margin: auto
 }
 
-.carousel-caption {
+.sponsors-caption {
     position: initial;
     z-index: 10;
     padding: 5rem 8rem;
@@ -30,7 +30,7 @@ h3{
 }
 
 @media(max-width:767px) {
-    .carousel-caption {
+    .sponsors-caption {
         position: initial;
         z-index: 10;
         padding: 3rem 2rem;
@@ -43,14 +43,14 @@ h3{
     }
 }
 
-.carousel-caption img {
+.sponsors-caption img {
     width: 17rem;
    height: 8rem;
     margin-top: 2rem
 }
 
 @media(max-width:767px) {
-    .carousel-caption img {
+    .sponsors-caption img {
         width: 4rem;
         
         margin-top: 1rem
@@ -86,11 +86,17 @@ i {
     opacity: unset
 }
 @media(max-width:990px) {
-    .carousel-caption img {
+    .sponsors-caption img {
         width: 10rem;
        height: 5rem;
         margin-top: 2rem
     }
     
+    
+}
+@media(max-width:900px){
+    .button {
+        display: none;
+    }
 }
 /* ******************************************** */
