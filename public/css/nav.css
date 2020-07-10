@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 :root {
@@ -112,8 +112,7 @@
 }
 
 #navigation .nav-item{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-family: 'Grenze Gotisch', cursive;
+  font-family: 'Racing Sans One', cursive;
     font-size: 28px;
     margin: 0 8px;
     transition: all .3s ease-in-out;
