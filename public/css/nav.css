@@ -1,6 +1,6 @@
 #footer {
     background-color: black;
-    padding: 45px 0 10px;
+    padding: 35px 0 10px;
     font-size: 15px;
     line-height: 24px;
     color: #737373;
@@ -23,6 +23,11 @@
     letter-spacing: 2px
 }
 
+.text-center {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
 #footer a {
     color: #737373;
 }
@@ -32,12 +37,13 @@
     text-decoration: none;
 }
 
-#logo {
+#autocreedLogo {
+    margin-right: 24%;
     width: 30%;
 }
 
 .links {
-    padding-left: 30%;
+    padding-left: 28%;
 }
 
 .footer-links {
@@ -181,22 +187,12 @@
     color: #00E8FF;
 }
 
-.heart {
-    fill: red;
-    position: relative;
-    top: 1px;
-    width: 15px;
-    animation: pulse 1s ease infinite;
+#webarchLogo {
+    filter: grayscale(1);
+    margin-bottom: 3px;
+    height: 15px;
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
+a:hover #webarchLogo {
+    filter: none;
 }
