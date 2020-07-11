@@ -400,7 +400,6 @@
 
 /* media queries */
 
-
 @media(min-width:768px){
   #navigation .nav-item #sidebarLogo{
     display: none!important;
@@ -418,11 +417,6 @@
   #navigation .nav-link .logo{
     font-size:28px;
   }
-  
-  #navigation #sidebarLogo:hover span{
-    letter-spacing: 6.15px;
-  }
-  
 }
 @media(max-width:430px){
   #navigation .navbar-collapse {
@@ -447,20 +441,15 @@
     margin: 40px 0 10px 0;
   }
 }
-
 @media(max-width:364px){
   #navigation .nav-item{
-    font-size: 23px;
+    font-size: 25px;
   }
   #navigation .nav-link .logo{
-    font-size: 22px;
+    font-size: 29px;
   }
-  #navigation .nav-link .imgLogo{
-    width: 35px;
-    height: 35px;
-  }
-}
 
+}
 @media(max-width:338px){
   #navigation .navbar-brand .logo{
     font-size: 30px;
