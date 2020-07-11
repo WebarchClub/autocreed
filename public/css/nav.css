@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
 /* @font-face{
   font-family:"breezedcaps-boldoblique";
   src:url("https://fontsme.com/wp-data/b/999/11999/file/BREECBO_.TTF") format("woff"),
@@ -132,8 +132,7 @@
 } */
 
 #navigation .nav-item{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-family: 'Grenze Gotisch', cursive;
+    font-family: 'Racing Sans One', cursive;
     font-size: 28px;
     margin: 0 8px;
     transition: all .3s ease-in-out;
@@ -420,10 +419,22 @@
     font-size:28px;
   }
   
-#navigation #sidebarLogo:hover span{
-  letter-spacing: 6.15px;
-}
+  #navigation #sidebarLogo:hover span{
+    letter-spacing: 6.15px;
+  }
   
+}
+@media(max-width:430px){
+  #navigation .navbar-collapse {
+     width: 65vw; 
+     left: -65vw!important;
+  }
+}
+@media(max-width:395px){
+  #navigation .navbar-collapse {
+     width: 75vw; 
+     left: -75vw!important;
+  }
 }
 @media(max-width:376px){
   #navigation .nav-link .logo{
@@ -436,6 +447,7 @@
     margin: 40px 0 10px 0;
   }
 }
+
 @media(max-width:364px){
   #navigation .nav-item{
     font-size: 23px;
@@ -448,6 +460,7 @@
     height: 35px;
   }
 }
+
 @media(max-width:338px){
   #navigation .navbar-brand .logo{
     font-size: 30px;
