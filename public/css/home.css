@@ -1,3 +1,8 @@
 body{
     background-color: aquamarine;
+    background: #121213;
+    background-image: radial-gradient(top, circle cover, #212122 0%, #181622 80%);
+    background-attachment: fixed;
+
+    height: 200vh; /* to check onscroll navbar bg change effect*/
 }
