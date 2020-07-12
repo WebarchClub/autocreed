@@ -111,8 +111,13 @@
    opacity: 1;
 }
 
+#navigation #sidebarLogo:hover span{
+  letter-spacing: 6.5px;
+
+}
+
 #navigation .nav-item{
-  font-family: 'Racing Sans One', cursive;
+    font-family: 'Racing Sans One', cursive;
     font-size: 28px;
     margin: 0 8px;
     transition: all .3s ease-in-out;
@@ -133,8 +138,7 @@
     overflow: hidden;
     z-index: 1;
     transition: 0.5s ease-in;
-    color: #E94B3CFF!important;
-    color: #ED372D!important;
+    color: #00f !important;
 
   }
 
@@ -172,7 +176,7 @@
       margin: auto;
       height: 1px;
       z-index: -1;
-      background: #ffcecb; /*adjust bgcolor here*/
+      background: #aaf; /*adjust bgcolor here*/
       border-radius: 100%;
     }
     100% {
@@ -195,7 +199,7 @@
     #navigation .nav-link {
       padding-bottom: 10px;
       text-decoration: none;
-      color: #ED372D;
+      color: #00f;
       display: inline-block;
       position: relative;
       
@@ -211,7 +215,7 @@
       height: 3px;
       content: "";
       position: absolute;
-      background-color: #ED372D;
+      background-color: #aaf;
     }
     
     #navigation .nav-link-ltr::before {
@@ -272,6 +276,7 @@
     #navigation .navbar-collapse.show {
         left: 0%!important;
     }
+
 
     /* placing hamburger icon  */
 
@@ -345,8 +350,11 @@
      
     #navigation .navbar-toggler.collapsed .bottom-bar {
       transform: rotate(0);
-    }    
+    }
+    
 }
+
+
 /* media queries */
 
 @media(min-width:768px){
@@ -367,6 +375,18 @@
     font-size:28px;
   }
 }
+@media(max-width:430px){
+  #navigation .navbar-collapse {
+     width: 65vw; 
+     left: -65vw!important;
+  }
+}
+@media(max-width:395px){
+  #navigation .navbar-collapse {
+     width: 75vw; 
+     left: -75vw!important;
+  }
+}
 @media(max-width:376px){
   #navigation .nav-link .logo{
     margin-left: 0!important;
@@ -380,15 +400,12 @@
 }
 @media(max-width:364px){
   #navigation .nav-item{
-    font-size: 23px;
+    font-size: 25px;
   }
   #navigation .nav-link .logo{
-    font-size: 22px;
+    font-size: 29px;
   }
-  #navigation .nav-link .imgLogo{
-    width: 35px;
-    height: 35px;
-  }
+
 }
 @media(max-width:338px){
   #navigation .navbar-brand .logo{
@@ -450,7 +467,7 @@
 }
 
 #footer a:hover {
-    color: #ff0000;
+    color: #00f;
     text-decoration: none;
 }
 
@@ -480,7 +497,7 @@
 #footer .footer-links a:active,
 #footer .footer-links a:focus,
 #footer .footer-links a:hover {
-    color: red;
+    color: #00f;
     font-size: 105%;
     text-decoration: none;
 }
