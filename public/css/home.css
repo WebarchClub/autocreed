@@ -6,3 +6,29 @@ body{
 
     height: 200vh; /* to check onscroll navbar bg change effect*/
 }
+#mission{
+    text-align: center;
+    font-family: 'Racing Sans One', cursive;
+    
+}
+#mission_title{
+    color: #00f;
+    text-shadow: 2px 3px rgb(197, 197, 197), 5px 7px 7px black;
+}
+.jumbotron a{
+    color: #00f;
+    box-shadow: 5px 5px 5px black;
+}
+.jumbotron p{
+    color: whitesmoke;
+    word-wrap: normal;
+}
+.jumbotron hr{
+    background-color: rgb(207, 144, 9);
+}
+.jumbotron{
+    background-color: #53535365;
+}
+#mission_img{
+    height: 50%;
+} 
