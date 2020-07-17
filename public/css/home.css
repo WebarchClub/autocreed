@@ -1,8 +1,347 @@
+@import url(//db.onlinewebfonts.com/c/401b3afcdd14cf76b92956ecc7f7d8e6?family=Eras+Bold+ITC);
 body{
-    background-color: aquamarine;
     background: #121213;
     background-image: radial-gradient(top, circle cover, #212122 0%, #181622 80%);
     background-attachment: fixed;
 
     height: 200vh; /* to check onscroll navbar bg change effect*/
 }
+
+/* ===================Carousel========================*/
+#carousel{
+
+    padding-top: 80px;
+}
+
+#carousel .carousel-fade .carousel-item {
+    opacity: 0;
+    transition-duration: .5s;
+    transition-property: opacity;
+   }
+   
+   #carousel .carousel-fade  .carousel-item.active,
+   #carousel .carousel-fade  .carousel-item-next.carousel-item-left,
+   #carousel .carousel-fade  .carousel-item-prev.carousel-item-right {
+     opacity: 1;
+   }
+   
+   #carousel .carousel-fade .active.carousel-item-left,
+   #carousel .carousel-fade  .active.carousel-item-right {
+    opacity: 0;
+   }
+   
+   #carousel .carousel-fade  .carousel-item-next,
+   #carousel .carousel-fade .carousel-item-prev,
+   #carousel .carousel-fade .carousel-item.active,
+   #carousel .carousel-fade .active.carousel-item-left,
+   #carousel .carousel-fade  .active.carousel-item-prev {
+    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
+   }
+   
+   #carousel .carousel-item{
+   
+    height : 100%;
+    width : 100%;
+  }
+   /*============Carousel ends=====================*/
+
+/* ==================MISSION================== */
+
+#mission{
+    text-align: center;
+    font-family: 'Racing Sans One', cursive;
+    
+}
+#mission #mission_title{
+    color: #00f;
+    text-shadow: 2px 3px rgb(197, 197, 197), 5px 7px 7px black;
+}
+#mission .jumbotron a{
+    color: #00f;
+    box-shadow: 5px 5px 5px black;
+}
+#mission .jumbotron p{
+    color: whitesmoke;
+    word-wrap: normal;
+}
+#mission .jumbotron hr{
+    background-color: rgb(207, 144, 9);
+}
+#mission .jumbotron{
+    background-color: #53535365;
+}
+#mission #mission_img{
+    height: 50%;
+} 
+/* ==================MISSION================== */
+
+/*--------------ACHIEVEMENTS SECTION---------*/
+#achievements{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    background-color: #161616;
+    color:white;
+    font-family: "Eras Bold ITC";
+    border-radius: 8px;
+}
+#achievements-container{
+    padding:none;
+
+}
+#achievements-container {
+    min-width:1000px;
+    height:600px;
+    display: block;
+    position: relative;
+    background-color:#121213;
+    border-radius: 4px;
+    padding: 32px 24px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    background-image: url("/images/achievementsimage.png");
+    background-size:auto 42em;
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+    background-position: center;
+    
+  }
+#achievements .achievements-header{
+    text-align: center;
+    padding:20px;
+    padding-top:none;
+    color: #3700b3;
+    
+}
+#achievements .achievements-header h1{
+    font-weight: bold;
+    font-size: 5em;
+}
+
+#achievements .achievements-body .col-12{
+    text-align: center;
+    padding-top:7px;
+}
+#achievements .achievements-body .row{
+    
+    padding-top:20px;
+    padding-bottom: 15px;
+}
+
+@media (max-width: 576px) { 
+    #achievements-container{
+        background-size: auto 32em ;
+        font-size: 14px;
+        
+    }
+    #achievements{
+        overflow-x: hidden;
+    }
+    #achievements-container{
+        width:50%;
+        
+    }
+    #achievements .achievements-header h1{
+        font-weight: bold;
+        font-size: 3.5em;
+        padding-bottom: none;
+    }
+    #achievements .achievements-header{
+        
+        padding-top:80px;
+    }
+    #achievements .achievements-body .row{
+    
+        padding-top:10px;
+        padding-bottom: 10px;
+    }
+ }
+
+
+@media (max-width: 768px) { 
+    #achievements-container{
+        background-size: auto 34em ;
+    }
+    #achievements{
+        overflow-x: hidden;
+    }
+    #achievements-container{
+        width:50%;
+        
+    }
+    #achievements .achievements-header h1{
+        font-weight: bold;
+        font-size: 4em;
+        padding-bottom: none;
+    }
+    #achievements .achievements-header{
+        
+        padding-top:65px;
+    }
+    #achievements .achievements-body .row{
+    
+        padding-top:12px;
+        padding-bottom: 15px;
+    }
+}
+@media (min-width: 768px){
+    #achievements{
+        width:50%;
+        
+    }
+}
+
+@font-face {font-family: "Eras Bold ITC";
+    src: url("http://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.eot"); /* IE9*/
+    src: url("http://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("http://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.woff2") format("woff2"), /* chrome firefox */
+    url("http://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.woff") format("woff"), /* chrome firefox */
+    url("http://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    url("http://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.svg#Eras Bold ITC") format("svg"); /* iOS 4.1- */
+}
+
+/*---------------------------------END OF ACHIEVEMENTS SECTION--------------------------------*/
+
+/*************** sponsers ***************/
+#sponsors {
+    margin-top: 100px;
+}
+
+#sponsors #demo {
+    
+    background: linear-gradient(112deg, #0000FF 50%, white 50%);
+    max-width: 1300px;
+    margin: auto
+}
+
+#sponsors .sponsors-caption {
+    position: initial;
+    z-index: 10;
+    padding: 5rem 8rem;
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem
+}
+
+@media(max-width:767px) {
+    #sponsors .sponsors-caption {
+        position: initial;
+        z-index: 10;
+        padding: 3rem 2rem;
+        color: black;
+        text-align: center;
+        font-size: 0.7rem;
+        line-height: 1.5rem
+    }
+}
+
+#sponsors .sponsors-caption img {
+    width: 17rem;
+   height: 8rem;
+    margin-top: 2rem
+}
+
+@media(max-width:767px) {
+    #sponsors .sponsors-caption img {
+        width: 4rem;
+        margin-top: 1rem
+    }
+}
+
+#sponsors h1 {
+  font-size: 30px;
+  line-height: 90px;
+ letter-spacing: 2px;
+ color: blue;
+    font-family: "Eras Bold ITC";
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+}
+
+
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+
+    color: blue;
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+      color: blue;
+  }
+}
+
+#sponsors i {
+    background-color: black;
+    padding: 1.4rem
+}
+
+@media(max-width:767px) {
+    #sponsors i {
+        padding: 0.8rem
+    }
+}
+
+#sponsors .carousel-control-prev {
+    justify-content: flex-start
+}
+
+#sponsors .carousel-control-next {
+    justify-content: flex-end
+}
+
+#sponsors .carousel-control-prev,
+#sponsors .carousel-control-next {
+    transition: none;
+    opacity: unset
+}
+@media(max-width:990px) {
+    #sponsors .sponsors-caption img {
+        width: 10rem;
+       height: 5rem;
+        margin-top: 2rem
+    }
+    
+    
+}
+@media(max-width:900px){
+    #sponsors .button {
+        display: none;
+    }
+}
+/* ******************sponsors section ends here************************** */

@@ -231,7 +231,7 @@
 
 /* navbar-toggler effects for small screens*/
 /* navbar slide right to left  */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     /* to align nav-links in center  */
     #navigation .nav-item{
@@ -421,10 +421,39 @@
   }
 }
 
-@media (max-width:920px) and (min-width:768px) {
+@media (max-width:1034px) and (min-width:921px) {
+  #navigation .nav-item{
+    font-size: 27px;
+    margin: 0 1px;
+  }
+}
+@media (max-width:920px) and (min-width:867px) {
+  #navigation .nav-item{
+    font-size: 25px;
+    margin: 0 1px;
+  }
+}
+@media (max-width:866px) and (min-width:830px) {
+  #navigation .logo{
+    font:italic 900 35px 'Bangers';
+
+  }
   #navigation .nav-item{
     font-size: 24px;
     margin: 0 1px;
+  }
+}
+@media (max-width:829px) and (min-width:768px) {
+  #navigation .logo{
+    font:italic 900 33px 'Bangers';
+  }
+  #navigation .imgLogo{
+    height: 35px;
+    width: 35px;
+  }
+  #navigation .nav-item{
+    font-size: 23px;
+    margin: -2px;
   }
 }
 
@@ -437,7 +466,7 @@
     font-size: 15px;
     line-height: 24px;
     color: #737373;
-    top: 100%;
+    top: 0;
 }
 
 #footer hr {
