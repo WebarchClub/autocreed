@@ -1,17 +1,30 @@
 <%- include("partials/header") %>
 
 <section id="CONTACT">
-    <div class="container">
-		<div class="innerwrap">		
+	<div class="container">
+		<div class="innerwrap">
+		
 			<section class="section1 clearfix">
 				<div class="textcenter">
 					<h1>Contact Us</h1>
 				</div>
-			</section>		
+			</section>
+		
 			<section class="section2 clearfix">
 				<div class="col2 column1 first">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1448.8383124598215!2d80.03789213489739!3d12.821233417325269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f76cfb047feb%3A0x879e2cafa77a42cb!2sSRM%20Main%20Campus!5e0!3m2!1sen!2sin!4v1594992176364!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>	
-				</div>				
+					<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.369095755942!2d80.03710011413374!3d12.819409321669633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f76c4db87a47%3A0x341fa471f8027d68!2sSRM%20University%2C%20Kattankulathur%2C%20Tamil%20Nadu%20603203!5e0!3m2!1sen!2sin!4v1595085787887!5m2!1sen!2sin" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
+					<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div class="sec2map" style='overflow:hidden;height:450px;width:100%;'><div id='gmap_canvas' style='height:100%;width:100%;'></div>
+					<div><small><a href="http://embedgooglemaps.com">embed google maps</a></small></div>
+					<style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
+					<script type='text/javascript'>
+						function init_map() {
+							var myOptions = {
+								zoom:14,center:new google.maps.LatLng(12.815330,80.041620),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+					marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(12.815330,80.041620)});
+					infowindow = new google.maps.InfoWindow({content:'<strong>Location</strong><br>SRM University Chennai<br>'});
+					google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+				</div>
+				
 				<div class="col2 column2 last">
 					<div class="sec2innercont">
 						<div class="sec2addr">
@@ -22,7 +35,8 @@
 								
 								SRM Institute of Science and Technology, Potheri, SRM Nagar, Kattankulathur, Tamil Nadu 603203</p>
 							<p><span class="collig">Phone (Team Captain):</span> +91 976885083</p>
-							<p><span class="collig">Phone (Corporate):</span>  +91 976885083</p>							
+							<p><span class="collig">Phone (Corporate):</span>  +91 976885083</p>
+							
 						</div>
 					</div>
 					<div class="sec2contactform">
@@ -42,8 +56,10 @@
 							<div class="clearfix"><input type="submit" value="Send"></div>
 						</form>
 					</div>
+
 				</div>
-			</section>		
+			</section>
+		
 		</div>
 		<div class="div2">
 			Become Our Sponsors
@@ -56,7 +72,7 @@
 				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque quas quisquam, magni itaque sit placeat excepturi eos perferendis explicabo inventore praesentium ipsum sed repudiandae qui odit numquam nobis. Amet, nesciunt.
 				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, ipsum aliquam ducimus, veniam repellat praesentium dignissimos molestias dolorum aliquid neque facilis excepturi iusto, voluptas mollitia debitis! Cumque cupiditate illum doloribus.
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur illum suscipit accusamus ipsa tenetur possimus fugiat, tempora nam veniam ducimus, maxime magnam saepe vitae delectus quam repudiandae magni officiis enim.
-				</p>
+			</p>
 		<section>
 			<ul class="social-media-list">
 				<li><a href="https://www.linkedin.com/company/autocreedracing/?originalSubdomain=in" target="_blank" class="contact-icon">
