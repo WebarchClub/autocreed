@@ -403,6 +403,7 @@
     background-color: black;
     padding: 35px 0 10px;
     font-size: 15px;
+    font-family: 'Racing Sans One', cursive;
     line-height: 24px;
     color: #737373;
     top: 100%;
@@ -434,12 +435,8 @@
     color: #737373;
 }
 
-#footer a:hover {
-    color: #ff0000;
-    text-decoration: none;
-}
-
 #footer #autocreedLogo {
+    margin-top: 15%;
     margin-right: 12%;
     width: 30%;
 }
@@ -459,15 +456,17 @@
 }
 
 #footer .footer-links a {
-    color: #737373
+    color: #737373;
+    transition-duration: 200ms;
 }
 
 #footer .footer-links a:active,
 #footer .footer-links a:focus,
 #footer .footer-links a:hover {
-    color: red;
+    color: #187bcd;
     font-size: 105%;
     text-decoration: none;
+    transition-duration: 200ms;
 }
 
 #footer .footer-links a:active .fas,
@@ -491,7 +490,6 @@
     margin-left: 6px;
     margin-right: 0;
     border-radius: 100%;
-    background-color: #33353d
 }
 
 #footer .copyright-text {
@@ -536,7 +534,7 @@
 #footer .social-icons a {
     background-color: #eceeef;
     color: #818a91;
-    font-size: 16px;
+    font-size: 25px;
     display: inline-block;
     line-height: 50px;
     width: 50px;
@@ -549,13 +547,6 @@
     transition: all .2s linear
 }
 
-#footer .social-icons a:active,
-#footer .social-icons a:focus,
-#footer .social-icons a:hover {
-    color: #fff;
-    background-color: #29aafe
-}
-
 #footer .social-icons.size-sm a {
     line-height: 34px;
     height: 34px;
@@ -563,14 +554,29 @@
     font-size: 14px
 }
 
+#footer .social-icons a.facebook {
+    color: #3b5998;
+    background-color: #818a91;
+}
+
 #footer .social-icons a.facebook:hover {
     color: #818a91;
     background-color: #3b5998;
 }
 
+#footer .social-icons a.linkedin {
+    color: #0e76a8;
+    background-color: #818a91;
+}
+
 #footer .social-icons a.linkedin:hover {
     color: #818a91;
     background-color: #0e76a8;
+}
+
+#footer .social-icons a.instagram {
+    color: #dd2a7b;
+    background-color: #818a91;
 }
 
 #footer .social-icons a.instagram:hover {
@@ -594,8 +600,14 @@
     filter: grayscale(1);
     margin-bottom: 3px;
     height: 15px;
+    transition-duration: 200ms;
 }
 
 #footer a:hover #webarchLogo {
     filter: none;
+    transition-duration: 200ms;
+}
+
+#footer a:hover {
+    text-decoration: none;
 }
