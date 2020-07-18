@@ -6,13 +6,17 @@
     url("https://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
     url("https://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.svg#Eras Bold ITC") format("svg"); /* iOS 4.1- */
 }
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
 body{
     background: #121213;
     background-image: radial-gradient(top, circle cover, #212122 0%, #181622 80%);
     background-attachment: fixed;
-    overflow-x: hidden;
-
-    height: 200vh; /* to check onscroll navbar bg change effect*/
 }
 
 /* ===================Carousel========================*/
@@ -196,7 +200,7 @@ body{
     }
     #achievements .achievements-header h1{
         font-weight: bold;
-        font-size: 3.5em;
+        font-size: 3em;
         padding-bottom: none;
     }
     #achievements .achievements-header{
@@ -204,10 +208,20 @@ body{
         padding-top:80px;
     }
     #achievements .achievements-body .row{
-    
+        font-size: 0.9em;
         padding-top:10px;
         padding-bottom: 10px;
     }
+ }
+
+ @media (max-width: 376px){
+     #achievements .achievements-header h1{
+         font-size: 2.2em;
+     }
+
+     #achievements .achievements-body .row{
+         font-size: 0.6em;
+     }
  }
 
 /*---------------------------------END OF ACHIEVEMENTS SECTION--------------------------------*/
@@ -300,6 +314,20 @@ body{
 @media(max-width:900px){
     #sponsors .button {
         display: none;
+    }
+}
+@media (max-width: 576px){
+    #sponsors{
+        margin: 0;
+    }
+    #sponsors h1{
+        font-size: 3.5em;
+    }
+}
+
+@media (max-width: 376px){
+    #sponsors h1{
+        font-size: 2em;
     }
 }
 /* ******************sponsors section ends here************************** */
