@@ -3,14 +3,14 @@ body{
     background: #121213;
     background-image: radial-gradient(top, circle cover, #212122 0%, #181622 80%);
     background-attachment: fixed;
+    overflow-x: hidden;
 
     height: 200vh; /* to check onscroll navbar bg change effect*/
 }
 
 /* ===================Carousel========================*/
 #carousel{
-
-    padding-top: 80px;
+    padding-top: 70px;
 }
 
 #carousel .carousel-fade .carousel-item {
@@ -39,11 +39,21 @@ body{
     transform: translate3d(0, 0, 0);
    }
    
-   #carousel .carousel-item{
-   
-    height : 100%;
+   #carousel .carousel-inner{   
+    height : auto;
     width : 100%;
   }
+@media (max-width: 767px){
+  #carousel img {
+    height: 90vh; 
+  }
+
+}
+@media (min-width: 768px) and (max-width:1200px){
+  #carousel img {
+    height: 45vh; 
+  }
+}
    /*============Carousel ends=====================*/
 
 /* ==================MISSION================== */
@@ -131,37 +141,6 @@ body{
     padding-top:20px;
     padding-bottom: 15px;
 }
-
-@media (max-width: 576px) { 
-    #achievements-container{
-        background-size: auto 32em ;
-        font-size: 14px;
-        
-    }
-    #achievements{
-        overflow-x: hidden;
-    }
-    #achievements-container{
-        width:50%;
-        
-    }
-    #achievements .achievements-header h1{
-        font-weight: bold;
-        font-size: 3.5em;
-        padding-bottom: none;
-    }
-    #achievements .achievements-header{
-        
-        padding-top:80px;
-    }
-    #achievements .achievements-body .row{
-    
-        padding-top:10px;
-        padding-bottom: 10px;
-    }
- }
-
-
 @media (max-width: 768px) { 
     #achievements-container{
         background-size: auto 34em ;
@@ -195,6 +174,35 @@ body{
     }
 }
 
+@media (max-width: 576px) { 
+    #achievements-container{
+        background-size: auto 32em ;
+        font-size: 14px;
+        
+    }
+    #achievements{
+        overflow-x: hidden;
+    }
+    #achievements-container{
+        width:50%;
+        
+    }
+    #achievements .achievements-header h1{
+        font-weight: bold;
+        font-size: 3.5em;
+        padding-bottom: none;
+    }
+    #achievements .achievements-header{
+        
+        padding-top:80px;
+    }
+    #achievements .achievements-body .row{
+    
+        padding-top:10px;
+        padding-bottom: 10px;
+    }
+ }
+
 @font-face {font-family: "Eras Bold ITC";
     src: url("http://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.eot"); /* IE9*/
     src: url("http://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
@@ -208,11 +216,10 @@ body{
 
 /*************** sponsers ***************/
 #sponsors {
-    margin-top: 100px;
+    margin: 2rem 0;
 }
 
-#sponsors #demo {
-    
+#sponsors #demo {    
     background: linear-gradient(112deg, #0000FF 50%, white 50%);
     max-width: 1300px;
     margin: auto
@@ -224,7 +231,7 @@ body{
     padding: 5rem 8rem;
     color: black;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.5rem;   
     line-height: 2rem
 }
 
@@ -235,7 +242,7 @@ body{
         padding: 3rem 2rem;
         color: black;
         text-align: center;
-        font-size: 0.7rem;
+        font-size: 0.7rem;        
         line-height: 1.5rem
     }
 }
@@ -248,64 +255,21 @@ body{
 
 @media(max-width:767px) {
     #sponsors .sponsors-caption img {
-        width: 4rem;
+        width: 4rem;        
         margin-top: 1rem
     }
 }
 
+@import url(//db.onlinewebfonts.com/c/401b3afcdd14cf76b92956ecc7f7d8e6?family=Eras+Bold+ITC);
+
 #sponsors h1 {
-  font-size: 30px;
-  line-height: 90px;
- letter-spacing: 2px;
- color: blue;
-    font-family: "Eras Bold ITC";
-  text-align: center;
-  animation: blink 12s infinite;
-  -webkit-animation: blink 12s infinite;
-}
-
-
-@-webkit-keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
-  }
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-
+    font-size: 4em;
+    letter-spacing: 10px;
+    margin-bottom: 1em;
     color: blue;
-  }
+    font-family: "Eras Bold ITC";
+    text-align: center; 
 }
-
-@keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
-  }
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-      color: blue;
-  }
-}
-
 #sponsors i {
     background-color: black;
     padding: 1.4rem
@@ -335,9 +299,7 @@ body{
         width: 10rem;
        height: 5rem;
         margin-top: 2rem
-    }
-    
-    
+    }    
 }
 @media(max-width:900px){
     #sponsors .button {
