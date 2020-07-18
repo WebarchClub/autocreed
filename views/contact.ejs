@@ -15,14 +15,13 @@
 					<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.369095755942!2d80.03710011413374!3d12.819409321669633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f76c4db87a47%3A0x341fa471f8027d68!2sSRM%20University%2C%20Kattankulathur%2C%20Tamil%20Nadu%20603203!5e0!3m2!1sen!2sin!4v1595085787887!5m2!1sen!2sin" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
 					<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div class="sec2map" style='overflow:hidden;height:450px;width:100%;'><div id='gmap_canvas' style='height:100%;width:100%;'></div>
 					<div><small><a href="http://embedgooglemaps.com">embed google maps</a></small></div>
-					<div><small><a href="http://freedirectorysubmissionsites.com/">free web directories</a></small></div>
 					<style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
 					<script type='text/javascript'>
 						function init_map() {
 							var myOptions = {
 								zoom:14,center:new google.maps.LatLng(12.815330,80.041620),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
-					marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(19.075314480255834,72.88153973865361)});
-					infowindow = new google.maps.InfoWindow({content:'<strong>My Location</strong><br>mumbai<br>'});
+					marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(12.815330,80.041620)});
+					infowindow = new google.maps.InfoWindow({content:'<strong>Location</strong><br>SRM University Chennai<br>'});
 					google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
 				</div>
 				
