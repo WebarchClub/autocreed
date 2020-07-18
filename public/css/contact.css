@@ -1,8 +1,8 @@
 body{
-    background-color: aquamarine;
     background: #121213;
     background-image: radial-gradient(top, circle cover, #212122 0%, #181622 80%);
     background-attachment: fixed;
+    color: #333;
 
     height: 200vh; /* to check onscroll navbar bg change effect*/
 }
@@ -19,14 +19,8 @@ body{
 .clearfix:before, .clearfix:after { display: table; content: ''; }
 .clearfix:after { clear: both; }
 
-
-body {
-	background: #121213;
-	color: #333;
-	/* font-weight: normal;
-	font-size: 1em; */
-	/* font-family: 'Roboto', Arial, sans-serif; */
-	
+#CONTACT{
+    margin-top: 80px;
 }
 
 h1 {
@@ -226,12 +220,12 @@ p span.collig {
 
 /* @media querries */
 
-@media only screen and (max-width: 1266px) {
+@media screen and (max-width: 1266px) {
 	.section2 {
 		width: 100%;
 	}
 }
-@media only screen and (max-width: 960px) {
+@media (max-width: 430px) {
 	.container {
 		padding: 0 30px 70px;
 	}
@@ -245,11 +239,17 @@ p span.collig {
 	.section2 .col2.column2 {
 		padding: 0;
 	}
+
+	.section2 .clearfix .col2 .column1 .first {
+		height:20%;
+		width: 30%;
+	}
+
 	body .sec2map {
 		height: 250px !important;
 	}
 }
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 360px) {
 	.section2 .sec2addr {
 		font-size: 14px;
 	}
@@ -265,7 +265,7 @@ p span.collig {
 		font-size: 14px;
 	}
 }
-@media only screen and (max-width: 420px) {
+@media (max-width: 320px) {
 	.section1 h1 {
 		font-size: 28px;
 	}	
