@@ -1,8 +1,325 @@
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
 body{
-    background-color: aquamarine;
     background: #121213;
     background-image: radial-gradient(top, circle cover, #212122 0%, #181622 80%);
     background-attachment: fixed;
-
-    height: 200vh; /* to check onscroll navbar bg change effect*/
 }
+
+/* ===================Carousel========================*/
+#carousel{
+    padding-top: 70px;
+}
+
+#carousel .carousel-fade .carousel-item {
+    opacity: 0;
+    transition-duration: .5s;
+    transition-property: opacity;
+   }
+   
+   #carousel .carousel-fade  .carousel-item.active,
+   #carousel .carousel-fade  .carousel-item-next.carousel-item-left,
+   #carousel .carousel-fade  .carousel-item-prev.carousel-item-right {
+     opacity: 1;
+   }
+   
+   #carousel .carousel-fade .active.carousel-item-left,
+   #carousel .carousel-fade  .active.carousel-item-right {
+    opacity: 0;
+   }
+   
+   #carousel .carousel-fade  .carousel-item-next,
+   #carousel .carousel-fade .carousel-item-prev,
+   #carousel .carousel-fade .carousel-item.active,
+   #carousel .carousel-fade .active.carousel-item-left,
+   #carousel .carousel-fade  .active.carousel-item-prev {
+    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
+   }
+   
+   #carousel .carousel-inner{   
+    height : auto;
+    width : 100%;
+  }
+@media (max-width: 767px){
+  #carousel img {
+    height: 45vh; 
+  }
+
+}
+@media (min-width: 768px){
+  #carousel img {
+    height: 90vh; 
+  }
+}
+   /*============Carousel ends=====================*/
+
+/* ==================MISSION================== */
+
+#mission{
+    text-align: center;
+    font-family: Arial, sans-serif;
+    
+}
+#mission #mission_title{
+    color: #00f;
+    text-shadow: 2px 3px rgb(197, 197, 197), 5px 7px 7px black;
+}
+#mission .jumbotron a{
+    color: #00f;
+    box-shadow: 5px 5px 5px black;
+}
+#mission .jumbotron p{
+    color: whitesmoke;
+    word-wrap: normal;
+}
+#mission .jumbotron hr{
+    background-color: rgb(207, 144, 9);
+}
+#mission .jumbotron{
+    background-color: #53535365;
+}
+#mission #mission_img{
+    height: 50%;
+} 
+/* ==================MISSION================== */
+
+/*--------------ACHIEVEMENTS SECTION---------*/
+#achievements{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    background-color: #161616;
+    color:white;
+    font-family: Arial, sans-serif;
+    border-radius: 8px;
+}
+#achievements-container{
+    padding:none;
+
+}
+#achievements-container {
+    min-width:1000px;
+    height:600px;
+    display: block;
+    position: relative;
+    background-color:#121213;
+    border-radius: 4px;
+    padding: 32px 24px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    background-image: url("/images/achievementsimage.png");
+    background-size:auto 42em;
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+    background-position: center;
+    
+  }
+#achievements .achievements-header{
+    text-align: center;
+    padding:20px;
+    padding-top:none;
+    color: #3700b3;
+    
+}
+#achievements .achievements-header h1{
+    font-weight: bold;
+    font-size: 5em;
+}
+
+#achievements .achievements-body .col-12{
+    text-align: center;
+    padding-top:7px;
+}
+#achievements .achievements-body .row{
+    
+    padding-top:20px;
+    padding-bottom: 15px;
+}
+@media (max-width: 768px) { 
+    #achievements-container{
+        background-size: auto 34em ;
+    }
+    #achievements{
+        overflow-x: hidden;
+    }
+    #achievements-container{
+        width:50%;
+        
+    }
+    #achievements .achievements-header h1{
+        font-weight: bold;
+        font-size: 4em;
+        padding-bottom: none;
+    }
+    #achievements .achievements-header{
+        
+        padding-top:65px;
+    }
+    #achievements .achievements-body .row{
+    
+        padding-top:12px;
+        padding-bottom: 15px;
+    }
+}
+@media (min-width: 768px){
+    #achievements{
+        width:50%;
+        
+    }
+}
+
+@media (max-width: 576px) { 
+    #achievements-container{
+        background-size: auto 32em ;
+        font-size: 14px;
+        
+    }
+    #achievements{
+        overflow-x: hidden;
+    }
+    #achievements-container{
+        width:50%;
+        
+    }
+    #achievements .achievements-header h1{
+        font-weight: bold;
+        font-size: 3em;
+        padding-bottom: none;
+    }
+    #achievements .achievements-header{
+        
+        padding-top:80px;
+    }
+    #achievements .achievements-body .row{
+        font-size: 0.9em;
+        padding-top:10px;
+        padding-bottom: 10px;
+    }
+ }
+
+ @media (max-width: 376px){
+     #achievements .achievements-header h1{
+         font-size: 2.2em;
+     }
+
+     #achievements .achievements-body .row{
+         font-size: 0.6em;
+     }
+ }
+
+/*---------------------------------END OF ACHIEVEMENTS SECTION--------------------------------*/
+
+/*************** sponsers ***************/
+#sponsors {
+    margin: 2rem 0;
+}
+
+#sponsors #demo {    
+    background: linear-gradient(112deg, #0000FF 50%, white 50%);
+    max-width: 1300px;
+    margin: auto
+}
+
+#sponsors .sponsors-caption {
+    position: initial;
+    z-index: 10;
+    padding: 5rem 8rem;
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;   
+    line-height: 2rem
+}
+
+@media(max-width:767px) {
+    #sponsors .sponsors-caption {
+        position: initial;
+        z-index: 10;
+        padding: 3rem 2rem;
+        color: black;
+        text-align: center;
+        font-size: 0.7rem;        
+        line-height: 1.5rem
+    }
+}
+
+#sponsors .sponsors-caption img {
+    width: 17rem;
+   height: 8rem;
+    margin-top: 2rem
+}
+
+@media(max-width:767px) {
+    #sponsors .sponsors-caption img {
+        width: 4rem;        
+        margin-top: 1rem
+    }
+}
+
+#sponsors h1 {
+    font-size: 4em;
+    letter-spacing: 10px;
+    margin-bottom: 1em;
+    color: blue;
+    font-family: Arial, sans-serif;
+    text-align: center; 
+}
+#sponsors i {
+    background-color: black;
+    padding: 1.4rem
+}
+
+@media(max-width:767px) {
+    #sponsors i {
+        padding: 0.8rem
+    }
+}
+
+#sponsors .carousel-control-prev {
+    justify-content: flex-start
+}
+
+#sponsors .carousel-control-next {
+    justify-content: flex-end
+}
+
+#sponsors .carousel-control-prev,
+#sponsors .carousel-control-next {
+    transition: none;
+    opacity: unset
+}
+@media(max-width:990px) {
+    #sponsors .sponsors-caption img {
+        width: 10rem;
+       height: 5rem;
+        margin-top: 2rem
+    }    
+}
+@media(max-width:900px){
+    #sponsors .button {
+        display: none;
+    }
+}
+@media (max-width: 576px){
+    #sponsors{
+        margin: 0;
+    }
+    #sponsors h1{
+        font-size: 3.5em;
+    }
+}
+
+@media (max-width: 376px){
+    #sponsors h1{
+        font-size: 2em;
+    }
+}
+/* ******************sponsors section ends here************************** */
