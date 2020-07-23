@@ -10,7 +10,19 @@
 body{
   font-family: "Audrey"!important;
 }
-
+#navigation .blurrer {
+  height: 140px;
+  top: -50px;
+  left: -30px;
+  right: -10px;
+  position: absolute;
+  overflow: hidden;
+  filter: blur(18px);
+  opacity: 1;
+  z-index: -9999;
+  background-color: rgba(0, 0, 0, 1);
+  background-size: cover;
+  }
 /*navbar blur effect onscroll>50px*/
 #navigation .blurry .blurrer {
 height: 140px;
