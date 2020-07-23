@@ -27,12 +27,12 @@ body{
 }
 
 #CONTACT h1 {
-	font: 900 39px Arial, sans-serif;
+	font: 900 39px "Audrey";
 }
 
 #CONTACT .div2 {
 	color: blue;
-	font: 90 29px Arial, sans-serif;
+	font: 90 29px "Audrey";
 }
  
 #CONTACT .div2 .seperator {
@@ -104,7 +104,7 @@ body{
 	color: #00f;
 	margin-right: 10px;
 	display: inline-block;
-	font: 90 19px Arial, sans-serif;
+	font: 90 19px "Audrey";
 	
 }
 #CONTACT p {
@@ -114,7 +114,7 @@ body{
 	color: teal;
 	margin-right: 10px;
 	display: inline-block;
-	font: 90 25px Arial, sans-serif;
+	font: 90 25px "Audrey";
 }
 #CONTACT .section2 .sec2addr {
 	display: block;
@@ -137,7 +137,7 @@ body{
 	width: 100%;
 	display: block;
 	color: white;
-	font: 19 19px Arial, sans-serif;
+	font: 19 19px "Audrey";
 
   resize:none;
 }
