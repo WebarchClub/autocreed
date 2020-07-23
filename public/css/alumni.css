@@ -3,10 +3,26 @@ body{
   background: #121213;
   background-image: radial-gradient(top, circle cover, #212122 0%, #181622 80%);
   background-attachment: fixed;
-  background-image: url('https://wallpaperplay.com/walls/full/3/d/0/29078.jpg');
+  background: 
+              url('https://wallpaperplay.com/walls/full/3/d/0/29078.jpg');
+  
   letter-spacing: 0.0625em;
 }
+  #about .blurrer {
+  height: 140px;
+  position: absolute;
+  top: -50px;
+  left: -20px;
+  right: -10px;
+  overflow: hidden;
+  filter: blur(18px);
+  opacity: 0.7;
+  z-index: -9999;
+  background-color: rgba(0, 0, 0, 1);
+  background-size: cover;
+  }
 
+  
 #about {
   margin: 60px;
   margin-top: 120px;
