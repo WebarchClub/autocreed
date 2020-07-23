@@ -184,7 +184,7 @@ transform: translateY(-5px) scale(1.05);
   background: transparent;
 }
 
-@media(min-width:768px){
+@media(min-width:992px){
   #navigation nav.circle ul li a:hover:after {
       animation: circle .8s ease-in forwards;
   }
@@ -220,7 +220,7 @@ transform: translateY(-5px) scale(1.05);
 }
 
 /* mobile navlink hover animation  */
-@media(max-width:768px){
+@media(max-width:992px){
   
   #navigation .nav-link {
     padding-bottom: 10px;
