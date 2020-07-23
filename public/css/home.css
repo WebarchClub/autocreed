@@ -6,15 +6,6 @@ html,body
     overflow-x: hidden; 
 }
 body{
-<<<<<<< HEAD
-    background-color: aquamarine;
-    background: #121213;
-    background-image: radial-gradient(top, circle cover, #212122 0%, #181622 80%);
-    background-attachment: fixed;
-
-    height: 200vh; /* to check onscroll navbar bg change effect*/
-}
-=======
     background: #121213;
     background-image: radial-gradient(top, circle cover, #212122 0%, #181622 80%);
     background-attachment: fixed;
@@ -332,4 +323,3 @@ body{
     }
 }
 /* ******************sponsors section ends here************************** */
->>>>>>> 2852b608ee577b63faf276514cfceee472e3be7a

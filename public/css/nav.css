@@ -1,3 +1,4 @@
+@font-face {font-family: "Audrey"; src: url("//db.onlinewebfonts.com/t/d9a58a393d946d86051fbd9a0b594d2f.eot"); src: url("//db.onlinewebfonts.com/t/d9a58a393d946d86051fbd9a0b594d2f.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/d9a58a393d946d86051fbd9a0b594d2f.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/d9a58a393d946d86051fbd9a0b594d2f.woff") format("woff"), url("//db.onlinewebfonts.com/t/d9a58a393d946d86051fbd9a0b594d2f.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/d9a58a393d946d86051fbd9a0b594d2f.svg#Audrey") format("svg"); }
 :root {
   /* bgcolor of sidebar  */
   --navBg: rgb(0, 0, 0); /*set according to color of navbar*/
@@ -33,9 +34,19 @@ filter: blur(20px);
 
 /* logo shadow  */
 #navigation .imgLogo{
-  filter: drop-shadow(5px 5px 4px #646464);
+  /* filter: drop-shadow(5px 5px 4px #646464);
   filter: drop-shadow(5px 5px 5px rgb(75, 75, 75));
-  filter: drop-shadow(0 0 5px #e9e9e9);
+  filter: drop-shadow(0 0 5px #e9e9e9); */
+  transition: .8s;
+  animation: shine1 4s ease;
+}
+@keyframes shine1{
+  0%,50%,100%{
+    filter: none;
+  }
+  25%,75%{
+    filter: drop-shadow(0 0 5px #777);
+  }
 }
 
 /* main logo text*/
@@ -43,7 +54,9 @@ filter: blur(20px);
   text-transform: uppercase;
   color: white;
   /* letter-spacing: 6px; */
-  font:900 39px Arial, sans-serif;
+  /* font:900 39px "Audrey"; */
+  font:900 39px "Audrey";
+
   text-shadow: 0 1px 0 #ccc,
   0 2px 0 #c9c9c9,
   0 3px 0 #bbb,
@@ -57,6 +70,10 @@ filter: blur(20px);
   0 10px 10px rgba(0,0,0,.2),
   0 20px 20px rgba(0,0,0,.15),
   0 30px 30px rgba(0,0,0,.15);
+  text-shadow: 
+      1px 1px 0px #999, 
+      2px 2px 0px #333, 
+      3px 3px 0px #999;
   transition: 1s;
 }
 
@@ -68,8 +85,11 @@ text-shadow: 0 0 10px #777,
   0 0 40px #777,
   0 0 80px #777;
 }
+#navigation .navbar-brand:hover .imgLogo{
+  filter: drop-shadow(0 0 5px #777);
+}
 #navigation .navbar-brand span{
-animation: shine 4s ease;
+  animation: shine 4s ease;
 }
 @keyframes shine{
 0%,50%,100%{
@@ -86,6 +106,15 @@ animation: shine 4s ease;
   0 10px 10px rgba(0,0,0,.2),
   0 20px 20px rgba(0,0,0,.15),
   0 30px 30px rgba(0,0,0,.15);
+  text-shadow: 
+      1px 1px 0px #999, 
+      2px 2px 0px #333, 
+      3px 3px 0px #999,
+      4px 4px 0px #333,
+      5px 5px 0px #999,
+      6px 6px 0px #333,
+      7px 7px 0px #999,
+      8px 8px 0px #333;
 }
 25%,75%{
   text-shadow: 0 0 10px #777,
@@ -113,8 +142,9 @@ animation: shine 4s ease;
 }
 
 #navigation .nav-item{
-  font-family: Arial, sans-serif;
-  font-size: 28px;
+  /* font-family: "Audrey";
+  font-family: "Audrey"; */
+  font:900 27px "Audrey";
   margin: 0 8px;
   transition: all .3s ease-in-out;
 }
@@ -227,7 +257,7 @@ transform: translateY(-5px) scale(1.05);
 
 /* navbar-toggler effects for small screens*/
 /* navbar slide right to left  */
-@media (max-width: 767px) {
+@media (max-width: 991px) {
 
   /* to align nav-links in center  */
   #navigation .nav-item{
@@ -353,12 +383,54 @@ transform: translateY(-5px) scale(1.05);
 
 /* media queries */
 
-@media(min-width:768px){
-#navigation .nav-item #sidebarLogo{
-  display: none!important;
+@media(min-width:992px){
+  #navigation .nav-item #sidebarLogo{
+    display: none!important;
+  }
 }
+@media(max-width:547px){
+  #navigation .navbar-brand{
+    transform: scale(0.9);
+    position: relative;
+    margin-left: -19px!important;
+  }
+  #navigation .nav-item .imgLogo{
+    width: 37px;
+    height: 35px;
+ }
+  #navigation .nav-item .logo{
+     font-size: 33px;
+  }
 }
-@media(max-width:453px){
+@media(max-width:471px){
+  #navigation .nav-item .logo{
+     font-size: 30px;
+  }
+  #navigation .nav-item .imgLogo{
+       width: 35px;
+       height: 33px;
+    }
+}
+@media(max-width:440px){
+  #navigation .navbar-brand{
+    transform: scale(0.8);
+    position: relative;
+    margin-left: -40px!important;
+  }
+  #navigation .nav-item .logo{
+     font-size: 28px;
+  }
+}
+@media(max-width:406px){
+  #navigation .nav-item .imgLogo{
+    width: 32px;
+    height: 30px;
+ }
+  #navigation .nav-item .logo{
+     font-size: 25px;
+  }
+}
+/* @media(max-width:453px){
 #navigation .nav-link .logo{
   font-size:32px;
 }
@@ -417,41 +489,56 @@ transform: translateY(-5px) scale(1.05);
 }
 }
 
-@media (max-width:1034px) and (min-width:921px) {
-#navigation .nav-item{
-  font-size: 27px;
-  margin: 0 1px;
+@media (max-width:1034px) and (min-width:955px) {
+  #navigation .logo{
+    font-size: 36px;
+  }
+  #navigation .nav-item{
+    font-size: 26px;
+    margin: 0 1px;
+  }
 }
+@media (max-width:954px) and (min-width:921px) {
+  #navigation .logo{
+    font-size: 35px;
+  }
+  #navigation .nav-item{
+    font-size: 24px;
+    margin: 0 1px;
+  }
 }
 @media (max-width:920px) and (min-width:867px) {
+  #navigation .logo{
+    font-size: 35px;
+  }
 #navigation .nav-item{
-  font-size: 25px;
+  font-size: 23px;
   margin: 0 1px;
 }
 }
 @media (max-width:866px) and (min-width:830px) {
 #navigation .logo{
-  font:900 35px Arial, sans-serif;
+  font:900 35px "Audrey";
 
 }
 #navigation .nav-item{
-  font-size: 24px;
+  font-size: 22px;
   margin: 0 1px;
 }
 }
 @media (max-width:829px) and (min-width:768px) {
 #navigation .logo{
-  font:900 33px Arial, sans-serif;
+  font:900 33px "Audrey";
 }
 #navigation .imgLogo{
   height: 35px;
   width: 35px;
 }
 #navigation .nav-item{
-  font-size: 23px;
+  font-size: 22px;
   margin: -2px;
 }
-}
+} */
 
 /* ========================FOOTER==================== */
 
@@ -460,7 +547,7 @@ position: relative;
 background-color: black;
 padding: 35px 0 10px;
 font-size: 15px;
-font-family: Arial, sans-serif;
+font-family: "Audrey";
 line-height: 24px;
 color: #737373;
 top: 0;
