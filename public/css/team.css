@@ -1,8 +1,72 @@
-body{
-    background-color: aquamarine;
+body {
     background: #121213;
-    background-image: radial-gradient(top, circle cover, #212122 0%, #181622 80%);
-    background-attachment: fixed;
+}
 
-    height: 200vh; /* to check onscroll navbar bg change effect*/
+#teamWrapper {
+    padding-top: 3%;
+    text-align: center;
+}
+
+#teamWrapper .container {
+    padding-top: 3%;
+    text-align: center;
+}
+
+#aboutUs .heading {
+    color: #0779e4;
+}
+
+#aboutUsText {
+    margin-left: 10%;
+    color: #969696;
+    width: 80%;
+}
+
+#aboutUsText span {
+    color: #29aafe;
+}
+
+#teamWrapper .container img {
+    width: 150px;
+    padding: 5px;
+    border-radius: 100%;
+    transition-duration: 500ms;
+}
+
+#images span {
+    transition-duration: 250ms;
+}
+
+#images span:hover {
+    color: #29aafe;
+    transition-duration: 250ms;
+}
+
+#faculty,
+#lead {
+    margin-bottom: 2%;
+}
+
+#faculty span:hover img {
+    box-shadow: -3px -3px 3px 0 #0779e4 inset;
+    transition-duration: 500ms;
+}
+
+#lead span:hover img {
+    box-shadow: -3px -3px 3px 0 #29aafe inset;
+    transition-duration: 500ms;
+}
+
+#teamPhotos span:hover img {
+    box-shadow: -3px -3px 3px 0 #4cbbb9 inset;
+    transition-duration: 500ms;
+}
+
+#teamPhotos .row {
+    display: flex;
+    margin-bottom: 2%;
+}
+
+#teamPhotos .column {
+    flex: 33.33%;
 }
