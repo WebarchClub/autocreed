@@ -42,7 +42,7 @@
 #navigation .logo{
     text-transform: uppercase;
     color: white;
-    letter-spacing: 6px;
+    /* letter-spacing: 6px; */
     font:900 39px Arial, sans-serif;
     text-shadow: 0 1px 0 #ccc,
     0 2px 0 #c9c9c9,
@@ -62,7 +62,7 @@
 
 /* hover & onload main logo shiny effect */
 #navigation .navbar-brand:hover span{
-  letter-spacing: 7px;
+  /* letter-spacing: 7px; */
   text-shadow: 0 0 10px #777,
     0 0 20px #777,
     0 0 40px #777,
@@ -108,7 +108,7 @@
 }
 
 #navigation #sidebarLogo:hover span{
-  letter-spacing: 6.5px;
+  /* letter-spacing: 6.5px; */
 
 }
 
@@ -134,7 +134,7 @@
     overflow: hidden;
     z-index: 1;
     transition: 0.5s ease-in;
-    color: #00f !important;
+    color: #2309a0 !important;
 
   }
 
@@ -195,7 +195,7 @@
     #navigation .nav-link {
       padding-bottom: 10px;
       text-decoration: none;
-      color: #00f;
+      color: #2309a0;
       display: inline-block;
       position: relative;
       
