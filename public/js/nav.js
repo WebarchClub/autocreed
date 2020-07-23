@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // sidebar hides when any part of the main body is targetted
+=======
+>>>>>>> 2852b608ee577b63faf276514cfceee472e3be7a
 $(document).click(function(e) {
 	if (!$(e.target).is('.navbar-collapse')) {
         $('.collapse').collapse('hide');

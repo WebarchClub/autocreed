@@ -1,3 +1,277 @@
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px; 
+}
 body{
-    background-color: brown;
+    background: #121213;
+    background-image: radial-gradient(top, circle cover, #212122 0%, #181622 80%);
+    background-attachment: fixed;
+    color: #333;
+
+    height: 200vh; /* to check onscroll navbar bg change effect*/
+}
+
+* {
+	margin:0px;
+	padding:0px;
+}
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing: border-box; }
+
+.clearfix:before, .clearfix:after { display: table; content: ''; }
+.clearfix:after { clear: both; }
+
+#CONTACT{
+    margin-top: 80px;
+}
+
+#CONTACT h1 {
+	font: 900 39px Arial, sans-serif;
+}
+
+#CONTACT .div2 {
+	color: blue;
+	font: 90 29px Arial, sans-serif;
+}
+ 
+#CONTACT .div2 .seperator {
+	color: white;
+	size: 9em;
+}
+
+#CONTACT input:focus, #CONTACT textarea:focus, #CONTACT keygen:focus, #CONTACT select:focus {
+	outline: none;
+}
+::-moz-placeholder {
+	color: white;
+	font-weight: 300;
+	opacity: 1;
+}
+
+::-webkit-input-placeholder {
+	color: white;
+	font-weight: 300;
+}
+
+
+/* Contact Form Styling */
+#CONTACT .container {
+	padding: 0 50px 70px;
+}
+#CONTACT .textcenter {
+	text-align: center;
+}
+#CONTACT .section1 {
+	text-align: center;
+	display: table;
+	width: 100%;
+}
+#CONTACT .section1 .shtext {
+	display: block;
+	margin-top: 20px;
+}
+#CONTACT .section1 .seperator {
+	border-bottom:1px solid #a2a2a2;
+	width: 35px;
+	display: inline-block;
+	margin: 20px;
+}
+
+#CONTACT .section1 h1 {
+	font-size: 40px;
+	color: #00f;
+	font-weight: normal;
+}
+
+#CONTACT .section2 {
+    width: 1200px;
+    margin: 25px auto;
+}
+#CONTACT .section2 .col2 {
+	width: 48.71%;
+}
+#CONTACT .section2 .col2.first {
+	float: left;
+}
+#CONTACT .section2 .col2.last {
+	float: right;
+}
+#CONTACT .section2 .col2.column2 {
+	padding: 0 30px;
+}
+#CONTACT .section2 span.collig {
+	color: #00f;
+	margin-right: 10px;
+	display: inline-block;
+	font: 90 19px Arial, sans-serif;
+	
+}
+#CONTACT p {
+	color: thistle;
+}
+#CONTACT p span.collig {
+	color: teal;
+	margin-right: 10px;
+	display: inline-block;
+	font: 90 25px Arial, sans-serif;
+}
+#CONTACT .section2 .sec2addr {
+	display: block;
+	line-height: 26px;
+	color: teal;
+}
+#CONTACT .section2 .sec2addr p:first-child {
+	margin-bottom: 10px;
+}
+#CONTACT .section2 .sec2contactform input[type="text"], 
+#CONTACT .section2 .sec2contactform input[type="email"],
+#CONTACT .section2 .sec2contactform textarea {
+    padding: 18px;
+	border: 0;
+    background: #666;
+	margin: 7px 0;
+	opacity: 0.9;
+}
+#CONTACT .section2 .sec2contactform textarea {
+	width: 100%;
+	display: block;
+	color: white;
+	font: 19 19px Arial, sans-serif;
+
+  resize:none;
+}
+#CONTACT .section2 .sec2contactform input[type="submit"] {
+	padding: 15px 40px;
+    color: #fff;
+    border: 0;
+    background: #00f;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 7px 0;
+    cursor: pointer;
+}
+#CONTACT .section2 .sec2contactform h3 {
+	font-weight: normal;
+    margin: 20px 0;
+    margin-top: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 19px;
+    color: #00f;
+}
+
+/* Social Media Icons */
+#CONTACT .social-media-list {
+	position: relative;
+	font-size: 1.6rem;
+	text-align: center;
+	width: 100%;
+}
+
+#CONTACT .social-media-list li a {
+	color:blue;
+}
+
+#CONTACT .social-media-list li {
+	position: relative;
+	margin-left: 10px;
+	top: 0;
+	left: -20px;
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	margin: 10px 5px;
+	line-height: 50px;
+	border-radius: 50%;
+	color: blue;
+	background-color: white;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+}
+
+#CONTACT .social-media-list li:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 50%;
+	opacity: 0;
+	box-shadow: 0 0 0 1px #fff;
+	transition: all .2s ease-in-out;
+}
+
+#CONTACT .social-media-list li:hover {
+	background-color: #fff;
+}
+
+#CONTACT .social-media-list li i {
+	font-size: 25px;
+}
+
+#CONTACT .social-media-list li:hover:after {
+	opacity: 1;
+	transform: scale(1.12);
+	transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+#CONTACT .social-media-list li:hover a {
+	color: #111;
+}
+
+/* @media querries */
+
+@media screen and (max-width: 1266px) {
+	#CONTACT .section2 {
+		width: 100%;
+	}
+}
+@media (max-width: 758px) {
+	#CONTACT .container {
+		padding: 0 30px 70px;
+	}
+	#CONTACT .section2 .col2 {
+		width: 100%;
+		display: block;
+	}
+	#CONTACT .section2 .col2.first {
+		margin-bottom: 10px;
+	}
+	#CONTACT .section2 .col2.column2 {
+		padding: 0;
+	}
+
+	#CONTACT .section2 .clearfix .col2 .column1 .first {
+		height:20%;
+		width: 30%;
+	}
+
+	#CONTACT .sec2map {
+		height: 250px !important;
+	}
+}
+@media screen and (max-width: 360px) {
+	#CONTACT .section2 .sec2addr {
+		font-size: 14px;
+	}
+	#CONTACT .section2 .sec2contactform h3 {
+		font-size: 16px;
+	}
+	#CONTACT .section2 .sec2contactform input[type="text"], 
+	#CONTACT .section2 .sec2contactform input[type="email"], 
+	#CONTACT .section2 .sec2contactform textarea {
+		padding: 10px;
+		margin:3px 0;
+	}
+	#CONTACT .section2 .sec2contactform input[type="submit"] {
+		padding: 10px 30px;
+		font-size: 14px;
+	}
+}
+@media (max-width: 320px) {
+	#CONTACT .section1 h1 {
+		font-size: 28px;
+	}	
 }
