@@ -3,7 +3,7 @@ body {
 }
 
 #teamWrapper {
-    padding-top: 3%;
+    margin-top: 75px;
     text-align: center;
 }
 
@@ -18,8 +18,10 @@ body {
 
 #aboutUsText {
     margin-left: 10%;
-    color: #969696;
+    color: #808080;
     width: 80%;
+    font-size: 1.5em;
+    line-height: 2em;
 }
 
 #aboutUsText span {
@@ -31,6 +33,11 @@ body {
     padding: 5px;
     border-radius: 100%;
     transition-duration: 500ms;
+}
+
+#images{
+    margin-top: 2.5em;
+    color: #808080;
 }
 
 #images span {
@@ -69,4 +76,26 @@ body {
 
 #teamPhotos .column {
     flex: 33.33%;
+}
+
+@media(max-width: 991px){
+    #aboutUsText {
+        width: 90%;
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+}
+@media(max-width: 767px){
+    #aboutUsText {
+        width: 90%;
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
+}
+@media(max-width: 376px){
+    #aboutUsText {
+        width: 90%;
+        font-size: 1em;
+        line-height: 1.2em;
+    }
 }
