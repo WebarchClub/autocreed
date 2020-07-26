@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/airstrike');
 @font-face {
   font-family: "Audrey"; 
   src: url("https://db.onlinewebfonts.com/t/d9a58a393d946d86051fbd9a0b594d2f.eot"); 
@@ -54,7 +55,9 @@ border: none;
 opacity: 1;
 filter: blur(20px);
 }
-
+#navigation nav{
+  margin-top: -5px;
+}
 /* logo shadow  */
 #navigation .imgLogo{
   /* filter: drop-shadow(5px 5px 4px #646464);
@@ -78,8 +81,8 @@ filter: blur(20px);
   color: white;
   /* letter-spacing: 6px; */
   /* font:900 39px "Audrey"; */
-  font:900 39px "Audrey";
-
+  /* font:900 39px "Audrey"; */
+  font:900 46px "Airstrike Laser", sans-serif;
   /* text-shadow: 0 1px 0 #ccc,
   0 2px 0 #c9c9c9,
   0 3px 0 #bbb,
@@ -149,7 +152,7 @@ text-shadow: 0 0 10px #777,
 /* sidebar logo  */
 #navigation .nav-item .logo{
   display: inline!important;
-  font-size: 35px;
+  font-size: 39px;
   color: rgb(238, 238, 238);
   /* text-shadow: 2px 2px 0 rgba(221, 221, 221, 0.7); */
   text-shadow: 
@@ -199,7 +202,7 @@ transform: translateY(-5px) scale(1.05);
   overflow: hidden;
   z-index: 1;
   transition: 0.5s ease-in;
-  color: #2309a0 !important;
+  color: #223F99 !important;
   filter: drop-shadow(0 0 9px #2309a0);
   
 }
@@ -262,7 +265,7 @@ transform: translateY(-5px) scale(1.05);
   #navigation .nav-link {
     padding-bottom: 10px;
     text-decoration: none;
-    color: #2309a0;
+    color: #223F99;
 
     display: inline-block;
     position: relative;
@@ -425,52 +428,56 @@ transform: translateY(-5px) scale(1.05);
     display: none!important;
   }
 }
-@media(max-width:547px){
+@media(max-width:600px){
   #navigation .navbar-brand{
     transform: scale(0.9);
     position: relative;
-    margin-left: -19px!important;
+    margin-left: -22px!important;
+  }
+  #navigation .navbar-brand .imgLogo{
+    width: 40px;
+    height: 35px;
   }
   #navigation .nav-item .imgLogo{
     width: 37px;
     height: 35px;
  }
   #navigation .nav-item .logo{
-     font-size: 33px;
+     font-size: 38px;
   }
 }
 @media(max-width:471px){
   #navigation .nav-item .logo{
-     font-size: 30px;
+     font-size: 38px;
   }
   #navigation .nav-item .imgLogo{
        width: 35px;
        height: 33px;
     }
 }
-@media(max-width:440px){
+@media(max-width:450px){
   #navigation .navbar-brand{
     transform: scale(0.8);
     position: relative;
     margin-left: -40px!important;
   }
   #navigation .nav-item .logo{
-     font-size: 28px;
+     font-size: 36px;
   }
 }
-@media(max-width:406px){
+@media(max-width:422px){
   #navigation .nav-item .imgLogo{
     width: 32px;
     height: 30px;
  }
   #navigation .nav-item .logo{
-     font-size: 25px;
+     font-size: 34px;
   }
 }
 @media(max-width:490px){
     #navigation .navbar-collapse {
-      width: 65vw; 
-      left: -65vw!important;
+      width: 68vw; 
+      left: -68vw!important;
     }
   }
 @media(max-width:395px){
@@ -478,6 +485,9 @@ transform: translateY(-5px) scale(1.05);
      width: 70vw; 
      left: -70vw!important;
   }
+  #navigation .nav-item .logo{
+    font-size: 31px;
+ }
 }
 @media(max-width:368px){
   #navigation .navbar-collapse {
@@ -487,7 +497,11 @@ transform: translateY(-5px) scale(1.05);
 }
 @media (max-width:1055px) and (min-width:992px) {
   #navigation .logo{
-    font-size: 36px;
+    font-size: 42px;
+  }
+  #navigation .navbar-brand .imgLogo{
+    height: 35px;
+    width: 40px;
   }
   #navigation .nav-item{
     font-size: 26px;
