@@ -1,83 +1,144 @@
 <%- include("partials/header") %>
 
-<section id="CONTACT">
-	<div class="container">
-		<div class="innerwrap">		
-			<section class="section1 clearfix">
-				<div class="textcenter">
-					<h1>Contact Us</h1>
+
+<div class="container">
+	<div class="innerwrap">
+
+		<section class="section1 clearfix">
+			<div class="textcenter">
+				<span class="shtext">Contact Us</span>
+				<span class="seperator"></span>
+				<h1>CONTACT US</h1>
+			</div>
+		</section>
+
+		<section class="section2 clearfix">
+			<div class="col2 column1 first">
+				<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+				<div class="sec2map" style='overflow:hidden;height:550px;width:100%;'>
+					<div id='gmap_canvas' style='height:100%;width:100%;'></div>
+					<div><small><a href="http://embedgooglemaps.com"> embed google maps </a></small></div>
+					<div><small><a href="http://freedirectorysubmissionsites.com/">free web directories</a></small>
+					</div>
+					<style>
+						#gmap_canvas img {
+							max-width: none !important;
+							background: none !important
+						}
+					</style>
 				</div>
-			</section>		
-			<section class="section2 clearfix">
-				<div class="col2 column1 first">
-					<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.369095755942!2d80.03710011413374!3d12.819409321669633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f76c4db87a47%3A0x341fa471f8027d68!2sSRM%20University%2C%20Kattankulathur%2C%20Tamil%20Nadu%20603203!5e0!3m2!1sen!2sin!4v1595085787887!5m2!1sen!2sin" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
-					<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div class="sec2map" style='overflow:hidden;height:450px;width:100%;'><div id='gmap_canvas' style='height:100%;width:100%;'></div>
-					<div><small><a href="http://embedgooglemaps.com">embed google maps</a></small></div>
-					<style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
-					<script type='text/javascript'>
-						function init_map() {
-							var myOptions = {
-								zoom:14,center:new google.maps.LatLng(12.815330,80.041620),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
-					marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(12.815330,80.041620)});
-					infowindow = new google.maps.InfoWindow({content:'<strong>Location</strong><br>SRM University Chennai<br>'});
-					google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-				</div>				
-				<div class="col2 column2 last">
-					<div class="sec2innercont">
-						<div class="sec2addr">
-							<p><span class="collig">
-								Address:
-								</span>
-								Student Activity Room, Staff Quarters, Mahatma Gandhi Rd,
-								
-								SRM Institute of Science and Technology, Potheri, SRM Nagar, Kattankulathur, Tamil Nadu 603203</p>
-							<p><span class="collig">Phone (Team Captain):</span> +91 976885083</p>
-							<p><span class="collig">Phone (Corporate):</span>  +91 976885083</p>							
+				<script
+					type='text/javascript'>function init_map() { var myOptions = { zoom: 14, center: new google.maps.LatLng(19.075314480255834, 72.88153973865361), mapTypeId: google.maps.MapTypeId.ROADMAP }; map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions); marker = new google.maps.Marker({ map: map, position: new google.maps.LatLng(19.075314480255834, 72.88153973865361) }); infowindow = new google.maps.InfoWindow({ content: '<strong>My Location</strong><br>mumbai<br>' }); google.maps.event.addListener(marker, 'click', function () { infowindow.open(map, marker); }); infowindow.open(map, marker); } google.maps.event.addDomListener(window, 'load', init_map);</script>
+			</div>
+			<div class="col2 column2 last">
+				<div class="sec2innercont">
+					<div class="sec2addr">
+						<h1>Address</h1>
+						<p>Student Activity Room, Staff Quarters, Mahatma Gandhi Rd,
+
+							SRM Institute of Science and Technology , Potheri , SRM Nagar , Kattankulathur , Tamil Nadu
+							603203</p>
+						<p><span class="collig">Phone (Team Captain):</span> +91 976885083</p>
+						<p><span class="collig">Phone (Corporate):</span> +91 976885083</p>
+
+					</div>
+				</div>
+
+
+			</div>
+			<div class="col2 column2 last">
+				<div class="sec2innercont">
+					<div class="sec2addr">
+						<h1>Become Our Sponsors</h1>
+						<p><span class="collig">Email :</span> autocreedsrm@gmail.com</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque quas quisquam, magni
+							itaque sit placeat excepturi eos perferendis explicabo inventore praesentium ipsum sed
+							repudiandae qui odit numquam nobis. Amet, nesciunt. Lorem ipsum dolor sit amet consectetur,
+							adipisicing elit.</p>
+					</div>
+				</div>
+
+				<div class="rounded-social-buttons">
+					<a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i
+							class="fab fa-facebook-f"></i></a>
+
+					<a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i
+							class="fab fa-linkedin"></i></a>
+
+					<a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i
+							class="fab fa-instagram"></i></a>
+				</div>
+				<br>
+
+				<div class="contact-container">
+
+					<ul class="actions">
+
+						<li><a href="#" id="contact" class="button big">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+
+
+			<div class="cd-popup contact" role="alert">
+				<form name="contactform" id="contactform" class="contact-form">
+					<div class="cd-popup-container">
+						<p>
+							<a href="" class="cd-popup-close cd-close-button">
+								<i class="fa fa-times" style="pointer-events:none;"></i>
+							</a>
+						</p>
+
+						<div class="name">
+							<label for="name">Name</label>
+							<input type="text" id="name" name="name" />
+						</div>
+						<div class="email">
+							<label for="email">Email</label>
+							<input type="text" id="email" name="email" />
+						</div>
+						<div class="message">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" name="message"></textarea>
+						</div>
+						<br>
+						<div style="text-align:left">
+							<input type="checkbox" id="human" name="human" />
+							<label for="human">I am a human and not a robot.</label>
+						</div>
+						<br>
+						<div class="submit">
+							<p class="user-message" id="contactblurb"> Questions, suggestions, and general comments are
+								all welcome!
+							</p>
+							<input type="submit" name="submit" id="submit" value="Send" />
 						</div>
 					</div>
-					<div class="sec2contactform">
-						<h3 class="sec2frmtitle">Want to Know More?? Drop Us a Mail</h3>
-						<form action="">
-							<div class="clearfix">
-								<input class="col2 first" type="text" placeholder="FirstName">
-								<input class="col2 last" type="text" placeholder="LastName">
-							</div>
-							<div class="clearfix">
-								<input  class="col2 first" type="Email" placeholder="Email">
-								<input class="col2 last" type="text" placeholder="Contact Number">
-							</div>
-							<div class="clearfix">
-								<textarea name="textarea" id="" cols="30" rows="7">Your message here...</textarea>
-							</div>
-							<div class="clearfix"><input type="submit" value="Send"></div>
-						</form>
-					</div>
+				</form>
+			</div>
+
+			<div class="cd-popup notification" role="alert">
+				<div class="cd-popup-container">
+					<a href="" class="cd-popup-close cd-close-button"><i class="fa fa-times"
+							style="pointer-events:none;"></i></a>
+					<p>
+					<h3 id="notification-text">Thanks for getting in touch!</h3>
+					</p>
 				</div>
-			</section>		
-		</div>
-		<div class="div2">
-			Become Our Sponsors
-			<div class="dropdown-divider"></div>
-		</div>
-			<p><span class="collig">Email :</span> autocreedsrm@gmail.com </br><br>
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque quas quisquam, magni itaque sit placeat excepturi eos perferendis explicabo inventore praesentium ipsum sed repudiandae qui odit numquam nobis. Amet, nesciunt.
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, ipsum aliquam ducimus, veniam repellat praesentium dignissimos molestias dolorum aliquid neque facilis excepturi iusto, voluptas mollitia debitis! Cumque cupiditate illum doloribus.
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur illum suscipit accusamus ipsa tenetur possimus fugiat, tempora nam veniam ducimus, maxime magnam saepe vitae delectus quam repudiandae magni officiis enim.
-			</p>
-		<section>
-			<ul class="social-media-list">
-				<li><a href="https://www.linkedin.com/company/autocreedracing/?originalSubdomain=in" target="_blank" class="contact-icon">
-					<i class="fab fa-linkedin" aria-hidden="true"></i></a>
-				</li>
-				<li><a href="https://www.instagram.com/autocreedracingsrm/?hl=en" target="_blank" class="contact-icon">
-					<i class="fab fa-instagram" aria-hidden="true"></i></a>
-				</li>
-				<li><a href="https://www.facebook.com/autocreedracing/" target="_blank" class="contact-icon">
-					<i class="fab fa-facebook" aria-hidden="true"></i></a>
-				</li>
-			  </ul>
+			</div>
 		</section>
+
 	</div>
-</section>
+</div>
+
+
+
+
+
+
+
+
+
+
 
 <%- include("partials/footer") %>
