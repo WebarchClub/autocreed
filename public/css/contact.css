@@ -4,9 +4,19 @@
 /*****************CONTACT FORM STYLING*******************/
 
 body {
-  background: #bbe1fa !important;
+  background: #0f4c75 !important;
 }
-
+.collig{
+  color: black !important;
+  font-weight: bold;
+}
+h1, p{
+  color: #bbe1fa !important;
+  
+}
+.user-message{
+  color: black !important;
+}
 body,
 input,
 select,
@@ -191,7 +201,7 @@ input[type="reset"]:hover,
 input[type="button"]:hover,
 .button:hover {
   background-color: rgba(144, 144, 144, 0.075);
-  color: #545454 !important;
+  color: #bbe1fa !important;
 }
 
 input[type="submit"]:active,
