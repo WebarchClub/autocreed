@@ -1,16 +1,19 @@
-@import url(//db.onlinewebfonts.com/c/401b3afcdd14cf76b92956ecc7f7d8e6?family=Eras+Bold+ITC);
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
 body{
     background: #121213;
     background-image: radial-gradient(top, circle cover, #212122 0%, #181622 80%);
     background-attachment: fixed;
-    overflow-x: hidden;
-
-    height: 200vh; /* to check onscroll navbar bg change effect*/
 }
 
 /* ===================Carousel========================*/
 #carousel{
-    padding-top: 70px;
+    padding-top: 55px;
 }
 
 #carousel .carousel-fade .carousel-item {
@@ -45,13 +48,13 @@ body{
   }
 @media (max-width: 767px){
   #carousel img {
-    height: 90vh; 
+    height: 45vh; 
   }
 
 }
-@media (min-width: 768px) and (max-width:1200px){
+@media (min-width: 768px){
   #carousel img {
-    height: 45vh; 
+    height: 90vh; 
   }
 }
    /*============Carousel ends=====================*/
@@ -60,15 +63,15 @@ body{
 
 #mission{
     text-align: center;
-    font-family: 'Racing Sans One', cursive;
     
 }
 #mission #mission_title{
-    color: #00f;
+    color: #2309a0;
+    font-weight: 800;  
     text-shadow: 2px 3px rgb(197, 197, 197), 5px 7px 7px black;
 }
 #mission .jumbotron a{
-    color: #00f;
+    color: #2309a0;
     box-shadow: 5px 5px 5px black;
 }
 #mission .jumbotron p{
@@ -84,6 +87,23 @@ body{
 #mission #mission_img{
     height: 50%;
 } 
+@media (min-width: 768px){
+    #mission .jumbotron p{
+        font-size: 1.6rem;}
+    #mission #mission_title{
+           font-size: 3.8rem;
+        
+    }
+    }
+    @media (max-width: 767px){
+        #mission .jumbotron p{
+            font-size: 1.3rem;
+        }
+        #mission #mission_title{
+            font-size: 3.2rem;
+         
+     }
+        }
 /* ==================MISSION================== */
 
 /*--------------ACHIEVEMENTS SECTION---------*/
@@ -92,10 +112,9 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    
     background-color: #161616;
     color:white;
-    font-family: "Eras Bold ITC";
     border-radius: 8px;
 }
 #achievements-container{
@@ -124,17 +143,18 @@ body{
     text-align: center;
     padding:20px;
     padding-top:none;
-    color: #3700b3;
+    color: #2309a0;
     
 }
 #achievements .achievements-header h1{
-    font-weight: bold;
+    font-weight: 800;
     font-size: 5em;
 }
 
 #achievements .achievements-body .col-12{
     text-align: center;
     padding-top:7px;
+    
 }
 #achievements .achievements-body .row{
     
@@ -165,6 +185,11 @@ body{
     
         padding-top:12px;
         padding-bottom: 15px;
+    
+    }
+    #achievements .achievements-body .col-12{
+        
+        font-size: 1.3rem;
     }
 }
 @media (min-width: 768px){
@@ -172,6 +197,12 @@ body{
         width:50%;
         
     }
+    #achievements .achievements-body .col-12{
+        
+        font-size: 1.6rem;
+    }
+    
+
 }
 
 @media (max-width: 576px) { 
@@ -189,28 +220,33 @@ body{
     }
     #achievements .achievements-header h1{
         font-weight: bold;
-        font-size: 3.5em;
+        font-size: 3.3em;
         padding-bottom: none;
     }
     #achievements .achievements-header{
         
         padding-top:80px;
     }
-    #achievements .achievements-body .row{
-    
+    #achievements .achievements-body .row div{
+        font-size: 1em;
         padding-top:10px;
         padding-bottom: 10px;
     }
  }
 
-@font-face {font-family: "Eras Bold ITC";
-    src: url("http://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.eot"); /* IE9*/
-    src: url("http://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("http://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.woff2") format("woff2"), /* chrome firefox */
-    url("http://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.woff") format("woff"), /* chrome firefox */
-    url("http://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
-    url("http://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.svg#Eras Bold ITC") format("svg"); /* iOS 4.1- */
-}
+ @media (max-width: 376px){
+     #achievements .achievements-header h1{
+         font-size: 2.5em;
+     }
+
+     #achievements .achievements-body .row div{
+         font-size: 0.8em;
+     }
+     #achievements .achievements-body .col-12 {
+         font-size: 1.3rem;
+         
+     }
+ }
 
 /*---------------------------------END OF ACHIEVEMENTS SECTION--------------------------------*/
 
@@ -220,7 +256,7 @@ body{
 }
 
 #sponsors #demo {    
-    background: linear-gradient(112deg, #0000FF 50%, white 50%);
+    background: linear-gradient(112deg, #2309a0 50%, white 50%);
     max-width: 1300px;
     margin: auto
 }
@@ -231,7 +267,7 @@ body{
     padding: 5rem 8rem;
     color: black;
     text-align: center;
-    font-size: 1.5rem;   
+    font-size: 1.7rem;   
     line-height: 2rem
 }
 
@@ -242,7 +278,7 @@ body{
         padding: 3rem 2rem;
         color: black;
         text-align: center;
-        font-size: 0.7rem;        
+        font-size: 1.5rem;        
         line-height: 1.5rem
     }
 }
@@ -260,15 +296,13 @@ body{
     }
 }
 
-@import url(//db.onlinewebfonts.com/c/401b3afcdd14cf76b92956ecc7f7d8e6?family=Eras+Bold+ITC);
-
 #sponsors h1 {
-    font-size: 4em;
-    letter-spacing: 10px;
+    
+    font-size: 5em;
     margin-bottom: 1em;
-    color: blue;
-    font-family: "Eras Bold ITC";
+    color: #2309a0;
     text-align: center; 
+    font-weight: 800;
 }
 #sponsors i {
     background-color: black;
@@ -278,6 +312,9 @@ body{
 @media(max-width:767px) {
     #sponsors i {
         padding: 0.8rem
+    }
+    #sponsors h1 {
+        font-size: 4em;
     }
 }
 
@@ -304,6 +341,20 @@ body{
 @media(max-width:900px){
     #sponsors .button {
         display: none;
+    }
+}
+@media (max-width: 576px){
+    #sponsors{
+        margin: 0;
+    }
+    #sponsors h1{
+        font-size: 3.3em;
+    }
+}
+
+@media (max-width: 376px){
+    #sponsors h1{
+        font-size: 2.5em;
     }
 }
 /* ******************sponsors section ends here************************** */

@@ -1,3 +1,7 @@
 <%- include("partials/header") %>
 
+<% instafeed.forEach((data) => { %>
+    <li><img src="<%= data.url %>" alt=""></li>
+<% }); %>
+
 <%- include("partials/footer") %>
