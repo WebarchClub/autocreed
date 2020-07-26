@@ -2,15 +2,14 @@ html,body
 {
     width: 100%;
     margin: 0px;
-    padding: 0px; 
+	padding: 0px; 
+
 }
 body{
     background: #121213;
     background-image: radial-gradient(top, circle cover, #212122 0%, #181622 80%);
     background-attachment: fixed;
     color: #333;
-
-    height: 200vh; /* to check onscroll navbar bg change effect*/
 }
 
 * {
@@ -23,20 +22,25 @@ body{
 .clearfix:after { clear: both; }
 
 #CONTACT{
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 #CONTACT h1 {
-	font: 900 39px "Audrey";
+	color: #2309a0;
+    font-weight: 800 !important;  
+    text-shadow: 2px 3px #808080, 5px 7px 7px black;
+	font: 900 49px "Audrey";
 }
 
 #CONTACT .div2 {
-	color: blue;
-	font: 90 29px "Audrey";
+	color: #2309a0;
+    font-weight: 800;  
+    text-shadow: 2px 3px #808080, 5px 7px 7px black;
+	font: 90 39px "Audrey";
 }
  
 #CONTACT .div2 .seperator {
-	color: white;
+	color: #808080;
 	size: 9em;
 }
 
@@ -45,6 +49,8 @@ body{
 }
 ::-moz-placeholder {
 	color: white;
+	font: 90 29px "Audrey";
+
 	font-weight: 300;
 	opacity: 1;
 }
@@ -52,6 +58,8 @@ body{
 ::-webkit-input-placeholder {
 	color: white;
 	font-weight: 300;
+	font: 90 29px "Audrey";
+
 }
 
 
@@ -79,9 +87,11 @@ body{
 }
 
 #CONTACT .section1 h1 {
-	font-size: 40px;
-	color: #00f;
+	margin-top: 50px;
+	color: #2309a0;
 	font-weight: normal;
+	font: 90 40px "Audrey";
+
 }
 
 #CONTACT .section2 {
@@ -101,14 +111,14 @@ body{
 	padding: 0 30px;
 }
 #CONTACT .section2 span.collig {
-	color: #00f;
+	color: #2309a0;
 	margin-right: 10px;
 	display: inline-block;
-	font: 90 19px "Audrey";
+	font: 90 29px "Audrey";
 	
 }
 #CONTACT p {
-	color: thistle;
+	color: #808080;
 }
 #CONTACT p span.collig {
 	color: teal;
@@ -124,6 +134,14 @@ body{
 #CONTACT .section2 .sec2addr p:first-child {
 	margin-bottom: 10px;
 }
+
+#CONTACT .section2 .sec2frmtitle {
+	font: 90 35px "Audrey";	
+	color: #2309a0;
+    font-weight: 800;  
+    text-shadow: 2px 3px #808080, 5px 7px 7px black;
+}
+
 #CONTACT .section2 .sec2contactform input[type="text"], 
 #CONTACT .section2 .sec2contactform input[type="email"],
 #CONTACT .section2 .sec2contactform textarea {
@@ -131,13 +149,13 @@ body{
 	border: 0;
     background: #666;
 	margin: 7px 0;
-	opacity: 0.9;
+	opacity: 0.9;	
 }
 #CONTACT .section2 .sec2contactform textarea {
 	width: 100%;
 	display: block;
 	color: white;
-	font: 19 19px "Audrey";
+	font: 19 29px "Audrey";
 
   resize:none;
 }
@@ -145,7 +163,7 @@ body{
 	padding: 15px 40px;
     color: #fff;
     border: 0;
-    background: #00f;
+    background: #2309a0;
     font-size: 16px;
     text-transform: uppercase;
     margin: 7px 0;
@@ -157,7 +175,7 @@ body{
     margin-top: 30px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 19px;
-    color: #00f;
+    color: #2309a0;
 }
 
 /* Social Media Icons */
