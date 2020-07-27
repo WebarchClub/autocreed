@@ -1,20 +1,9 @@
-<<<<<<< HEAD
-@import url(//db.onlinewebfonts.com/c/401b3afcdd14cf76b92956ecc7f7d8e6?family=Eras+Bold+ITC);
-body {
-    background: #121213;
-    font-family: 'Racing Sans One', cursive;
-}
-
-#teamWrapper {
-    padding-top: 3%;
-=======
 body {
     background: #121213;
 }
 
 #teamWrapper {
     margin-top: 75px;
->>>>>>> 2e34a771403a2a320d6ee7e35a93b8e2c9c3830f
     text-align: center;
 }
 
@@ -29,15 +18,10 @@ body {
 
 #aboutUsText {
     margin-left: 10%;
-<<<<<<< HEAD
-    color: #969696;
-    width: 80%;
-=======
     color: #808080;
     width: 80%;
     font-size: 1.5em;
     line-height: 2em;
->>>>>>> 2e34a771403a2a320d6ee7e35a93b8e2c9c3830f
 }
 
 #aboutUsText span {
@@ -51,14 +35,11 @@ body {
     transition-duration: 500ms;
 }
 
-<<<<<<< HEAD
-=======
-#images{
+#images {
     margin-top: 2.5em;
     color: #808080;
 }
 
->>>>>>> 2e34a771403a2a320d6ee7e35a93b8e2c9c3830f
 #images span {
     transition-duration: 250ms;
 }
@@ -95,29 +76,28 @@ body {
 
 #teamPhotos .column {
     flex: 33.33%;
-<<<<<<< HEAD
-=======
 }
 
-@media(max-width: 991px){
+@media(max-width: 991px) {
     #aboutUsText {
         width: 90%;
         font-size: 1.5em;
         line-height: 1.5em;
     }
 }
-@media(max-width: 767px){
+
+@media(max-width: 767px) {
     #aboutUsText {
         width: 90%;
         font-size: 1.2em;
         line-height: 1.2em;
     }
 }
-@media(max-width: 376px){
+
+@media(max-width: 376px) {
     #aboutUsText {
         width: 90%;
         font-size: 1em;
         line-height: 1.2em;
     }
->>>>>>> 2e34a771403a2a320d6ee7e35a93b8e2c9c3830f
 }
