@@ -13,20 +13,47 @@ body{
 
 /* ===================Carousel========================*/
 #carousel{
-    padding-top: 55px;
+    
+    background: transparent;
+ padding-top: 55px;
 }
-   #carousel .carousel-inner{   
+#carousel .carousel-inner{   
     height : auto;
     width : 100%;
   }
+.carousel-item {
+   
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.carousel-control-prev,
+.carousel-control-next {
+	font-size: 35px;
+	margin-left: -4%;
+	margin-right: -4%;
+	position: absolute;
+}
+
+.carousel-control-next-icon:after {
+	box-sizing: border-box;
+}
+
+.carousel-control-prev-icon:after {
+	box-sizing: border-box;
+}
+  
 @media (max-width: 767px){
-  #carousel img {
+  .carousel-item {
     height: 45vh; 
+    background-attachment: scroll;
   }
+  
 
 }
 @media (min-width: 768px){
-  #carousel img {
+  .carousel-item {
     height: 90vh; 
   }
 }
