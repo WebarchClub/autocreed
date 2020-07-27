@@ -15,33 +15,6 @@ body{
 #carousel{
     padding-top: 55px;
 }
-
-#carousel .carousel-fade .carousel-item {
-    opacity: 0;
-    transition-duration: .5s;
-    transition-property: opacity;
-   }
-   
-   #carousel .carousel-fade  .carousel-item.active,
-   #carousel .carousel-fade  .carousel-item-next.carousel-item-left,
-   #carousel .carousel-fade  .carousel-item-prev.carousel-item-right {
-     opacity: 1;
-   }
-   
-   #carousel .carousel-fade .active.carousel-item-left,
-   #carousel .carousel-fade  .active.carousel-item-right {
-    opacity: 0;
-   }
-   
-   #carousel .carousel-fade  .carousel-item-next,
-   #carousel .carousel-fade .carousel-item-prev,
-   #carousel .carousel-fade .carousel-item.active,
-   #carousel .carousel-fade .active.carousel-item-left,
-   #carousel .carousel-fade  .active.carousel-item-prev {
-    transform: translateX(0);
-    transform: translate3d(0, 0, 0);
-   }
-   
    #carousel .carousel-inner{   
     height : auto;
     width : 100%;
