@@ -4,7 +4,13 @@ $(document).click(function(e) {
         // $('.icon').toggleClass('newLocation');	    
     }
 });
+$(document).ready(function(){
 
+  $("button").click(function(){
+  
+    $('.navbar-toggler').toggleClass('shift');
+  });
+});
 /* navbar bg changed after scrolling 50px */
 $(window).scroll(function() {
     

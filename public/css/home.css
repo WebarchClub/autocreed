@@ -1,16 +1,5 @@
-html,body
-{
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-}
-body{
-    background: #121213;
-    background-image: radial-gradient(top, circle cover, #212122 0%, #181622 80%);
-    background-attachment: fixed;
-}
 
+<<<<<<< HEAD
 /* ===================Carousel========================*/
 #carousel{
     padding-top: 55px;
@@ -323,3 +312,6 @@ body{
     }
 }
 /* ******************sponsors section ends here************************** */
+=======
+
+>>>>>>> 5a8e9c67e52b79efe717faa3e54b8de44427c5e6
