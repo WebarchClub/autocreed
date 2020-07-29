@@ -1,2 +1,83 @@
+/* ===================Carousel========================*/
+#carousel{
+    
+  background: transparent;
+padding-top: 55px;
+}
+#carousel .carousel-inner{   
+  height : auto;
+  width : 100%;
+}
+.carousel-item {
+ 
+background-size: 100% 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+.carousel-control-prev,
+.carousel-control-next {
+font-size: 35px;
+margin-left: -4%;
+margin-right: -4%;
+position: absolute;
+}
+
+.carousel-control-next-icon:after {
+box-sizing: border-box;
+}
+
+.carousel-control-prev-icon:after {
+box-sizing: border-box;
+}
+
+@media (max-width: 767px){
+.carousel-item {
+  height: 45vh; 
+  background-attachment: scroll;
+}
 
 
+}
+@media (min-width: 768px){
+.carousel-item {
+  height: 90vh; 
+}
+}
+ /*============Carousel ends=====================*/
+
+/* ==============Mission=========================== */
+#mission{
+    text-align: center;
+    
+}
+#mission_title{
+    color: #016A86;
+    font-weight: 800;
+}
+#mission .jumbotron a{
+    color: #00f;
+    box-shadow: 5px 5px 5px black;
+}
+#mission .jumbotron p{
+    color: whitesmoke;
+    word-wrap: normal;
+}
+#mission .jumbotron p:first-of-type{
+  font-size: 1.8em;
+}
+#mission .jumbotron hr{
+    background-color: rgb(207, 144, 9);
+}
+#mission .jumbotron{
+    background-color: transparent;
+}
+#mission_img{
+    height: 50%;
+}
+@media(min-width: 992px){
+  #mission .jumbotron p:last-of-type{
+    font-size: 1.2em;
+  }
+}
+/* ==============Mission ends=========================== */

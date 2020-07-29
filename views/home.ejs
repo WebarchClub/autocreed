@@ -1,4 +1,47 @@
 <%- include("partials/header") %>
+<section id="carousel">
+  <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url('/images/carousel/carousel1.png')">
+         
+        </div>
+        <div class="carousel-item" style="background-image: url('/images/carousel/carousel2.png')">
+          
+        </div>
+        <div class="carousel-item" style="background-image: url('/images/carousel/carousel3.png')">
+          
+        </div>
+        <div class="carousel-item" style="background-image: url('/images/carousel/carousel4.png')">
+          
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
 
+</section>
+<!-- ============================================================================================================= -->
+
+<section id="mission">
+    <div class="jumbotron">
+        <h1 id="mission_title" class="display-4">A Team Above All &amp; Above All A Team</h1>
+        <p class="lead">We build today & tomorrow’s engineers for a sustainable society.</p>
+        <hr class="my-4">
+        <p> AutoCreed Racing is a motorsports racing team that engineers a league of designing & fabricating electric go-karts at the national level.<br> We are a passionate group of individuals that pride ourselves on being an inclusive group emphasizing education and knowledge transfer as well as performance.</p>
+        <a class="btn btn-light btn-lg" href="/gallery" role="button">Learn more</a>
+      </div>
+</section>
 
 <%- include("partials/footer") %>
