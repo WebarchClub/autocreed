@@ -194,10 +194,9 @@ transform: translateY(-5px) scale(1.05);
 @media(max-width:992px){
   
   #navigation .nav-link {
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     text-decoration: none;
     color: #223F99;
-
     display: inline-block;
     position: relative;
     opacity: 0.85;
@@ -252,13 +251,13 @@ transform: translateY(-5px) scale(1.05);
   #navigation .navbar-collapse {
       position: absolute;
       top: 0px;
-      width: 65vw;
+      width: 55vw;
       height: 100vh;
       transition: all 0.3s ease;
       background-color: var(--navBg);
       position: fixed;
       top: 0px;
-      left: -65vw!important;
+      left: -55vw!important;
       
       z-index: 1000;
       padding: .5rem;
@@ -296,9 +295,8 @@ transform: translateY(-5px) scale(1.05);
       background: transparent !important;
       border: none;
   }
-  .shift{
-    left: 90vw!important;
-  }
+  
+
   #navigation .navbar-toggler:focus,
   #navigation .navbar-toggler:active {
       outline: 0;
@@ -355,7 +353,15 @@ transform: translateY(-5px) scale(1.05);
   #navigation .navbar-toggler.collapsed .bottom-bar {
     transform: rotate(0);
   }
-  
+
+  /* shift cross logo to right  */
+  #navigation .shift{
+    left: 90vw!important;
+  }
+  #navigation .disappear{
+    transition: .3s linear ;
+    margin-top: -70px!important;
+  }
 }
 
 
@@ -400,15 +406,18 @@ transform: translateY(-5px) scale(1.05);
   #navigation .navbar-brand .imgLogo{
     height: 36px;
   }
+  #navigation .nav-item{
+    font-size: 25px;
+  }
 }
 @media(max-width:800px){
   #navigation .nav-item .Logo{
     width: 280px;
   } 
-  #navigation .navbar-collapse {
+  /* #navigation .navbar-collapse {
     width: 70vw!important;
     left: -70vw!important;
-  }
+  } */
 }
 @media(max-width:726px){
   #navigation .Logo{
@@ -442,10 +451,10 @@ transform: translateY(-5px) scale(1.05);
   #navigation .imgLogo{
     width: 43px;
   }
-  #navigation .navbar-collapse {
+  /* #navigation .navbar-collapse {
     left: -72vw!important;
     width: 72vw!important;
-  }
+  } */
 }
 @media(max-width:500px){
   #navigation .navbar-brand .Logo{
