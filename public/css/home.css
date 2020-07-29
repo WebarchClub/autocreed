@@ -11,6 +11,11 @@ body{
     background-attachment: fixed;
 }
 
+
+    height: 200vh; /* to check onscroll navbar bg change effect*/
+
+}
+
 /* ===================Carousel========================*/
 #carousel{
     padding-top: 55px;
@@ -106,15 +111,25 @@ body{
         }
 /* ==================MISSION================== */
 
+
 /*--------------ACHIEVEMENTS SECTION---------*/
 #achievements{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+
+    font-size: 16px;
+    background-color: #161616;
+    color:white;
+    font-family: "Eras Bold ITC";
+    /* padding:20px; */
+    /* box-shadow: 0 -2px 10px rgba(0, 0, 0, 1); */
+=======
     
     background-color: #161616;
     color:white;
+
     border-radius: 8px;
 }
 #achievements-container{
@@ -129,41 +144,73 @@ body{
     background-color:#121213;
     border-radius: 4px;
     padding: 32px 24px;
+
+    /* margin: 12px; */
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    background-image: url("/public/images/achievementsimage.png");
+
     text-decoration: none;
     z-index: 0;
     overflow: hidden;
     background-image: url("/images/achievementsimage.png");
+
     background-size:auto 42em;
     background-repeat: no-repeat;
     background-blend-mode: luminosity;
     background-position: center;
     
   }
+
+  /* .row .col-12:hover{
+    transition: all 0.3s ease-out;
+    color: darkblue;
+} */
+
 #achievements .achievements-header{
     text-align: center;
     padding:20px;
     padding-top:none;
+
+    color: #3700b3;
+    
+}
+#achievements .achievements-header h1{
+    font-weight: bold;
+
     color: #223F99;
     
 }
 #achievements .achievements-header h1{
     font-weight: 800;
+
     font-size: 5em;
 }
 
 #achievements .achievements-body .col-12{
     text-align: center;
     padding-top:7px;
-    
+
+
 }
 #achievements .achievements-body .row{
     
     padding-top:20px;
     padding-bottom: 15px;
 }
+
+
+@media (max-width: 576px) { 
+    #achievements-container{
+        background-size: auto 32em ;
+        font-size: 14px;
+        
+
 @media (max-width: 768px) { 
     #achievements-container{
         background-size: auto 34em ;
+
     }
     #achievements{
         overflow-x: hidden;
@@ -174,11 +221,30 @@ body{
     }
     #achievements .achievements-header h1{
         font-weight: bold;
+
+        font-size: 3.5em;
+
         font-size: 4em;
+
         padding-bottom: none;
     }
     #achievements .achievements-header{
         
+
+        padding-top:80px;
+    }
+    #achievements .achievements-body .row{
+    
+        padding-top:10px;
+        padding-bottom: 10px;
+    }
+ }
+
+
+@media (max-width: 768px) { 
+    #achievements-container{
+        background-size: auto 34em ;
+=======
         padding-top:65px;
     }
     #achievements .achievements-body .row{
@@ -210,6 +276,7 @@ body{
         background-size: auto 32em ;
         font-size: 14px;
         
+
     }
     #achievements{
         overflow-x: hidden;
@@ -220,11 +287,44 @@ body{
     }
     #achievements .achievements-header h1{
         font-weight: bold;
+
+        font-size: 4em;
+=======
         font-size: 3.3em;
+
         padding-bottom: none;
     }
     #achievements .achievements-header{
         
+
+        padding-top:65px;
+    }
+    #achievements .achievements-body .row{
+    
+        padding-top:12px;
+        padding-bottom: 15px;
+    }
+}
+@media (min-width: 768px){
+    #achievements{
+        width:50%;
+        
+    }
+}
+
+@font-face {font-family: "Eras Bold ITC";
+    src: url("http://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.eot"); /* IE9*/
+    src: url("http://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("http://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.woff2") format("woff2"), /* chrome firefox */
+    url("http://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.woff") format("woff"), /* chrome firefox */
+    url("http://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    url("http://db.onlinewebfonts.com/t/401b3afcdd14cf76b92956ecc7f7d8e6.svg#Eras Bold ITC") format("svg"); /* iOS 4.1- */
+}
+
+/*---------------------------------END OF ACHIEVEMENTS SECTION--------------------------------*/
+  
+
+
         padding-top:80px;
     }
     #achievements .achievements-body .row div{
@@ -358,3 +458,4 @@ body{
     }
 }
 /* ******************sponsors section ends here************************** */
+
