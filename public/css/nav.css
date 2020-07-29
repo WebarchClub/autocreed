@@ -412,7 +412,7 @@ transform: translateY(-5px) scale(1.05);
 }
 @media(max-width:800px){
   #navigation .nav-item .Logo{
-    width: 280px;
+    width: 300px;
   } 
   /* #navigation .navbar-collapse {
     width: 70vw!important;
@@ -446,7 +446,6 @@ transform: translateY(-5px) scale(1.05);
 @media(max-width:568px){
   #navigation .nav-item .Logo{
     width: 240px;
-    margin-left: 0!important;
   }
   #navigation .imgLogo{
     width: 43px;
