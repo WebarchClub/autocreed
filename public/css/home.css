@@ -1,360 +1,371 @@
-html,body
-{
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-}
-body{
-    background: #121213;
-    background-image: radial-gradient(top, circle cover, #212122 0%, #181622 80%);
-    background-attachment: fixed;
-}
-
 /* ===================Carousel========================*/
 #carousel{
     
-    background: transparent;
- padding-top: 55px;
+  background: transparent;
+padding-top: 55px;
 }
 #carousel .carousel-inner{   
-    height : auto;
-    width : 100%;
-  }
+  height : auto;
+  width : 100%;
+}
 .carousel-item {
-   
-	background-size: 100% 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+ 
+background-size: 100% 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
 }
 .carousel-control-prev,
 .carousel-control-next {
-	font-size: 35px;
-	margin-left: -4%;
-	margin-right: -4%;
-	position: absolute;
+font-size: 35px;
+margin-left: -4%;
+margin-right: -4%;
+position: absolute;
 }
 
 .carousel-control-next-icon:after {
-	box-sizing: border-box;
+box-sizing: border-box;
 }
 
 .carousel-control-prev-icon:after {
-	box-sizing: border-box;
+box-sizing: border-box;
 }
-  
+
 @media (max-width: 767px){
-  .carousel-item {
-    height: 45vh; 
-    background-attachment: scroll;
-  }
-  
+.carousel-item {
+  height: 45vh; 
+  background-attachment: scroll;
+}
+
 
 }
 @media (min-width: 768px){
-  .carousel-item {
-    height: 90vh; 
-  }
+.carousel-item {
+  height: 90vh; 
 }
-   /*============Carousel ends=====================*/
+}
+ /*============Carousel ends=====================*/
 
-/* ==================MISSION================== */
-
+/* ==============Mission=========================== */
 #mission{
     text-align: center;
     
 }
-#mission #mission_title{
-    color: #223F99;
-    font-weight: 800;  
-    text-shadow: 2px 3px rgb(197, 197, 197), 5px 7px 7px black;
+#mission_title{
+    color: #016A86;
+    font-weight: 800;
 }
 #mission .jumbotron a{
-    color: #223F99;
+    color: #00f;
     box-shadow: 5px 5px 5px black;
 }
 #mission .jumbotron p{
     color: whitesmoke;
     word-wrap: normal;
 }
+#mission .jumbotron p:first-of-type{
+  font-size: 1.8em;
+}
 #mission .jumbotron hr{
     background-color: rgb(207, 144, 9);
 }
 #mission .jumbotron{
-    background-color: #53535365;
+    background-color: transparent;
 }
-#mission #mission_img{
+#mission_img{
     height: 50%;
-} 
-@media (min-width: 768px){
-    #mission .jumbotron p{
-        font-size: 1.6rem;}
-    #mission #mission_title{
-           font-size: 3.8rem;
-        
-    }
-    }
-    @media (max-width: 767px){
-        #mission .jumbotron p{
-            font-size: 1.3rem;
-        }
-        #mission #mission_title{
-            font-size: 3.2rem;
-         
-     }
-        }
-/* ==================MISSION================== */
+}
+@media(min-width: 992px){
+  #mission .jumbotron p:last-of-type{
+    font-size: 1.2em;
+  }
+}
+/* ==============Mission ends=========================== */
 
-/*--------------ACHIEVEMENTS SECTION---------*/
-#achievements{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+
+/*============Timeline Starts=====================*/
+
+
+#timeline ol{
+    list-style-type: none;
+}
+#timeline .cd-horizontal-timeline {
+  opacity: 0;
+  margin: auto;
+  transition: opacity 0.2s;
+  list-style-type:none !important;
+  
+}
+#timeline .cd-horizontal-timeline::before {
+   content: 'mobile';
+  display: none;
+}
+#timeline .cd-horizontal-timeline.loaded {
+    opacity: 1;
+}
+#timeline.cd-horizontal-timeline .timeline {
+  position: relative;
+  height: 100px;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+#timeline.cd-horizontal-timeline .events-wrapper {
+  position: relative;
+  height: 100%;
+  margin: 0 40px;
+  overflow: hidden;
+}
+#timeline.cd-horizontal-timeline .events-wrapper::after, .cd-horizontal-timeline .events-wrapper::before {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  height: 100%;
+  width: 20px;
+}
+#timeline.cd-horizontal-timeline .events-wrapper::before {
+  left: 0;
+  background-image: linear-gradient(to right, #f8f8f8 );
+}
+#timeline.cd-horizontal-timeline .events-wrapper::after {
+  right: 0;
+  background-image: linear-gradient(to left, #f8f8f8);
+}
+#timeline.cd-horizontal-timeline .events {
+  
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 49px;
+  height: 10px;
+  background: black;
+  transition: transform 0.8s;
+}
+#timeline.cd-horizontal-timeline .filling-line {
+  
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #223F99;
+  transform: scaleX(0);
+  transform-origin: left center;
+  
+  transition: transform 0.3s;
+}
+#timeline.cd-horizontal-timeline .events a {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+  font-size: 1.1rem;
+  padding-bottom: 20px;
+  color: #cf9009;
+  text-decoration: none;
+  transform: translateZ(0);
+}
+#timeline .events-content{
     
-    background-color: #161616;
-    color:white;
-    border-radius: 8px;
+    height: auto !important;
+    padding: 60px 20px;
+  
 }
-#achievements-container{
-    padding:none;
+.timeline .events a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  bottom: -5px;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: black;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+#timeline.no-touch .cd-horizontal-timeline .events a:hover::after {
+  background-color: #7b9d6f;
+  border-color: #7b9d6f;
+}
+#timeline.cd-horizontal-timeline .events a.selected {
+  pointer-events: none;
+}
+#timeline.cd-horizontal-timeline .events a.selected::after {
+  background-color: #223F99;
+  border-color: #223F99;
+}
+#timeline.cd-horizontal-timeline .events a.older-event::after {
+  border-color: #223F99;
+}
+@media only screen and (min-width: 1100px) {
+  #timeline.cd-horizontal-timeline {
+    margin: 6em auto;
+  }
+  #timeline.cd-horizontal-timeline::before {
+    /* never visible - this is used in jQuery to check the current MQ */
+    content: 'desktop';
+  }
+}
+#timeline .cd-timeline-navigation{
+    list-style-type:none;
+}
+#timeline .cd-timeline-navigation a {
+  /* these are the left/right arrows to navigate the timeline */
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  border: 2px solid #dfdfdf;
+  /* replace text with an icon */
+  overflow: hidden;
+  color: transparent;
+  text-indent: 100%;
+  white-space: nowrap;
+  transition: border-color 0.3s;
+}
+#timeline .cd-timeline-navigation a::after {
+  /* arrow icon */
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  transform: translateX(-50%) translateY(-50%);
+  
+}
+#timeline .cd-timeline-navigation a.prev {
+  left: 0;
+  transform: translateY(-50%) rotate(180deg);
+}
+#timeline .cd-timeline-navigation a.next {
+  right: 0;
+}
+#timeline.no-touch .cd-timeline-navigation a:hover {
+  border-color: #7b9d6f;
+}
+#timeline .cd-timeline-navigation a.inactive {
+  cursor: not-allowed;
+}
+#timeline .cd-timeline-navigation a.inactive::after {
+  background-position: 0 -16px;
+}
+#timeline .no-touch .cd-timeline-navigation a.inactive:hover {
+  border-color: #dfdfdf;
+}
 
+#timeline .cd-horizontal-timeline .events-content {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  transition: height 0.4s;
 }
-#achievements-container {
-    min-width:1000px;
-    height:600px;
-    display: block;
-    position: relative;
-    background-color:#121213;
-    border-radius: 4px;
-    padding: 32px 24px;
-    text-decoration: none;
-    z-index: 0;
-    overflow: hidden;
-    background-image: url("/images/achievementsimage.png");
-    background-size:auto 42em;
-    background-repeat: no-repeat;
-    background-blend-mode: luminosity;
-    background-position: center;
+ .cd-horizontal-timeline .events-content li {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  padding: 0 5%;
+  opacity: 0;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+}
+#timeline.cd-horizontal-timeline .events-content li.selected {
+
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  transform: translateX(0);
+  
+ 
+}
+#timeline .box{
+  border: 1px solid white;
+  padding: 10px;
+  box-shadow: 5px 10px white;
+  padding: 40px;
+}
+#timeline.cd-horizontal-timeline .events-content li.enter-right, .cd-horizontal-timeline .events-content li.leave-right {
+  animation-name: cd-enter-right;
+  
+}
+#timeline.cd-horizontal-timeline .events-content li.enter-left, .cd-horizontal-timeline .events-content li.leave-left {
+  animation-name: cd-enter-left;
+}
+#timeline.cd-horizontal-timeline .events-content li.leave-right, .cd-horizontal-timeline .events-content li.leave-left {
+  
+  animation-direction: reverse;
+}
+#timeline.cd-horizontal-timeline .events-content li > * {
+  max-width: 800px;
+  margin: 0 auto;
+}
+#timeline.cd-horizontal-timeline .events-content h2 {
+  font-weight: bold;
+  font-size: 2.6rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+#timeline.cd-horizontal-timeline .events-content em {
+  display: block;
+  margin: 10px auto;
+  color: #016A86;
+  font-size: 1.5em;
+}
+#timeline.cd-horizontal-timeline .events-content em::before {
+  content: '- ';
+}
+#timeline.cd-horizontal-timeline .events-content p {
+  font-size: 1rem;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  #timeline .cd-horizontal-timeline .events-content h2 {
+    font-size: 7rem;
+  }
+  #timeline .cd-horizontal-timeline .events-content em {
+    font-size: 1.5rem;
+  }
+  #timeline .cd-horizontal-timeline .events-content p {
+    font-size: 1.2rem;
+  }
+}
+
+
+@keyframes cd-enter-right {
+  0% {
+    
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
     
   }
-#achievements .achievements-header{
-    text-align: center;
-    padding:20px;
-    padding-top:none;
-    color: #223F99;
+}
+
+@keyframes cd-enter-left {
+  0% {
+    opacity: 0;
     
-}
-#achievements .achievements-header h1{
-    font-weight: 800;
-    font-size: 5em;
-}
-
-#achievements .achievements-body .col-12{
-    text-align: center;
-    padding-top:7px;
+  }
+  100% {
+    opacity: 1;
     
-}
-#achievements .achievements-body .row{
-    
-    padding-top:20px;
-    padding-bottom: 15px;
-}
-@media (max-width: 768px) { 
-    #achievements-container{
-        background-size: auto 34em ;
-    }
-    #achievements{
-        overflow-x: hidden;
-    }
-    #achievements-container{
-        width:50%;
-        
-    }
-    #achievements .achievements-header h1{
-        font-weight: bold;
-        font-size: 4em;
-        padding-bottom: none;
-    }
-    #achievements .achievements-header{
-        
-        padding-top:65px;
-    }
-    #achievements .achievements-body .row{
-    
-        padding-top:12px;
-        padding-bottom: 15px;
-    
-    }
-    #achievements .achievements-body .col-12{
-        
-        font-size: 1.3rem;
-    }
-}
-@media (min-width: 768px){
-    #achievements{
-        width:50%;
-        
-    }
-    #achievements .achievements-body .col-12{
-        
-        font-size: 1.6rem;
-    }
-    
-
+  }
 }
 
-@media (max-width: 576px) { 
-    #achievements-container{
-        background-size: auto 32em ;
-        font-size: 14px;
-        
-    }
-    #achievements{
-        overflow-x: hidden;
-    }
-    #achievements-container{
-        width:50%;
-        
-    }
-    #achievements .achievements-header h1{
-        font-weight: bold;
-        font-size: 3.3em;
-        padding-bottom: none;
-    }
-    #achievements .achievements-header{
-        
-        padding-top:80px;
-    }
-    #achievements .achievements-body .row div{
-        font-size: 1em;
-        padding-top:10px;
-        padding-bottom: 10px;
-    }
- }
-
- @media (max-width: 376px){
-     #achievements .achievements-header h1{
-         font-size: 2.5em;
-     }
-
-     #achievements .achievements-body .row div{
-         font-size: 0.8em;
-     }
-     #achievements .achievements-body .col-12 {
-         font-size: 1.3rem;
-         
-     }
- }
-
-/*---------------------------------END OF ACHIEVEMENTS SECTION--------------------------------*/
-
-/*************** sponsers ***************/
-#sponsors {
-    margin: 2rem 0;
-}
-
-#sponsors #demo {    
-    background: linear-gradient(112deg, #223F99 50%, white 50%);
-    max-width: 1300px;
-    margin: auto
-}
-
-#sponsors .sponsors-caption {
-    position: initial;
-    z-index: 10;
-    padding: 5rem 8rem;
-    color: black;
-    text-align: center;
-    font-size: 1.7rem;   
-    line-height: 2rem
-}
-
-@media(max-width:767px) {
-    #sponsors .sponsors-caption {
-        position: initial;
-        z-index: 10;
-        padding: 3rem 2rem;
-        color: black;
-        text-align: center;
-        font-size: 1.5rem;        
-        line-height: 1.5rem
-    }
-}
-
-#sponsors .sponsors-caption img {
-    width: 17rem;
-   height: 8rem;
-    margin-top: 2rem
-}
-
-@media(max-width:767px) {
-    #sponsors .sponsors-caption img {
-        width: 4rem;        
-        margin-top: 1rem
-    }
-}
-
-#sponsors h1 {
-    
-    font-size: 5em;
-    margin-bottom: 1em;
-    color: #223F99;
-    text-align: center; 
-    font-weight: 800;
-}
-#sponsors i {
-    background-color: black;
-    padding: 1.4rem
-}
-
-@media(max-width:767px) {
-    #sponsors i {
-        padding: 0.8rem
-    }
-    #sponsors h1 {
-        font-size: 4em;
-    }
-}
-
-#sponsors .carousel-control-prev {
-    justify-content: flex-start
-}
-
-#sponsors .carousel-control-next {
-    justify-content: flex-end
-}
-
-#sponsors .carousel-control-prev,
-#sponsors .carousel-control-next {
-    transition: none;
-    opacity: unset
-}
-@media(max-width:990px) {
-    #sponsors .sponsors-caption img {
-        width: 10rem;
-       height: 5rem;
-        margin-top: 2rem
-    }    
-}
-@media(max-width:900px){
-    #sponsors .button {
-        display: none;
-    }
-}
-@media (max-width: 576px){
-    #sponsors{
-        margin: 0;
-    }
-    #sponsors h1{
-        font-size: 3.3em;
-    }
-}
-
-@media (max-width: 376px){
-    #sponsors h1{
-        font-size: 2.5em;
-    }
-}
-/* ******************sponsors section ends here************************** */
+/*============Timeline Ends=====================*/
