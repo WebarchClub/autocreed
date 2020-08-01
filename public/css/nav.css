@@ -1,12 +1,3 @@
-@font-face {
-  font-family: "Audrey"; 
-  src: url("https://db.onlinewebfonts.com/t/d9a58a393d946d86051fbd9a0b594d2f.eot"); 
-  src: url("https://db.onlinewebfonts.com/t/d9a58a393d946d86051fbd9a0b594d2f.eot?#iefix") format("embedded-opentype"), 
-  url("https://db.onlinewebfonts.com/t/d9a58a393d946d86051fbd9a0b594d2f.woff2") format("woff2"), 
-  url("https://db.onlinewebfonts.com/t/d9a58a393d946d86051fbd9a0b594d2f.woff") format("woff"), 
-  url("https://db.onlinewebfonts.com/t/d9a58a393d946d86051fbd9a0b594d2f.ttf") format("truetype"), 
-  url("https://db.onlinewebfonts.com/t/d9a58a393d946d86051fbd9a0b594d2f.svg#Audrey") format("svg"); 
-}
 :root {
   /* bgcolor of sidebar  */
   --navBg: rgb(0, 0, 0); /*set according to color of navbar*/
@@ -15,8 +6,23 @@
   margin: 0;
   padding: 0;
 }
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
 body{
-  font-family: "Audrey"!important;
+  background:
+  linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+  linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+  linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+  linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+  linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+  linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  background-color: #131313;
+  background-size: 20px 20px;
 }
 #navigation .blurrer {
   height: 140px;
@@ -55,101 +61,39 @@ opacity: 1;
 filter: blur(20px);
 }
 
-/* logo shadow  */
+/* main logo  */
 #navigation .imgLogo{
-  /* filter: drop-shadow(5px 5px 4px #646464);
-  filter: drop-shadow(5px 5px 5px rgb(75, 75, 75));
-  filter: drop-shadow(0 0 5px #e9e9e9); */
-  transition: .8s;
-  animation: shine1 4s ease;
+  width: 50px;
+  height: 40px;
+  transition: 1s;
 }
-@keyframes shine1{
-  0%,50%,100%{
-    filter: none;
-  }
-  25%,75%{
-    filter: drop-shadow(0 0 5px #777);
-  }
-}
-
-/* main logo text*/
-#navigation .logo{
-  text-transform: uppercase;
-  color: white;
-  /* letter-spacing: 6px; */
-  /* font:900 39px "Audrey"; */
-  font:900 39px "Audrey";
-
-  /* text-shadow: 0 1px 0 #ccc,
-  0 2px 0 #c9c9c9,
-  0 3px 0 #bbb,
-  0 4px 0 #b9b9b9,
-  0 5px 0 #aaa,
-  0 6px 1px rgba(0,0,0,.1),
-  0 0 5px rgba(0,0,0,.1),
-  0 1px 3px rgba(0,0,0,.3),
-  0 3px 5px rgba(0,0,0,.2),
-  0 5px 10px rgba(0,0,0,.25),
-  0 10px 10px rgba(0,0,0,.2),
-  0 20px 20px rgba(0,0,0,.15),
-  0 30px 30px rgba(0,0,0,.15); */
-  text-shadow: 
-      1px 1px 0px #999, 
-      2px 2px 0px #333, 
-      3px 3px 0px #999;
+#navigation .Logo{
+  width: 400px;
+  height: 50px;
+  margin-top: -5px;
   transition: 1s;
 }
 
+
 /* hover & onload main logo shiny effect */
-#navigation .navbar-brand:hover span{
-/* letter-spacing: 7px; */
-text-shadow: 0 0 10px #777,
-  0 0 20px #777,
-  0 0 40px #777,
-  0 0 80px #777;
+#navigation .navbar-brand:hover{
+  filter: drop-shadow(0 0 15px #223F99);
 }
-#navigation .navbar-brand:hover .imgLogo{
-  filter: drop-shadow(0 0 5px #777);
-}
-#navigation .navbar-brand span{
+#navigation .navbar-brand{
   animation: shine 4s ease;
 }
 @keyframes shine{
-0%,50%,100%{
-  /* text-shadow: 0 1px 0 #ccc,
-  0 2px 0 #c9c9c9,
-  0 3px 0 #bbb,
-  0 4px 0 #b9b9b9,
-  0 5px 0 #aaa,
-  0 6px 1px rgba(0,0,0,.1),
-  0 0 5px rgba(0,0,0,.1),
-  0 1px 3px rgba(0,0,0,.3),
-  0 3px 5px rgba(0,0,0,.2),
-  0 5px 10px rgba(0,0,0,.25),
-  0 10px 10px rgba(0,0,0,.2),
-  0 20px 20px rgba(0,0,0,.15),
-  0 30px 30px rgba(0,0,0,.15); */
-  text-shadow: 
-      1px 1px 0px #999, 
-      2px 2px 0px #333, 
-      3px 3px 0px #999,
-      4px 4px 0px #333,
-      5px 5px 0px #999,
-      6px 6px 0px #333,
-      7px 7px 0px #999,
-      8px 8px 0px #333;
-}
-25%,75%{
-  text-shadow: 0 0 10px #777,
-  0 0 20px #777,
-  0 0 40px #777,
-  0 0 80px #777;
-}
+  0%,50%,100%{
+    filter: none;  
+  }
+  25%,75%{
+    filter: drop-shadow(0 1px 20px #02217e);
+  }
 }
 /* sidebar logo  */
 #navigation .nav-item .logo{
   display: inline!important;
-  font-size: 35px;
+  font-size: 39px;
   color: rgb(238, 238, 238);
   /* text-shadow: 2px 2px 0 rgba(221, 221, 221, 0.7); */
   text-shadow: 
@@ -165,21 +109,11 @@ text-shadow: 0 0 10px #777,
 
 #navigation #sidebarLogo:hover .logo{
 /* letter-spacing: 6.5px; */
-  text-shadow: 
-  1px 1px 0px #333, 
-  2px 2px 0px #999, 
-  3px 3px 0px #333,
-  4px 4px 0px #999,
-  5px 5px 0px #333,
-  6px 6px 0px #999,
-  7px 7px 0px #333,
-  8px 8px 0px #999;
+  filter: drop-shadow(0 0 15px #223F99);
 }
 
 #navigation .nav-item{
-  /* font-family: "Audrey";
-  font-family: "Audrey"; */
-  font:900 27px "Audrey";
+  font-size: 26px;
   margin: 0 8px;
   transition: all .3s ease-in-out;
 }
@@ -199,7 +133,7 @@ transform: translateY(-5px) scale(1.05);
   overflow: hidden;
   z-index: 1;
   transition: 0.5s ease-in;
-  color: #2309a0 !important;
+  color: #223F99 !important;
   filter: drop-shadow(0 0 9px #2309a0);
   
 }
@@ -260,10 +194,9 @@ transform: translateY(-5px) scale(1.05);
 @media(max-width:992px){
   
   #navigation .nav-link {
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     text-decoration: none;
-    color: #2309a0;
-
+    color: #223F99;
     display: inline-block;
     position: relative;
     opacity: 0.85;
@@ -307,7 +240,7 @@ transform: translateY(-5px) scale(1.05);
       width: 80%;
   }
   #navigation .firstLink{
-      margin-top: 55px;
+      margin-top: 50px!important;
     }
 
   #navigation .nav-link .logo{
@@ -318,14 +251,14 @@ transform: translateY(-5px) scale(1.05);
   #navigation .navbar-collapse {
       position: absolute;
       top: 0px;
-      width: 60vw;
+      width: 55vw;
       height: 100vh;
       transition: all 0.3s ease;
       background-color: var(--navBg);
       position: fixed;
       top: 0px;
-      left: -60vw!important;
-      font-weight: 900;
+      left: -55vw!important;
+      
       z-index: 1000;
       padding: .5rem;
   }
@@ -343,21 +276,27 @@ transform: translateY(-5px) scale(1.05);
 
   /* placing hamburger icon  */
 
+  #navigation .navbar-brand{
+    margin-left: 30px;
+  }
+  
   #navigation .navbar-toggler {
       border: none;
       outline: 0;
       background: transparent !important;
       position: fixed;
       top: 15px;
-      right: 0!important;
+      left: 0;
       font-weight: 900;
       z-index: 1000;
-      transition: all 1s;
+      transition: all .5s;
     }
     #navigation .navbar-toggler:hover {
       background: transparent !important;
       border: none;
   }
+  
+
   #navigation .navbar-toggler:focus,
   #navigation .navbar-toggler:active {
       outline: 0;
@@ -370,7 +309,7 @@ transform: translateY(-5px) scale(1.05);
       height: 2px;
       background-color: #696868;
       display: block;
-      transition: all 0.5s;
+      transition: all 1s;
       margin: 4px 0 0 0;
   }
   
@@ -414,7 +353,15 @@ transform: translateY(-5px) scale(1.05);
   #navigation .navbar-toggler.collapsed .bottom-bar {
     transform: rotate(0);
   }
-  
+
+  /* shift cross logo to right  */
+  #navigation .shift{
+    left: 90vw!important;
+  }
+  #navigation .disappear{
+    transition: .3s linear ;
+    margin-top: -70px!important;
+  }
 }
 
 
@@ -425,397 +372,105 @@ transform: translateY(-5px) scale(1.05);
     display: none!important;
   }
 }
-@media(max-width:547px){
-  #navigation .navbar-brand{
-    transform: scale(0.9);
-    position: relative;
-    margin-left: -19px!important;
+@media(max-width:1164px){
+  #navigation .Logo{
+    width: 350px;
+    height: 45px;
   }
-  #navigation .nav-item .imgLogo{
-    width: 37px;
-    height: 35px;
- }
-  #navigation .nav-item .logo{
-     font-size: 33px;
-  }
-}
-@media(max-width:471px){
-  #navigation .nav-item .logo{
-     font-size: 30px;
-  }
-  #navigation .nav-item .imgLogo{
-       width: 35px;
-       height: 33px;
-    }
-}
-@media(max-width:440px){
-  #navigation .navbar-brand{
-    transform: scale(0.8);
-    position: relative;
-    margin-left: -40px!important;
-  }
-  #navigation .nav-item .logo{
-     font-size: 28px;
-  }
-}
-@media(max-width:406px){
-  #navigation .nav-item .imgLogo{
-    width: 32px;
-    height: 30px;
- }
-  #navigation .nav-item .logo{
-     font-size: 25px;
-  }
-}
-@media(max-width:490px){
-    #navigation .navbar-collapse {
-      width: 65vw; 
-      left: -65vw!important;
-    }
-  }
-@media(max-width:395px){
-  #navigation .navbar-collapse {
-     width: 70vw; 
-     left: -70vw!important;
-  }
-}
-@media(max-width:368px){
-  #navigation .navbar-collapse {
-     width: 75vw; 
-     left: -75vw!important;
-  }
-}
-@media (max-width:1055px) and (min-width:992px) {
-  #navigation .logo{
-    font-size: 36px;
+  #navigation .imgLogo{
+    height: 36px;
   }
   #navigation .nav-item{
-    font-size: 26px;
-    margin: 0 1px;
+    font-size: 25px;
+    margin: 0 3px;
   }
 }
-/* @media(max-width:453px){
-#navigation .nav-link .logo{
-  font-size:32px;
-}
-#navigation .navbar-brand .logo{
-  font-size: 35px;
-}
-}
-@media(max-width:402px){
-#navigation .nav-link .logo{
-  font-size:28px;
-}
-}
-@media(max-width:430px){
-#navigation .navbar-collapse {
-   width: 65vw; 
-   left: -65vw!important;
-}
-}
-@media(max-width:395px){
-#navigation .navbar-collapse {
-   width: 75vw; 
-   left: -75vw!important;
-}
-}
-@media(max-width:376px){
-#navigation .nav-link .logo{
-  margin-left: 0!important;
-}
-#navigation #sidebarLogo{
-  display: inline!important;
-}
-#navigation .firstLink{
-  margin: 40px 0 10px 0;
-}
-}
-@media(max-width:364px){
-#navigation .nav-item{
-  font-size: 25px;
-}
-#navigation .nav-link .logo{
-  font-size: 29px;
-}
-}
-@media(max-width:338px){
-#navigation .navbar-brand .logo{
-  font-size: 30px;
-}
-#navigation .navbar-brand .imgLogo{
-  width: 35px;
-  height: 35px;
-}
-#navigation .nav-link .imgLogo{
-  width: 28px;
-  height: 28px;
-}
-}
-@media (max-width:1034px) and (min-width:955px) {
-  #navigation .logo{
-    font-size: 36px;
+@media(max-width:1050px){
+  #navigation .Logo{
+    width: 330px;
+    height: 42px;
   }
-  #navigation .nav-item{
-    font-size: 26px;
-    margin: 0 1px;
-  }
-}
-@media (max-width:954px) and (min-width:921px) {
-  #navigation .logo{
-    font-size: 35px;
+  #navigation .imgLogo{
+    height: 33px;
   }
   #navigation .nav-item{
     font-size: 24px;
-    margin: 0 1px;
+    margin: 0 3px;
   }
 }
-@media (max-width:920px) and (min-width:867px) {
-  #navigation .logo{
-    font-size: 35px;
+@media(max-width:992px){
+  #navigation .Logo{
+    width: 400px;
+    height: 45px;
   }
-#navigation .nav-item{
-  font-size: 23px;
-  margin: 0 1px;
+  #navigation .navbar-brand .imgLogo{
+    height: 36px;
+  }
+  #navigation .nav-item{
+    font-size: 25px;
+  }
 }
+@media(max-width:800px){
+  #navigation .nav-item .Logo{
+    width: 300px;
+  } 
+  /* #navigation .navbar-collapse {
+    width: 70vw!important;
+    left: -70vw!important;
+  } */
 }
-@media (max-width:866px) and (min-width:830px) {
-#navigation .logo{
-  font:900 35px "Audrey";
+@media(max-width:726px){
+  #navigation .Logo{
+    width: 360px;
+    height: 42px;
+  }
+  #navigation .navbar-brand .imgLogo{
+    height: 33px;
+  }
+ 
 }
-#navigation .nav-item{
-  font-size: 22px;
-  margin: 0 1px;
+@media(max-width:620px){
+  #navigation .Logo{
+    width: 330px;
+    height: 40px;
+  }
+  #navigation .navbar-brand .imgLogo{
+    height: 30px;
+  }
 }
+@media(max-width:580px){
+  #navigation .navbar-brand .Logo{
+    width: 320px;
+  }
 }
-@media (max-width:829px) and (min-width:768px) {
-#navigation .logo{
-  font:900 33px "Audrey";
+@media(max-width:568px){
+  #navigation .nav-item .Logo{
+    width: 240px;
+  }
+  #navigation .imgLogo{
+    width: 43px;
+  }
+  /* #navigation .navbar-collapse {
+    left: -72vw!important;
+    width: 72vw!important;
+  } */
 }
-#navigation .imgLogo{
-  height: 35px;
-  width: 35px;
+@media(max-width:500px){
+  #navigation .navbar-brand .Logo{
+    width: 280px;
+  }
+ 
 }
-#navigation .nav-item{
-  font-size: 22px;
-  margin: -2px;
+@media(max-width:490px){
+  #navigation .navbar-brand .Logo{
+    width: 250px;
+  }
 }
-} */
-
-/* ========================FOOTER==================== */
-
-#footer {
-position: relative;
-background-color: black;
-padding: 35px 0 10px;
-font-size: 18px;
-font-family: "Audrey";
-line-height: 24px;
-color: #737373;
-top: 0;
-font-weight: bold;
-}
-
-#footer hr {
-border-top-color: #bbb;
-opacity: 0.5
-}
-
-#footer hr.small {
-margin: 20px 0
-}
-
-#footer h6 {
-color: #fff;
-font-size: 22px;
-text-transform: uppercase;
-margin-top: 5px;
-letter-spacing: 2px
-}
-
-#footer .text-center {
-text-align: center;
-margin-bottom: 0px;
-}
-
-#footer a {
-color: #737373;
-}
-
-#footer #autocreedLogo {
-margin-top: 15%;
-margin-right: 12%;
-width: 30%;
-}
-
-#footer .links {
-padding-left: 34%;
-}
-
-#footer .footer-links {
-padding-left: 0;
-list-style: none
-}
-
-#footer .footer-links li {
-display: block;
-margin: 1.5em 0;
-}
-
-#footer .footer-links a {
-color: #737373;
-transition-duration: 200ms;
-}
-
-#footer .footer-links a:active,
-#footer .footer-links a:focus,
-#footer .footer-links a:hover {
-color: #187bcd;
-font-size: 105%;
-text-decoration: none;
-transition-duration: 200ms;
-}
-
-#footer .footer-links a:active .fas,
-#footer .footer-links a:focus .fas,
-#footer .footer-links a:hover .fas {
-color: #737373;
-}
-
-.footer-links.inline li {
-display: inline-block
-}
-
-#footer .social-icons {
-text-align: right
-}
-
-#footer .social-icons a {
-width: 40px;
-height: 40px;
-line-height: 40px;
-margin-left: 6px;
-margin-right: 0;
-border-radius: 100%;
-}
-
-#footer .copyright-text {
-margin: 0
-}
-
-@media (max-width:991px) {
-#footer [class^=col-] {
-    margin-bottom: 30px
-}
-}
-
-@media (max-width:767px) {
-#footer {
-    padding-bottom: 0;
-    font-size: 18px;
-    font-weight: bold;
-}
-#footer .copyright-text,
-#footer .social-icons {
-    text-align: center
-}
-}
-
-#footer .social-icons {
-padding-left: 0;
-margin-bottom: 0;
-list-style: none
-}
-
-#footer .social-icons li {
-display: inline-block;
-margin-bottom: 4px
-}
-
-#footer .social-icons li.title {
-margin-right: 15px;
-text-transform: uppercase;
-color: #96a2b2;
-font-weight: 700;
-font-size: 13px
-}
-
-#footer .social-icons a {
-background-color: #eceeef;
-color: #818a91;
-font-size: 25px;
-display: inline-block;
-line-height: 50px;
-width: 50px;
-height: 50px;
-text-align: center;
-margin-right: 8px;
-border-radius: 100%;
--webkit-transition: all .2s linear;
--o-transition: all .2s linear;
-transition: all .2s linear
-}
-
-#footer .social-icons.size-sm a {
-line-height: 34px;
-height: 34px;
-width: 34px;
-font-size: 20px;
-}
-
-#footer .social-icons a.facebook {
-color: #3b5998;
-background-color: #818a91;
-}
-
-#footer .social-icons a.facebook:hover {
-color: #818a91;
-background-color: #3b5998;
-}
-
-#footer .social-icons a.linkedin {
-color: #0e76a8;
-background-color: #818a91;
-}
-
-#footer .social-icons a.linkedin:hover {
-color: #818a91;
-background-color: #0e76a8;
-}
-
-#footer .social-icons a.instagram {
-color: #dd2a7b;
-background-color: #818a91;
-}
-
-#footer .social-icons a.instagram:hover {
-color: #818a91;
-background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-}
-
-@media (max-width:767px) {
-#footer .social-icons li.title {
-    display: block;
-    margin-right: 0;
-    font-weight: 600
-}
-}
-
-#footer .copyright-text a:hover {
-color: #00E8FF;
-}
-
-#footer #webarchLogo {
-filter: grayscale(1);
-margin-bottom: 3px;
-height: 15px;
-transition-duration: 200ms;
-}
-
-#footer a:hover #webarchLogo {
-filter: none;
-transition-duration: 200ms;
-}
-
-#footer a:hover {
-text-decoration: none;
+@media(max-width:407px){
+  #navigation .navbar-brand .Logo{
+    width: 210px;
+  }
+  #navigation .imgLogo{
+    width: 40px;
+  }
 }
