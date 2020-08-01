@@ -85,6 +85,30 @@ box-sizing: border-box;
 
 /*============Timeline Starts=====================*/
 
+#timeline-divider .divider {
+  font-family: "Share Tech Mono", monospace;
+  color: #fff;
+  font-size: 2vh;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+#timeline-divider .divider::before, .divider::after {
+  content: '';
+  display: block;
+  height: 0.09em;
+  min-width: 35vw;
+}
+#timeline-divider .divider::before {
+  background: linear-gradient(to right, rgba(240, 240, 240, 0), #fff);
+  margin-right: 4vh;
+}
+#timeline-divider .divider::after {
+  background: linear-gradient(to left, rgba(240, 240, 240, 0), #fff);
+  margin-left: 4vh;
+}
 
 #timeline ol{
     list-style-type: none;
@@ -170,7 +194,7 @@ box-sizing: border-box;
 #timeline .events-content{
     
     height: auto !important;
-    padding: 60px 20px;
+    padding: 50px 20px;
   
 }
 .timeline .events a::after {
@@ -203,7 +227,7 @@ box-sizing: border-box;
 }
 @media only screen and (min-width: 1100px) {
   #timeline.cd-horizontal-timeline {
-    margin: 6em auto;
+    margin: 4em auto;
   }
   #timeline.cd-horizontal-timeline::before {
     /* never visible - this is used in jQuery to check the current MQ */
@@ -242,6 +266,7 @@ box-sizing: border-box;
   bottom: auto;
   right: auto;
   transform: translateX(-50%) translateY(-50%);
+  background: url(../images/next.png) no-repeat 0 0;
   
 }
 #timeline .cd-timeline-navigation a.prev {
@@ -257,9 +282,7 @@ box-sizing: border-box;
 #timeline .cd-timeline-navigation a.inactive {
   cursor: not-allowed;
 }
-#timeline .cd-timeline-navigation a.inactive::after {
-  background-position: 0 -16px;
-}
+
 #timeline .no-touch .cd-timeline-navigation a.inactive:hover {
   border-color: #dfdfdf;
 }
@@ -288,14 +311,15 @@ box-sizing: border-box;
   z-index: 2;
   opacity: 1;
   transform: translateX(0);
-  
- 
 }
 #timeline .box{
-  border: 1px solid white;
-  padding: 10px;
-  box-shadow: 5px 10px white;
-  padding: 40px;
+  
+  padding: 0px 20px;
+  box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color:#6c757d36;
+  padding-bottom: 30px;
+  padding-top: 20px;
+
 }
 #timeline.cd-horizontal-timeline .events-content li.enter-right, .cd-horizontal-timeline .events-content li.leave-right {
   animation-name: cd-enter-right;
@@ -322,15 +346,17 @@ box-sizing: border-box;
 #timeline.cd-horizontal-timeline .events-content em {
   display: block;
   margin: 10px auto;
-  color: #016A86;
-  font-size: 1.5em;
+  color: #cf9009;
+  font-size: 1em;
+  text-align:right;
 }
 #timeline.cd-horizontal-timeline .events-content em::before {
   content: '- ';
 }
 #timeline.cd-horizontal-timeline .events-content p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: white;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
