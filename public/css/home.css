@@ -103,11 +103,11 @@ box-sizing: border-box;
 }
 #timeline-divider .divider::before {
   background: linear-gradient(to right, rgba(240, 240, 240, 0), #fff);
-  margin-right: 4vh;
+  
 }
 #timeline-divider .divider::after {
   background: linear-gradient(to left, rgba(240, 240, 240, 0), #fff);
-  margin-left: 4vh;
+  
 }
 
 #timeline ol{
@@ -131,7 +131,7 @@ box-sizing: border-box;
   position: relative;
   height: 100px;
   width: 90%;
-  max-width: 800px;
+ max-width: 800px;
   margin: 0 auto;
 }
 #timeline.cd-horizontal-timeline .events-wrapper {
@@ -225,9 +225,9 @@ box-sizing: border-box;
 #timeline.cd-horizontal-timeline .events a.older-event::after {
   border-color: #223F99;
 }
-@media only screen and (min-width: 1100px) {
+@media (min-width: 1100px) {
   #timeline.cd-horizontal-timeline {
-    margin: 4em auto;
+    margin: auto;
   }
   #timeline.cd-horizontal-timeline::before {
     /* never visible - this is used in jQuery to check the current MQ */
