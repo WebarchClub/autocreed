@@ -41,7 +41,7 @@ body{
 #support .donate h3 {
    font-size: 14px;
    font-weight: 300;
-   margin-bottom: 15px;
+   margin-bottom: 30px;
 }
 
 #support .denomination {
@@ -104,7 +104,7 @@ body{
    font-family: 'Oswald', sans-serif;
    color: #FFF;
    font-size: 32px;
-   margin-bottom: 20px;
+   margin-bottom: 30px;
 }
 
 #support .donate-black h2 span {
@@ -145,7 +145,7 @@ body{
    font-size: 20px;
    line-height: 20px;
    padding: 14px 0;
-   margin: 15px 0;
+   margin: 30px 0;
    text-transform: uppercase;
    cursor: pointer;
 }
