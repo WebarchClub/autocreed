@@ -15,7 +15,7 @@ const appToken = "IGQVJYUmNqR2dNWmF4SXRwSXBNRlBOZAl9nZAXE0a1hwcTdiWHM0dFBuY0ZABQ
 
 var albumId = [];
 var feed = [];
-var vada = [];
+var albumPromise = [];
 
 //INSTAGRAM SETUP
 
@@ -31,18 +31,18 @@ app.get("/alumni", (req,res) => {
     res.render("alumni", {page: "alumni"});
 });
 app.get("/gallery", (req,res) => {
-    axios.get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url,username,timestamp&access_token=${appToken}`).then(function(data){
+    axios.get(`https://graph.instagram.com/me/media?fields=id,permalink,media_type,media_url,thumbnail_url,username,timestamp&access_token=${appToken}`).then(function(data){
         data.data.data.forEach(function(val){
             if(val.media_type === "IMAGE"){
                 feed.push({
                     url: val.media_url,
-                    time: val.timestamp
+                    instaUrl: val.permalink
                 });
             }
             if(val.media_type === "VIDEO"){
                 feed.push({
                     url: val.thumbnail_url,
-                    time: val.timestamp
+                    instaUrl: val.permalink
                 });
             }
             if(val.media_type === "CAROUSEL_ALBUM"){
@@ -53,21 +53,21 @@ app.get("/gallery", (req,res) => {
     })
     .then((data) => {
         data.forEach((val) => {
-            vada.push(axios.get(`https://graph.instagram.com/${val.id}/children?fields=id,media_type,media_url,thumbnail_url,username,timestamp&access_token=${appToken}`));
+            albumPromise.push(axios.get(`https://graph.instagram.com/${val.id}/children?fields=id,permalink,media_type,media_url,thumbnail_url,username,timestamp&access_token=${appToken}`));
         });
-        Promise.all(vada).then((val) => {
+        Promise.all(albumPromise).then((val) => {
             val.forEach((data) => {
                 data.data.data.forEach((val) => {
                     if(val.media_type === "IMAGE"){
                         feed.push({
                             url: val.media_url,
-                            time: val.timestamp
+                            instaUrl: val.permalink
                         });
                     }
                     if(val.media_type === "VIDEO"){
                         feed.push({
                             url: val.thumbnail_url,
-                            time: val.timestamp
+                            instaUrl: val.permalink
                         });
                     }
                 });
@@ -80,6 +80,9 @@ app.get("/gallery", (req,res) => {
         });
     })
     .catch(err => console.log(err));
+});
+app.get("/sponsors", (req, res) => {
+    res.render("sponsors", { page: "sponsors" });
 });
 app.get("/support", (req,res) => {
     res.render("support", {page: "support"});

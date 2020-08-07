@@ -1,7 +1,21 @@
 <%- include("partials/header") %>
 
-<% instafeed.forEach((data) => { %>
-    <li><img src="<%= data.url %>" alt=""></li>
-<% }); %>
+<div class="container">
+
+    <div class="gallery">
+        <% instafeed.forEach((data) => { %>
+        <li><img src="<%= data.url %>" alt=""></li>
+        <% }); %>
+    </div>
+</div>
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+            </div>
+        </div>
+    </div>
+</div>
 
 <%- include("partials/footer") %>

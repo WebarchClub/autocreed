@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
   // setTimeout(function(){
   //   $('.navbar-brand').toggleClass('disappear');
