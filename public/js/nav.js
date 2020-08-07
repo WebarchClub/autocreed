@@ -2,7 +2,7 @@ $(document).ready(function(){
   // setTimeout(function(){
   //   $('.navbar-brand').toggleClass('disappear');
   //   }, 6000);
-  $("button").click(function(){
+  $(".icon-bar").click(function(){
   
     $('.navbar-toggler').toggleClass('shift');
     // $('.navbar-brand').toggleClass('disappear');
