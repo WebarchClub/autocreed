@@ -1,1 +1,187 @@
-.
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#team-member-name {
+	margin-top: 20px;
+}
+
+#team-pic {
+	height: 225px;
+	width: 250px;
+	border-radius: 12.5px;
+}
+
+.team {
+	height: 100%;
+	width: 100%;
+	color: white;
+	margin-top: 17.5vh;
+	text-align: center;
+}
+
+.motto {
+	letter-spacing: 4px;
+	font-size: 3.5em;
+	font-weight: 700;
+	text-shadow: 0 0 15px #3f51b5, 0 0 10px #3f51b5;
+}
+
+.team-main-section {
+	padding: 50px;
+	padding-left: 225px;
+	padding-right: 225px;
+	padding-bottom: 50px;
+}
+
+.team-main-section h2 {
+	padding-bottom: 15px;
+}
+
+.team-descript {
+	text-align: center;
+	font-size: 17.5px;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+/* Cards */
+
+#single-card {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.card {
+	background: none;
+	color: white;
+}
+
+.team-icons a {
+	color: white;
+	font-size: 22.75px;
+}
+
+.team-icons a:hover {
+	transition: 0.5s;
+	color: blue;
+}
+
+#team-img {
+	margin-top: -50px;
+}
+.team-row {
+	margin-top: 15vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#final-card {
+	margin-top: 10vh;
+	display: inline-block;
+	/* margin: 0 auto; */
+}
+
+@media (max-width: 1200px) {
+	.team-descript {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+
+@media (max-width: 1024px) {
+	#team-pic {
+		width: 250px;
+		height: 200px;
+	}
+
+	.team-descript {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	.team-main-section {
+		padding-bottom: 50px;
+	}
+
+	#team p {
+		margin-bottom: 0px;
+	}
+
+	.card {
+		margin-top: 5vh;
+		margin-bottom: 5vh;
+	}
+
+	.team-row {
+		margin-top: 7.5vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.team-main-section {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
+@media (max-width: 768px) {
+	.motto {
+		font-size: 2.5em;
+		letter-spacing: 2px;
+	}
+
+	h3 {
+		margin-top: 0px;
+	}
+	.team {
+		margin-top: 14vh;
+	}
+
+	.card {
+		margin-top: 10vh;
+	}
+
+	#final-card {
+		margin-top: 0vh;
+	}
+
+	.team-main-section {
+		padding-bottom: 0px;
+		padding-left: 20px;
+		padding-right: 30px;
+	}
+
+	.team-row {
+		margin-top: 0vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 400px) {
+	br {
+		display: none;
+	}
+
+	.motto {
+        font-size: 1.5em;
+		margin-bottom: 0px;
+		letter-spacing: 1px;
+	}
+
+	.team-descript {
+		text-align: center;
+		font-size: 17px;
+		padding-top: 40px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
