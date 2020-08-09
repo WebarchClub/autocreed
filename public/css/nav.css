@@ -363,7 +363,6 @@ transform: translateY(-5px) scale(1.05);
     transition: .3s linear ;
     margin-top: -70px!important;
   }
-}
 
 #navigation .firstLink{
   animation: slideDown 10s;

@@ -1,3 +1,5 @@
+var $input = $(".input");
+var price;
 // hide cart content when there's no product in it
 $(".button").hide();
 $("#item").hide();
@@ -5,15 +7,14 @@ $(".remove").hide();
 
 // function to add product to the cart and display it there
   $('.buy').click(function(){
-        var cost = parseInt($(".productPrice").html());
-        var name = $(".productName").html();   
-        var price = parseInt($(".productPrice").html());  // store initial cost
+        name = $($(this).siblings()[0]).html();   
+        price = parseInt($($(this).siblings()[1].children[0]).html());  // store initial cost
        $(".product").text(name);                       // displays product name in the cart
-       $(".selectedPrice").text("₹"+ cost);             // displays product price in the cart
+       $(".selectedPrice").text("₹"+ price);             // displays product price in the cart
     
        $("#total").text("Total cost: ₹");                 // displays "total cost" in the cart
-       $("#cost").text(cost);                             // displays cost in the cart
-       $(".selectedImage").attr("src", "images/nike101.png");    // adds image in the cart
+       $("#cost").text(price);                             // displays cost in the cart
+       $(".selectedImage").attr("src", $(this).parent().siblings()[0].children[0].src);    // adds image in the cart
        
        // unhides/hides everything that was previously unhidden/hidden by pressing remove
        $(".empty").hide();
@@ -25,52 +26,17 @@ $(".remove").hide();
        $("#total").show();
        $(".button").show();
        
-       $(".buy").hide(); //hide buy now on card
+       $(this).hide(); //hide buy now on card
        
-       $(".remove").show(); //shows remove button on card
+       $($(this).siblings()[2]).show(); //shows remove button on card
 
-
-
-
-       // choosing number of products to be bought (+/-)
-      $('.minus').click(function () {
-                var $input = $(this).parent().find('input');
-                var count = parseInt($input.val()) - 1;
-                count = count < 1 ? 1 : count;
-                $input.val(count);
-
-                $input.change();
-                $("#cost").text(cost * count); // displays cost*no. of items
-                return false;
-      });
-
-      $('.plus').click(function () {
-          var $input = $(this).parent().find('input');
-
-          var count = parseInt($input.val()) + 1;
-          count = count < 1 ? 1 : count;
-          $input.val(count);
-
-          $input.change();
-          $("#cost").text(cost * count);
-
-          return false;
-      });
-
-
+       $input.val("1"); //sets value of number of products to 1
   });
 
   //function to remove product from the cart
   $('.remove').click(function(){
-      var $input = $('.input');
-      $input.val(1); //sets value of number of products to 1
-
       //hides/unhides
       $(".empty").show();
-      // $(".selectedImage").hide();
-      // $(".selectedPrice").hide();
-      // $(".product").hide();
-      // $(".number").hide();
 
       $("#item").hide(); // hides everything in the cart
       
@@ -78,9 +44,22 @@ $(".remove").hide();
       $("#total").hide();
       $(".button").hide();
 
-      $(".buy").show();
-      $(".remove").hide();
+      $($(this).siblings()[2]).show();
+      $(this).hide();
   });
+  // choosing number of products to be bought (+/-)
+  $('.minus').click(function () {
+    $input.val(Number($input.val())-1);
+    $("#cost").text(price*Number($input.val()));
+    return false;
+});
+
+$('.plus').click(function () {
+    $input.val(Number($input.val())+1);
+    $("#cost").text(price*Number($input.val()));
+
+    return false;
+});
 
   //handling donation part
   $(".denomination").click(function(event) {
@@ -115,27 +94,12 @@ $(".remove").hide();
       $('#clickme').html(function(i, val) { return val*1-1 });
     });
 
-    
-
-//     $('.donate-sm').click(function(){
-//         if ($(window).width() < 768) {
-//             $('.donate').show();
-//         }
-//    });
-//    $('.closedonation').click(function(){
-//         if ($(window).width() < 768) {
-//             $('.donate').hide();
-//         }
-//    });
-   $('.donate-sm').click(function(){
-        $('.donate').show();
+  
+    $('.donate-sm').click(function(){
+      // $('.donate').show();
+      $('.donate').css("display", "block");
     });
     $('.closedonation').click(function(){
-            $('.donate').hide();
+            // $('.donate').hide();
+        $('.donate').css("display", "none");
     });
-
-
-
-
-
-      
