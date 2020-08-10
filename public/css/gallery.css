@@ -5,7 +5,7 @@
     -webkit-column-gap: 10px;
     -moz-column-gap: 10px;
     column-gap: 10px;
-    margin-top: 70px;
+    margin-top: 30px;
     overflow: hidden;
 }
   
@@ -49,3 +49,14 @@
     width: 200px;
 }
 }
+
+.g-heading{
+    margin-top: 90px !important;
+    color: #223F99 !important;
+    text-align: center;
+    font-family: 'Recursive', sans-serif !important;
+}
+.g-heading:hover {
+    color: aqua !important;
+}
+
