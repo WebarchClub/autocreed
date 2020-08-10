@@ -108,7 +108,12 @@ filter: blur(20px);
   margin: 0 8px;
   transition: all .3s ease-in-out;
 }
-
+#navigation .dropdown-menu{
+  background-color: black;
+}
+#navigation .dropdown-menu .dropdown-item{
+  font-size: 20px;
+}
 /* ----------------------------------------  */
 
 /* nav-links hover effect */
@@ -375,6 +380,7 @@ transform: translateY(-5px) scale(1.05);
     margin-top: 50px!important;
   }
 }
+
 /* media queries */
 
 @media(min-width:992px){
@@ -418,6 +424,14 @@ transform: translateY(-5px) scale(1.05);
   }
   #navigation .nav-item{
     font-size: 25px;
+  }
+  #navigation .dropdown{
+    display: none!important;
+  }
+}
+@media(min-width:992px){
+  #navigation .navbarsm{
+    display: none!important;
   }
 }
 @media(max-width:800px){

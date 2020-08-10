@@ -62,11 +62,21 @@
             <li class="nav-item  active firstLink" data-aos="zoom-in-left" data-aos-delay="1000">
               <a class="nav-link nav-link-ltr" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item" data-aos="zoom-in-left" data-aos-delay="4150">
+            <!--for width < 992px-->
+            <li class="nav-item navbarsm" data-aos="zoom-in-left" data-aos-delay="4150">
                  <a class="nav-link nav-link-ltr" href="/team">Team</a>
             </li>
-            <li class="nav-item" data-aos="zoom-in-left" data-aos-delay="1300">
+            <li class="nav-item navbarsm" data-aos="zoom-in-left" data-aos-delay="1300">
                  <a class="nav-link nav-link-ltr" href="/alumni">Alumni</a>
+            </li>
+            <!--for width > 992px-->
+            <li class="nav-item dropdown" data-aos="zoom-in-left" data-aos-delay="1300">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Members
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/team">Team</a>
+                <a class="dropdown-item" href="/alumni">Alumni</a>
             </li>
             <li class="nav-item" data-aos="zoom-in-left" data-aos-delay="1450">
                  <a class="nav-link nav-link-ltr" href="/gallery">Gallery</a>
