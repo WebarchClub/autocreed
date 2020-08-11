@@ -340,7 +340,9 @@
    text-transform: uppercase;
    cursor: pointer;
 }
-
+#store .donate-submit button:hover {
+   box-shadow: 0 0 15px #223F99;
+}
 #store .donate-submit small {
    color: rgba(255, 255, 255, 0.4);
    font-size: 12px;
