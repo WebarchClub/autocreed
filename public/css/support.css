@@ -151,7 +151,6 @@
    text-align: center;
    animation: 1s ease;
 }
-
 #store .btn-cart:hover{
    animation: bounce 1s ease-in-out;
 
@@ -641,6 +640,9 @@
    }
    #store .donate{
       right:0!important;
+   }
+   #store .donate{
+      display: block!important;
    }
    
 }

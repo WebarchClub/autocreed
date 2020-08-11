@@ -221,6 +221,8 @@ transform: translateY(-5px) scale(1.05);
 
 }
 
+
+
 /* navbar-toggler effects for small screens*/
 /* navbar slide right to left  */
 @media (max-width: 991px) {
@@ -713,17 +715,17 @@ transform: translateY(-5px) scale(1.05);
 }
 
 #footer #webarchLogo {
-  filter: grayscale(1);
-  margin-bottom: 3px;
-  height: 15px;
-  transition-duration: 200ms;
+filter: grayscale(1);
+margin-bottom: 3px;
+height: 15px;
+transition-duration: 200ms;
 }
 
 #footer a:hover #webarchLogo {
-  filter: none;
-  transition-duration: 200ms;
+filter: none;
+transition-duration: 200ms;
 }
 
 #footer a:hover {
-  text-decoration: none;
+text-decoration: none;
 }

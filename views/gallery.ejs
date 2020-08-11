@@ -1,20 +1,11 @@
 <%- include("partials/header") %>
 
 <div class="container">
-
+    <h1 class="g-heading">Gallery</h1>
     <div class="gallery">
         <% instafeed.forEach((data) => { %>
-        <li><img src="<%= data.url %>" alt=""></li>
+        <li><a href="<%= data.instaUrl %>" target="_blank"><img src="<%= data.url %>" alt=""></a></li>
         <% }); %>
-    </div>
-</div>
-
-<div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-            </div>
-        </div>
     </div>
 </div>
 
