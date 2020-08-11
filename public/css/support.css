@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700,300');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
 /* modal  */
 #store .opacity-animate{
    animation:opt-animation4 1s;
@@ -139,20 +139,87 @@
 #store .dropdown-menu{
    width: 300px!important;
 }
+#store .btn-cart{
+   background:#111;
+   color: white;
+   width: 4em;
+   height: 4em;
+   padding: 10px;
+   border: 3px solid black;
+   outline: none!important;
+   border-radius: 50%;
+   text-align: center;
+   animation: 1s ease;
+}
+#store .btn-cart:hover{
+   animation: bounce 1s ease-in-out;
 
+}
+/* bounce animation of cart  */
+#store .bounce{
+   animation: bounce 1s ease-in-out;
+}
+
+@keyframes bounce {
+   0%, 20%, 53%, 80%, 100% {
+     transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+     transform: translate3d(0,0,0);
+   }
+ 
+   40% {
+     transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+     transform: translate3d(0, -7px, 0);
+   }
+ 
+   70% {
+     transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+     transform: translate3d(0, -5px, 0);
+   }
+ 
+   90% {
+     transform: translate3d(0,-3px,0);
+   }
+ }
+ #store .bounce2{
+   animation: bounce2 1s ease-in-out;
+}
+
+@keyframes bounce2 {
+   0%, 20%, 53%, 80%, 100% {
+     transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+     transform: translate3d(0,0,0);
+   }
+ 
+   40% {
+     transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+     transform: translate3d(-6px, 0,0);
+   }
+ 
+   70% {
+     transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+     transform: translate3d(-4px,0, 0);
+   }
+ 
+   90% {
+     transform: translate3d(-2px,0,0);
+   }
+ }
 
 #store .donate {
    
    /*padding: 50px*/
    background-color: #171b24;
    width: 400px;
-   
+   min-height: 101.25vh;
    color: #FFF;
    overflow-x: hidden;
    position: absolute;
-   top: 70px;
+   top: 0px;
    right: 0;
-   padding-top: 20px;
+   padding: 70px 0 0 0;
+   /* position: fixed; */
+   overflow-y: hidden;
+   /* z-index: -1; */
 }
 
 #store .donate p {
@@ -227,7 +294,7 @@
 #store .donate-black h2 {
    font-family: 'Oswald', sans-serif;
    color: #FFF;
-   font-size: 32px;
+   font-size: 34px;
    margin-bottom: 30px;
 }
 
@@ -269,7 +336,7 @@
    font-size: 20px;
    line-height: 20px;
    padding: 14px 0;
-   margin: 30px 0;
+   margin: 50px 0 40px 0;
    text-transform: uppercase;
    cursor: pointer;
 }
@@ -378,6 +445,9 @@
     top: 0;
     opacity: 1;
 }
+#store .card .contentBx .buy:hover{
+   box-shadow: 0 0 15px #223F99;
+}
 #store .card .contentBx .remove{
     position: relative;
     top: 200px;
@@ -393,6 +463,9 @@
     transition: 0.5s;
     animation: up 0.4s ease-in-out;
     animation-delay: -0.1s;
+}
+#store .card .contentBx .remove:hover{
+   box-shadow: 0 0 15px #df1818;
 }
 @keyframes up{
    0%,50%{
@@ -472,7 +545,7 @@
  /* donate for small screen  */
  #store .donate h2 .closedonation{
    position: absolute;
-   top: 45px; 
+   top: 80px; 
    right: 0;
    color:white;
    background-color: #122936;
@@ -541,6 +614,9 @@
 @media(min-width:768px){
    #store .donate-sm,#store .closedonation{
       display: none!important;
+   }
+   #store .donate{
+      display: block!important;
    }
    
 }
