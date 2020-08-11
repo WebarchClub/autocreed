@@ -151,6 +151,7 @@
    text-align: center;
    animation: 1s ease;
 }
+
 #store .btn-cart:hover{
    animation: bounce 1s ease-in-out;
 
@@ -593,15 +594,32 @@
       z-index: 999;
    }
 }
+@media(max-width:1150px){
+   #store .donate{
+      width: 370px;
+      z-index: 999;
+   }
+}
 @media(max-width:1090px){
    #store .donate{
       width: 350px;
       z-index: 999;
    }
 }
+@media(min-width:992px) and (max-width:1040px){
+   #store .donate{
+      width: 330px;
+      height: 100vh;
+   }
+   #store .denomination{
+      width: 49.5%;
+      padding: 5px 0;
+   }
+}
 @media(max-width:768px){
    #store .donate{
       display: none;
+      position: fixed;
    }
    #store .col-sm-12{
       display: flex!important;
@@ -614,6 +632,7 @@
 @media(min-width:768px){
    #store .donate-sm,#store .closedonation{
       display: none!important;
+
    }
    #store .donate{
       display: block!important;
@@ -631,3 +650,4 @@
        width: 49.5%;
     }
 }
+

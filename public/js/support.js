@@ -5,6 +5,7 @@ $(".button").hide();
 $("#item").hide();
 $(".remove").hide();
 
+
 // function to add product to the cart and display it there
   $('.buy').click(function(){
         name = $($(this).siblings()[0]).html();   
