@@ -1,3 +1,12 @@
 <%- include("partials/header") %>
 
+<div class="container">
+    <h1 class="g-heading">Gallery</h1>
+    <div class="gallery">
+        <% instafeed.forEach((data) => { %>
+        <li><a href="<%= data.instaUrl %>" target="_blank"><img src="<%= data.url %>" alt=""></a></li>
+        <% }); %>
+    </div>
+</div>
+
 <%- include("partials/footer") %>

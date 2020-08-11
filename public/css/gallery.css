@@ -1,8 +1,61 @@
-body{
-    background-color: aquamarine;
-    background: #121213;
-    background-image: radial-gradient(top, circle cover, #212122 0%, #181622 80%);
-    background-attachment: fixed;
+.gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+  
+.gallery img { 
+    width: 100%; 
+    height: auto;
+    transition: 500ms;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    page-break-inside: avoid; /* For Firefox. */
+    -webkit-column-break-inside: avoid; /* For Chrome & friends. */
+    break-inside: avoid; /* For standard browsers like IE. :-) */
+}
 
-    height: 200vh; /* to check onscroll navbar bg change effect*/
+.gallery img:hover {
+    opacity: 1;
+}
+
+
+
+@media screen and (max-width: 767px) {
+.gallery { 
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+}
+.gallery div { margin: 0; 
+    width: 200px;
+}
+
+}
+
+@media screen and (max-width: 479px) {
+.gallery { 
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+}
+.gallery div { 
+    margin: 0; 
+    width: 200px;
+}
+}
+
+.g-heading{
+    margin-top: 90px !important;
+    color: #223F99 !important;
+    text-align: center;
+    font-family: 'Recursive', sans-serif !important;
+}
+.g-heading:hover {
+    color: aqua !important;
 }
