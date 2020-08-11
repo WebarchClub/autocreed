@@ -1,3 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@900&display=swap');
+/* ===========================Layout==================== */
+.section-head{
+  background-color: rgba(150, 150, 150, 0.2);
+  color: #fff;
+}
+.section-title h1{
+  text-transform: uppercase;
+  font-weight: 800;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  font-size: 6em;
+  font-family: 'Exo 2', sans-serif;
+  letter-spacing: 15px;
+}
+#key-events .section-title h1{
+  transform-origin: center;
+  transform: rotate(90deg);
+}
+@media(max-width: 576px){
+  .section-title h1{
+    font-size: 5em;
+    padding: 1.5em;
+    letter-spacing: 25px;
+  }
+}
+@media(max-width: 386px){
+  .section-title h1{
+    font-size: 4em;
+  }
+}
+/* ===========================Layout Ends==================== */
+
 /* ===================Carousel========================*/
 #carousel{
     
@@ -48,8 +81,8 @@ box-sizing: border-box;
 
 /* ==============Mission=========================== */
 #mission{
-    text-align: center;
-    
+    text-align: center;  
+    min-height: 70vh; 
 }
 #mission_title{
     color: #016A86;
@@ -72,9 +105,6 @@ box-sizing: border-box;
 #mission .jumbotron{
     background-color: transparent;
 }
-#mission_img{
-    height: 50%;
-}
 @media(min-width: 992px){
   #mission .jumbotron p:last-of-type{
     font-size: 1.2em;
@@ -83,30 +113,8 @@ box-sizing: border-box;
 /* ==============Mission ends=========================== */
 
 /*============Timeline Starts=====================*/
-
-.divider {
-  font-family: "Share Tech Mono", monospace;
-  color: #fff;
-  font-size: 2vh;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 30px;
-}
-.divider::before, .divider::after {
-  content: '';
-  display: block;
-  height: 0.09em;
-  min-width: 35vw;
-}
-.divider::before {
-  background: linear-gradient(to right, rgba(240, 240, 240, 0), #fff);
-  
-}
-.divider::after {
-  background: linear-gradient(to left, rgba(240, 240, 240, 0), #fff);
-  
+#timeline{
+  min-height: 80vh;
 }
 
 #timeline ol{
@@ -116,8 +124,7 @@ box-sizing: border-box;
   opacity: 0;
   margin: auto;
   transition: opacity 0.2s;
-  list-style-type:none !important;
-  
+  list-style-type:none !important;  
 }
 #timeline .cd-horizontal-timeline::before {
    content: 'mobile';
@@ -132,6 +139,7 @@ box-sizing: border-box;
   width: 90%;
  max-width: 800px;
   margin: 0 auto;
+  margin-top: 50px;
 }
 #timeline.cd-horizontal-timeline .events-wrapper {
   position: relative;
@@ -189,6 +197,7 @@ box-sizing: border-box;
   color: #cf9009;
   text-decoration: none;
   transform: translateZ(0);
+  
 }
 #timeline .events-content{
     
@@ -228,11 +237,8 @@ box-sizing: border-box;
   #timeline.cd-horizontal-timeline {
     margin: auto;
   }
-  #timeline.cd-horizontal-timeline::before {
-    /* never visible - this is used in jQuery to check the current MQ */
-    content: 'desktop';
   }
-}
+
 #timeline .cd-timeline-navigation{
     list-style-type:none;
 }
@@ -265,7 +271,7 @@ box-sizing: border-box;
   bottom: auto;
   right: auto;
   transform: translateX(-50%) translateY(-50%);
-  background: url(../images/next.png) no-repeat 0 0;
+  background: url(/images/next.png) no-repeat 0 0;
   
 }
 #timeline .cd-timeline-navigation a.prev {
@@ -332,7 +338,7 @@ box-sizing: border-box;
   animation-direction: reverse;
 }
 #timeline.cd-horizontal-timeline .events-content li > * {
-  max-width: 800px;
+  /*max-width: 800px;*/
   margin: 0 auto;
 }
 #timeline.cd-horizontal-timeline .events-content h2 {
@@ -356,6 +362,8 @@ box-sizing: border-box;
   font-size: 1.2rem;
   color: white;
   text-align: center;
+ position: relative;
+ bottom: 45px;
 }
 
 @media (min-width: 768px) {
@@ -398,53 +406,12 @@ box-sizing: border-box;
 /*--------------------------ACHIEVEMENTS------------------*/
 #achievements{
   overflow: hidden;
-  margin-bottom: 1.5em;
+  margin: 2em auto;
+  min-height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.achievements-header{
-  padding-bottom:25px;
-}
-.achievements-header h1{
-  text-align:center;
-  color: #016A86;
-  font-weight: 800;
-  font-size: 4rem;
-  padding:10px;
-  padding-bottom:15px;
-   padding-top:100px;
-}
-.achievements-header .achievements-hr{
-  /* margin: 12px 0;
-  border: 0;
-  text-align: center; */
-   margin: auto;
-  /*width: 20%; */
-  /* width: 0%;
-  min-width: 20%;
-  max-width:#0*/
-  /* width: 7%;
-  border:6.5px solid whitesmoke;
-  background-size: cover;
-  background-color: whitesmoke;
-  background-position: center;
-  text-align: center;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent */
-  min-width: 30%;
-  max-width: 35%;
-  height: 1px;
-background: #333;
-background-image: -webkit-linear-gradient(left, #333,whitesmoke, #333);
-background-image: -moz-linear-gradient(left, #333,whitesmoke, #333);
-background-image: -ms-linear-gradient(left, #333,whitesmoke, #333);
-background-image: -o-linear-gradient(left, #333,whitesmoke, #333);
-
-}
-/* .achievements-header .achievements-hr:before {
-    content: "\2022 \2022 \2022 \2022 \2022" ;
-    font-size: 50px;
-    color: darkblue;
-  } */
-
 
 
 #corner-ribbon ul{
@@ -466,7 +433,7 @@ background-image: -o-linear-gradient(left, #333,whitesmoke, #333);
 /* ----- White Block ---------------------------------------*/ 
   #corner-ribbon > div {
       display            : block;
-      background         : rgba(35,35,35,0.95);
+      background         : rgba(35,35,35,0.7);
       height             : 500px;
       /* width              : 665px; */
       box-shadow         : 0px 1px 5px 0px rgba(0,0,0,0.7); 
@@ -489,34 +456,37 @@ background-image: -o-linear-gradient(left, #333,whitesmoke, #333);
     padding-top:70px !important;
 }
 #corner-ribbon > div > div {
-      left       : 600px !important;
+      left       : 550px !important;
           margin:auto;
+          height:250px !important;
+          width:250px !important;
   }
  #corner-ribbon > div > div > div {
-      width              : 378px !important;
-      height             : 50px !important;
+      width              : 410px !important;
+      height             : 55px !important;
       position           : relative;
       top                : 30px;
       right              : 80px !important;
       z-index            : 1;
 }
 #corner-ribbon > div > div:after {
-      top                   : 140px !important;
+      top                   : 180px !important;
 }
 #corner-ribbon > div > div > div:before {
-      left              : 115px !important;
-      height: 76px;
+      left              : 124px !important;
+      height: 80px !important;
 }
 #corner-ribbon > div > div > div:after{
-      left              : 298px !important;
-    height: 82px;
+      left              : 365px !important;
+    height: 90px !important;
+    bottom:100px !important;
 }
 }
 @media (min-width: 769px){
   #corner-ribbon > div{
       width:710px;
       margin:auto;
-      
+      height:100vh;
   }
 
   #corner-ribbon > div > div {
@@ -542,9 +512,15 @@ background-image: -o-linear-gradient(left, #333,whitesmoke, #333);
       left              : 273px ;
     height: 82px;
 } 
- 
+#corner-ribbon ul{
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-@media (max-width: 768px){
+#corner-ribbon ul li{
+  padding-bottom:40px;
+}
+}
+@media (max-width: 935px){
   .achievements-header .achievements-hr{
     max-width: 40%;
   }
@@ -583,7 +559,7 @@ background-image: -o-linear-gradient(left, #333,whitesmoke, #333);
     height: 82px;
 } 
 }
-@media (max-width: 576px){
+@media (max-width: 653px){
   .achievements-header .achievements-hr{
     max-width: 60%;
   }
@@ -626,7 +602,7 @@ background-image: -o-linear-gradient(left, #333,whitesmoke, #333);
     left              : 154px;
 } 
 }
-@media (max-width: 376px){
+@media (max-width: 450px){
   .achievements-header .achievements-hr{
     max-width: 90%;
   }
@@ -650,6 +626,29 @@ top: 75px;
 }
    #corner-ribbon ul{
     padding-top: 0px;
+}
+  #achievements-first-li{
+    padding-top:50px;
+}
+}
+@media(max-width:400px){
+  #corner-ribbon > div {
+      width              : 250px;
+      height:550px;
+  }
+  #corner-ribbon > div > div {
+      left       : 60px;
+
+  }
+  #corner-ribbon > div > div >div {
+      height:30px;
+
+  }
+  #corner-ribbon > div > div:after {
+top: 75px;
+  }
+  #corner-ribbon ul{
+    padding-top: 30px;
 }
   #achievements-first-li{
     padding-top:50px;

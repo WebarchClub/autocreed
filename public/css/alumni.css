@@ -224,8 +224,6 @@ body{
   background-color: #af2a3c;
   transform: scale(1.1);
 }
-
-
 #about .headshottext{
   margin-top: 10px;
   padding-left: 10px;
@@ -237,7 +235,6 @@ body{
   font-size: 70%;
 }
 /*******************************ALUMNI PAGE STYLING ENDS**************************/
-
 /**********************************HEADING STYLING**************************************/
 @font-face {
 font-family: 'Iceland';
