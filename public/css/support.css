@@ -570,6 +570,7 @@
 #store .donate-sm h2 .downarrow{
    font-size: 18px;
    padding-right: 7px;
+   transition: 0.5s;
 }
 #store .donate-sm h2 span {
    display: block;
@@ -583,11 +584,14 @@
    background-color: #223F99;
    border-radius: 50%;
 }
-
+#store .donate-sm:hover i{
+   transform: rotate(90deg);
+   padding-right: 10px;
+}
 
  @media(max-width:1200px){
    #store .card{
-      transform: scale(0.90);
+      transform: scale(0.95);
       
    }
    #store .donate{
@@ -616,9 +620,10 @@
       padding: 5px 0;
    }
 }
-@media(max-width:768px){
+@media(max-width:992px){
    #store .donate{
-      display: none;
+      right: -100%;
+      transition: ease-in-out .5s;
       position: fixed;
    }
    #store .col-sm-12{
@@ -629,15 +634,34 @@
       transform: scale(1)!important;
   }
 }
-@media(min-width:768px){
+@media(min-width:992px){
    #store .donate-sm,#store .closedonation{
       display: none!important;
 
    }
    #store .donate{
-      display: block!important;
+      right:0!important;
    }
    
+}
+@media(min-width:575px) and (max-width:768px){
+   #store .container{
+      max-width: 95%!important;
+   }
+   #store .card{
+      transform: scale(0.9)!important;
+  }
+  #store .card .imgBox img{
+   width: 270px;
+   }
+}
+@media(max-width:575px){
+   #store .card{
+      transform: scaleX(1)!important;
+      margin-right: 1px!important;
+      margin-right: 15px!important;
+  }
+  
 }
 @media(max-width:490px){
     #store .card{

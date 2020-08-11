@@ -103,9 +103,9 @@ $('.plus').click(function () {
    
     $('.donate-sm').click(function(){
       // $('.donate').show();
-      $('.donate').css("display", "block");
+      $('.donate').css("right", 0);
     });
     $('.closedonation').click(function(){
             // $('.donate').hide();
-        $('.donate').css("display", "none");
+        $('.donate').css("right", "-100%");
     });
