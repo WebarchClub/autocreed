@@ -46,14 +46,12 @@ body{
 	  	margin: -4px;
 	}
 }
-
 @media (min-width: 992px) {
 	#about .corner-decoration {
 		width: 4em;
 	  	margin: -5px;
 	}
 }
-
 @media (min-width: 1200px) {
 	#about .corner-decoration {
 		width: 5em;
