@@ -1,16 +1,14 @@
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+/* @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"); */
 
 /*****************CONTACT FORM STYLING*******************/
 
-body {
-  background: #0f4c75 !important;
-}
+
 .collig{
-  color: black !important;
+  color: #fff !important;
   font-weight: bold;
 }
-h1, p{
-  color: #bbe1fa !important;
+#contactpage h1, .contactp{
+  color: #ccf !important;
   
 }
 .user-message{
@@ -21,7 +19,7 @@ input,
 select,
 textarea {
   background: none;
-  color: #646464;
+  color: #000;
   font-size: 15pt;
   font-weight: 300;
   line-height: 1.75em;
@@ -86,7 +84,7 @@ ul.actions li:last-child {
   margin-right: auto;
   text-align: center;
 }
-p{
+.contactp{
 	font-size: 18px !important;
 }
 
@@ -112,7 +110,7 @@ input[type="checkbox"] + label {
   cursor: pointer;
   display: inline-block;
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 600;
   padding-left: 2.4em;
   padding-right: 0.75em;
   position: relative;
@@ -150,8 +148,8 @@ input[type="checkbox"]:checked + label:before {
 }
 
 input[type="checkbox"]:focus + label:before {
-  border-color: #47cdd9;
-  box-shadow: 0 0 0 1px #47cdd9;
+  border-color: #000;
+  box-shadow: 0 0 0 1px #000;
 }
 
 input[type="checkbox"] + label:before {
@@ -175,10 +173,10 @@ input[type="button"],
   -o-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  background-color: transparent;
+  background-color: rgb(80, 80, 80);
   border-radius: 0.5em;
   border: solid 1px black !important;
-  color: black !important;
+  color: #fff !important;
   cursor: pointer;
   display: inline-block;
   font-size: 0.8em;
@@ -200,7 +198,7 @@ input[type="reset"]:hover,
 input[type="button"]:hover,
 .button:hover {
   background-color: rgba(144, 144, 144, 0.075);
-  color: #bbe1fa !important;
+  color: #fff !important;
 }
 
 input[type="submit"]:active,
@@ -239,7 +237,7 @@ input[type="button"].icon:before,
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(94, 110, 141, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
@@ -266,7 +264,7 @@ input[type="button"].icon:before,
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  background: #fff;
+  background: #000;
   border-radius: .25em .25em .4em .4em;
   text-align: center;
   box-shadow: none;
@@ -321,7 +319,7 @@ input[type="button"].icon:before,
 }
 
 .is-visible .cd-popup-container {
-  background-color: #223F99;
+  background-color: rgb(80, 80, 80);
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
@@ -343,7 +341,7 @@ label:hover {
 }
 
 .contact-form {
-  background: #223F99 !important;
+  background: rgb(80, 80, 80) !important;
   height: auto;
   margin: 100px auto;
   max-width: 82%;
@@ -411,7 +409,7 @@ label:hover {
 .contact-form .email.typing label,
 .contact-form .message.typing label,
 .contact-form .name.typing label {
-  color: #3498db !important;
+  color: #000 !important;
   font-size: 10px !important;
   top: 7px !important;
 }
@@ -461,7 +459,7 @@ label:hover {
 }
 
 .contact-form .submit {
-  background: #223F99 !important;
+  background: rgb(80, 80, 80) !important;
   display: block !important;
   overflow: hidden !important;
   padding: 23px !important;

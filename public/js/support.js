@@ -5,6 +5,7 @@ $(".button").hide();
 $("#item").hide();
 $(".remove").hide();
 
+
 // function to add product to the cart and display it there
   $('.buy').click(function(){
         name = $($(this).siblings()[0]).html();   
@@ -31,6 +32,9 @@ $(".remove").hide();
        $($(this).siblings()[2]).show(); //shows remove button on card
 
        $input.val("1"); //sets value of number of products to 1
+
+
+       $('.btn-cart').removeClass("bounce").addClass("bounce");
   });
 
   //function to remove product from the cart
@@ -46,6 +50,8 @@ $(".remove").hide();
 
       $($(this).siblings()[2]).show();
       $(this).hide();
+      $('.btn-cart').removeClass("bounce2").addClass("bounce2");
+      
   });
   // choosing number of products to be bought (+/-)
   $('.minus').click(function () {
@@ -94,9 +100,12 @@ $('.plus').click(function () {
       $('#clickme').html(function(i, val) { return val*1-1 });
     });
 
-   $('.donate-sm').click(function(){
-        $('.donate').show();
+   
+    $('.donate-sm').click(function(){
+      // $('.donate').show();
+      $('.donate').css("right", 0);
     });
     $('.closedonation').click(function(){
-            $('.donate').hide();
+            // $('.donate').hide();
+        $('.donate').css("right", "-100%");
     });
