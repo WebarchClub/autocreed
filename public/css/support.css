@@ -352,6 +352,7 @@
 /* card layout  */
 #store .cart{
    margin-top: 100px!important;
+   margin-left: 20px;
 }
 #store .card{
     position: relative;
