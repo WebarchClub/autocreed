@@ -31,8 +31,6 @@
 }
 /* ===========================Layout Ends==================== */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 /* ===================Carousel========================*/
 #carousel{
     padding-top: 55px;
@@ -91,7 +89,7 @@
 #mission #mission_title{
     color: #00f;
     text-shadow: 2px 3px rgb(197, 197, 197), 5px 7px 7px black;
-=======
+}
 /* ===================Carousel========================*/
 #carousel{
     
@@ -148,7 +146,6 @@ box-sizing: border-box;
 #mission_title{
     color: #016A86;
     font-weight: 800;
->>>>>>> 22c710551f6a6693b376af6bbe2e74ac254f7087
 }
 #mission .jumbotron a{
     color: #00f;
@@ -158,19 +155,20 @@ box-sizing: border-box;
     color: whitesmoke;
     word-wrap: normal;
 }
-<<<<<<< HEAD
-=======
+
+
 #mission .jumbotron p:first-of-type{
   font-size: 1.8em;
 }
->>>>>>> 22c710551f6a6693b376af6bbe2e74ac254f7087
+s
 #mission .jumbotron hr{
     background-color: rgb(207, 144, 9);
 }
 #mission .jumbotron{
-<<<<<<< HEAD
+
     background-color: #53535365;
 }
+
 #mission #mission_img{
     height: 50%;
 } 
@@ -410,12 +408,7 @@ box-sizing: border-box;
     }
 }
 /* ******************sponsors section ends here************************** */
-=======
 
->>>>>>> 5a8e9c67e52b79efe717faa3e54b8de44427c5e6
-=======
-    background-color: transparent;
-}
 @media(min-width: 992px){
   #mission .jumbotron p:last-of-type{
     font-size: 1.2em;
@@ -829,8 +822,13 @@ box-sizing: border-box;
 }
 #corner-ribbon ul li{
   padding-bottom:40px;
+
 }
 }
+
+
+
+
 @media (max-width: 935px){
   .achievements-header .achievements-hr{
     max-width: 40%;
@@ -1106,4 +1104,4 @@ top: 75px;
   }
 
   /*-------------------------------------- END OF ACHIEVEMENTS SECTION-----------------------------------------------------*/
->>>>>>> 22c710551f6a6693b376af6bbe2e74ac254f7087
+

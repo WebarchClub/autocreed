@@ -109,4 +109,3 @@ $('.plus').click(function () {
             // $('.donate').hide();
         $('.donate').css("right", "-100%");
     });
-
