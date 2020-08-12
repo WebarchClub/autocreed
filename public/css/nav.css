@@ -1,3 +1,32 @@
+/**********************************HEADING STYLING**************************************/
+@font-face {
+  font-family: 'Iceland';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Iceland'), local('Iceland-Regular'), url(https://themes.googleusercontent.com/static/fonts/iceland/v3/F6LYTZLHrG9BNYXRjU7RSw.woff) format('woff');
+  }
+  
+  .page-heading{
+  text-align:center;
+  font-size:5em;
+  font-family:Iceland;
+  margin: 10px !important;
+  }
+  .page-heading .blue{
+  color: white !important;
+  
+  }
+  .page-heading a:hover{
+  color: aqua !important;
+  }
+  @media screen and (max-width: 990px) {
+    .page-heading{
+    font-size: 40px;
+  }
+  }
+  /*********************************HEADING STYLING ENDS*******************************/
+
+
 :root {
   /* bgcolor of sidebar  */
   --navBg: rgb(0, 0, 0); /*set according to color of navbar*/
