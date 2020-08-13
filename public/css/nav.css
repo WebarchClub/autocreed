@@ -26,7 +26,6 @@
   }
   /*********************************HEADING STYLING ENDS*******************************/
 
-
   :root {
     /* bgcolor of sidebar  */
     --navBg: rgb(0, 0, 0); /*set according to color of navbar*/
@@ -101,6 +100,7 @@
     height: 50px;
     margin-top: -5px;
     transition: 1s;
+    filter: none !important;
   }
   
   
@@ -180,39 +180,6 @@
     background: transparent;
   }
   
-  /*@media(min-width:992px){
-     #navigation nav.circle ul li a:hover:after {
-        animation: circle .8s ease-in forwards;
-    } 
-   @keyframes circle {
-    0% {
-      width: 1px;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      margin: auto;
-      height: 1px;
-      z-index: -1;
-      background: #aaf; 
-      border-radius: 100%;
-    }
-    100% {
-      background: none;
-      height: 5000%;
-      width: 5000%;
-      z-index: -1;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-      border-radius: 10px;
-    }
-  } */
-  
-  /* mobile navlink hover animation  */
-  
     
     #navigation .nav-link {
       padding-bottom: 15px;
@@ -243,11 +210,7 @@
     #navigation .nav-link-ltr:hover::before {
       width: 80%;
     }
-  
-  
-  
-  
-  
+
   /* navbar-toggler effects for small screens*/
   /* navbar slide right to left  */
   @media (max-width: 991px) {
