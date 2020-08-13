@@ -19,7 +19,7 @@
 }
 @media(max-width: 576px){
   .section-title h1{
-    font-size: 5em;
+    font-size: 4.8em;
     padding: 1.5em;
     letter-spacing: 25px;
   }
@@ -85,30 +85,48 @@ box-sizing: border-box;
     min-height: 70vh; 
 }
 #mission_title{
-    color: #016A86;
+    color: #223F99;
     font-weight: 800;
 }
-#mission .jumbotron a{
-    color: #00f;
-    box-shadow: 5px 5px 5px black;
+#mission .brief p{
+  font-size: 1.5em;
+}
+#mission .sub p{
+  font-size: 1.5em;
 }
 #mission .jumbotron p{
     color: whitesmoke;
     word-wrap: normal;
+    text-align: justify;
 }
-#mission .jumbotron p:first-of-type{
-  font-size: 1.8em;
+#mission .more{
+  height: 100%;
+  width: 100%;
+}
+#mission .more:hover{
+  background-color: rgba(150, 150, 150, 0.2);
+}
+#mission i{
+  font-size: 5em;
+  color: #fff;
+  animation: GrowShrink 2s infinite ease-out;
+}
+@keyframes GrowShrink{
+  from{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+  to{
+    transform: scale(1);
+  }
 }
 #mission .jumbotron hr{
     background-color: rgb(207, 144, 9);
 }
 #mission .jumbotron{
     background-color: transparent;
-}
-@media(min-width: 992px){
-  #mission .jumbotron p:last-of-type{
-    font-size: 1.2em;
-  }
 }
 /* ==============Mission ends=========================== */
 

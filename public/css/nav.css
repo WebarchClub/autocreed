@@ -125,6 +125,7 @@
   #navigation #sidebarLogo{
     width: 100%;
     opacity: 1;
+    filter: drop-shadow(0 0 0px #223F99)!important;
   }
   
   #navigation #sidebarLogo:hover .logo{
