@@ -113,5 +113,5 @@ $('.plus').click(function () {
       $('.inside').removeClass('ins');  
     }); 
     $('.icon').click(function(){ 
-      $('.inside').addClass('ins');  
+      $(this).closest('.inside').addClass('ins');  
     }); 
