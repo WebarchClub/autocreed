@@ -109,3 +109,9 @@ $('.plus').click(function () {
             // $('.donate').hide();
         $('.donate').css("right", "-100%");
     });
+    $('.icon2').click(function(){ 
+      $('.inside').removeClass('ins');  
+    }); 
+    $('.icon').click(function(){ 
+      $('.inside').addClass('ins');  
+    }); 
