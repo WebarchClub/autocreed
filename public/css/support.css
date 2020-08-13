@@ -151,10 +151,7 @@
    text-align: center;
    animation: 1s ease;
 }
-#store .btn-cart:hover{
-   animation: bounce 1s ease-in-out;
 
-}
 /* bounce animation of cart  */
 #store .bounce{
    animation: bounce 1s ease-in-out;
@@ -619,10 +616,15 @@
       z-index: 999;
    }
 }
-@media(min-width:992px) and (max-width:1040px){
+
+@media(min-width:992px) and (max-width:1090px){
+   #store .card{
+      margin-top: 38px;
+   }
    #store .donate{
       width: 330px;
       height: 100vh;
+      
    }
    #store .denomination{
       width: 49.5%;

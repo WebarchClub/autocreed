@@ -50,7 +50,7 @@ $(".remove").hide();
 
       $($(this).siblings()[2]).show();
       $(this).hide();
-      $('.btn-cart').removeClass("bounce2").addClass("bounce2");
+      $('.btn-cart').addClass("bounce2");
       
   });
   // choosing number of products to be bought (+/-)
