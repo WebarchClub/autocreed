@@ -623,11 +623,10 @@ input:focus, textarea:focus, keygen:focus, select:focus {
 	}
 }
 
-
-@media (max-width: 990px){
-	p{
-		font-size: 15px !important;
-	}
+@media(max-width: 576px){
+  .page-heading{
+    font-size: 4em;
+  }
 }
 
 
