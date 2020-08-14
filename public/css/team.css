@@ -16,34 +16,18 @@
 }
 
 .team {
-	height: 100%;
-	width: 100%;
 	color: white;
-	margin-top: 17.5vh;
+	margin-top: 85px;
 	text-align: center;
 }
-
-.motto {
-	letter-spacing: 4px;
-	font-size: 3.5em;
-	font-weight: 700;
-	text-shadow: 0 0 15px #3f51b5, 0 0 10px #3f51b5;
-}
-
-.team-main-section {
-	padding: 50px;
-	padding-left: 225px;
-	padding-right: 225px;
-	padding-bottom: 50px;
-}
-
-.team-main-section h2 {
-	padding-bottom: 15px;
+.page-heading{
+	line-height: 0.8em;
 }
 
 .team-descript {
 	text-align: center;
 	font-size: 17.5px;
+	padding-bottom: 2em;
 	padding-left: 100px;
 	padding-right: 100px;
 }
@@ -102,6 +86,8 @@
 	}
 
 	.team-descript {
+		text-align: justify;
+		padding: 0;
 		padding-left: 40px;
 		padding-right: 40px;
 	}
@@ -126,26 +112,12 @@
 		justify-content: center;
 		flex-direction: column;
 	}
-
-	.team-main-section {
-		padding-left: 30px;
-		padding-right: 30px;
-	}
 }
 
 @media (max-width: 768px) {
-	.motto {
-		font-size: 2.5em;
-		letter-spacing: 2px;
+	br {
+		display: none;
 	}
-
-	h3 {
-		margin-top: 0px;
-	}
-	.team {
-		margin-top: 14vh;
-	}
-
 	.card {
 		margin-top: 10vh;
 	}
@@ -167,24 +139,24 @@
 		justify-content: center;
 		flex-direction: column;
 	}
+	.team-descript{
+		text-align: justify;
+	}
+}
+@media(max-width: 610px){
+	.page-heading{
+		font-size: 3.5em !important;
+	}
 }
 
-@media (max-width: 400px) {
-	br {
-		display: none;
-	}
-
-	.motto {
-		font-size: 1.5em;
-		margin-bottom: 0px;
-		letter-spacing: 1px;
-	}
-
+@media (max-width: 448px) {
 	.team-descript {
-		text-align: center;
+		text-align: justify;
 		font-size: 17px;
-		padding-top: 40px;
 		padding-left: 0px;
 		padding-right: 0px;
+	}
+	.page-heading{
+		font-size: 3em !important;
 	}
 }
