@@ -1,0 +1,162 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#team-member-name {
+	margin-top: 20px;
+}
+
+#team-pic {
+	height: 250px;
+	width: 250px;
+	/* height: 225px; */
+	/* border-radius: 12.5px; */
+}
+
+.team {
+	color: white;
+	margin-top: 85px;
+	text-align: center;
+}
+.page-heading{
+	line-height: 0.8em;
+}
+
+.team-descript {
+	text-align: center;
+	font-size: 17.5px;
+	padding-bottom: 2em;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+/* Cards */
+
+#single-card {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.card {
+	background: none;
+	color: white;
+}
+
+.team-icons a {
+	color: white;
+	font-size: 22.75px;
+}
+
+.team-icons a:hover {
+	transition: 0.5s;
+	color: blue;
+}
+
+#team-img {
+	margin-top: -50px;
+}
+.team-row {
+	/* margin-top: 15vh; */
+	margin-top: 10vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#final-card {
+	margin-top: 10vh;
+	display: inline-block;
+	/* margin: 0 auto; */
+}
+
+@media (max-width: 1200px) {
+	.team-descript {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+
+@media (max-width: 1024px) {
+	#team-pic {
+		width: 250px;
+		height: 250px;
+		/* height: 200px; */
+	}
+
+	.team-descript {
+		text-align: justify;
+		padding: 0;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	.team-main-section {
+		padding-bottom: 50px;
+	}
+
+	#team p {
+		margin-bottom: 0px;
+	}
+
+	.card {
+		margin-top: 5vh;
+		margin-bottom: 5vh;
+	}
+
+	.team-row {
+		margin-top: 7.5vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 768px) {
+	br {
+		display: none;
+	}
+	.card {
+		margin-top: 10vh;
+	}
+
+	#final-card {
+		margin-top: 0vh;
+	}
+
+	.team-main-section {
+		padding-bottom: 0px;
+		padding-left: 20px;
+		padding-right: 30px;
+	}
+
+	.team-row {
+		margin-top: 0vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.team-descript{
+		text-align: justify;
+	}
+}
+@media(max-width: 610px){
+	.page-heading{
+		font-size: 3.5em !important;
+	}
+}
+
+@media (max-width: 448px) {
+	.team-descript {
+		text-align: justify;
+		font-size: 17px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.page-heading{
+		font-size: 3em !important;
+	}
+}
