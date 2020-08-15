@@ -399,3 +399,10 @@ height: 190px;
 }
 
   }
+
+@media(max-width: 490px){
+  .page-heading{
+    line-height: 0.8em;
+    font-size: 4em !important;
+  }
+}
