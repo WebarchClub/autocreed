@@ -2,7 +2,7 @@ $(document).ready(function(){
   // setTimeout(function(){
   //   $('.navbar-brand').toggleClass('disappear');
   //   }, 6000);
-  $("button").click(function(){
+  $(".navbar-toggler").click(function(){
   
     $('.navbar-toggler').toggleClass('shift');
     // $('.navbar-brand').toggleClass('disappear');
@@ -10,7 +10,7 @@ $(document).ready(function(){
   });
 });
 
-$("button").click(function () {
+$(".navbar-toggler").click(function () {
   var el = $('.navbar-brand');
   window.setTimeout(function() {
       el.toggleClass('disappear');

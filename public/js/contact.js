@@ -85,7 +85,6 @@ $(document).ready(function ($) {
         var email = $('#email').val();
         var message = $('#message').val();
         var human = $('#human:checked').val();
-
         if (human) {
             if (validateEmail(email)) {
                 if (name) {

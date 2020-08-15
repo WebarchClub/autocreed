@@ -64,7 +64,7 @@ box-sizing: border-box;
 box-sizing: border-box;
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px)and (min-width: 501px){
 .carousel-item {
   height: 45vh; 
   background-attachment: scroll;
@@ -72,7 +72,22 @@ box-sizing: border-box;
 
 
 }
-@media (min-width: 768px){
+@media (max-width: 500px) and (min-width:376px) {
+  .carousel-item {
+    height: 42vh; 
+    background-attachment: scroll;
+  }
+  }
+
+
+  @media (max-width: 375px)  {
+    .carousel-item {
+      height: 40vh; 
+      background-attachment: scroll;
+    }
+    }
+    
+@media (min-width: 768px) {
 .carousel-item {
   height: 90vh; 
 }
@@ -124,9 +139,7 @@ box-sizing: border-box;
   opacity: 0;
   margin: auto;
   transition: opacity 0.2s;
-  list-style-type:none !important;
- 
-  
+  list-style-type:none !important;  
 }
 #timeline .cd-horizontal-timeline::before {
    content: 'mobile';
@@ -410,6 +423,9 @@ box-sizing: border-box;
   overflow: hidden;
   margin: 2em auto;
   min-height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -432,7 +448,7 @@ box-sizing: border-box;
 /* ----- White Block ---------------------------------------*/ 
   #corner-ribbon > div {
       display            : block;
-      background         : rgba(35,35,35,0.95);
+      background         : rgba(35,35,35,0.7);
       height             : 500px;
       /* width              : 665px; */
       box-shadow         : 0px 1px 5px 0px rgba(0,0,0,0.7); 
@@ -455,34 +471,37 @@ box-sizing: border-box;
     padding-top:70px !important;
 }
 #corner-ribbon > div > div {
-      left       : 600px !important;
+      left       : 550px !important;
           margin:auto;
+          height:250px !important;
+          width:250px !important;
   }
  #corner-ribbon > div > div > div {
-      width              : 378px !important;
-      height             : 50px !important;
+      width              : 410px !important;
+      height             : 55px !important;
       position           : relative;
       top                : 30px;
       right              : 80px !important;
       z-index            : 1;
 }
 #corner-ribbon > div > div:after {
-      top                   : 140px !important;
+      top                   : 180px !important;
 }
 #corner-ribbon > div > div > div:before {
-      left              : 115px !important;
-      height: 76px;
+      left              : 124px !important;
+      height: 80px !important;
 }
 #corner-ribbon > div > div > div:after{
-      left              : 298px !important;
-    height: 82px;
+      left              : 365px !important;
+    height: 90px !important;
+    bottom:100px !important;
 }
 }
 @media (min-width: 769px){
   #corner-ribbon > div{
       width:710px;
       margin:auto;
-      
+      height:100vh;
   }
 
   #corner-ribbon > div > div {
@@ -508,9 +527,15 @@ box-sizing: border-box;
       left              : 273px ;
     height: 82px;
 } 
- 
+#corner-ribbon ul{
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-@media (max-width: 768px){
+#corner-ribbon ul li{
+  padding-bottom:40px;
+}
+}
+@media (max-width: 935px){
   .achievements-header .achievements-hr{
     max-width: 40%;
   }
@@ -549,7 +574,7 @@ box-sizing: border-box;
     height: 82px;
 } 
 }
-@media (max-width: 576px){
+@media (max-width: 653px){
   .achievements-header .achievements-hr{
     max-width: 60%;
   }
@@ -592,7 +617,7 @@ box-sizing: border-box;
     left              : 154px;
 } 
 }
-@media (max-width: 376px){
+@media (max-width: 450px){
   .achievements-header .achievements-hr{
     max-width: 90%;
   }
@@ -616,6 +641,29 @@ top: 75px;
 }
    #corner-ribbon ul{
     padding-top: 0px;
+}
+  #achievements-first-li{
+    padding-top:50px;
+}
+}
+@media(max-width:400px){
+  #corner-ribbon > div {
+      width              : 250px;
+      height:550px;
+  }
+  #corner-ribbon > div > div {
+      left       : 60px;
+
+  }
+  #corner-ribbon > div > div >div {
+      height:30px;
+
+  }
+  #corner-ribbon > div > div:after {
+top: 75px;
+  }
+  #corner-ribbon ul{
+    padding-top: 30px;
 }
   #achievements-first-li{
     padding-top:50px;
