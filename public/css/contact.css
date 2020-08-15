@@ -491,7 +491,10 @@ body {
 	color: #333;
 	font-weight: normal;
 	font-size: 1em;
-	font-family: 'Roboto', Arial, sans-serif;
+
+}
+.i {
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
 input:focus, textarea:focus, keygen:focus, select:focus {
@@ -646,9 +649,7 @@ input:focus, textarea:focus, keygen:focus, select:focus {
   vertical-align: -0.200em;
 }
 
-/* .rounded-social-buttons {
-  text-align: center;
-} */
+
 
 .rounded-social-buttons .social-button {
   display: inline-block;
@@ -661,7 +662,7 @@ input:focus, textarea:focus, keygen:focus, select:focus {
   text-decoration: none;
   text-align: center;
   color: #fefefe;
-  font-size: 1.5625rem;
+  font-size:1.4rem;                 
   font-weight: normal;
   line-height: 2em;
   border-radius: 1.6875rem;

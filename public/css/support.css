@@ -19,27 +19,27 @@
    transform: scale(1) rotate(0deg);
  }
 }
-#store.modal h2{
+#store .modal h2{
    font-family: 'Oswald', sans-serif;
    font-weight: 900;
 
 }
-#store.modal{
+#store .modal{
    font-family: 'Open Sans', sans-serif;
    
 }
 
-#store.modal label{
-   font-size: 18px;
+#store .modal label{
+   font-size: 16px;
    font-weight: 700;
+   
 }
-#store.modal input,#store.modal textarea{
-   font-size: 14px;
-   font-weight: 100;
-   width: 80%;
-   margin: 0 10%;
+#store .modal .btn-proceed{
+    background: #223F99;
+    color:#fff;
 }
-#store.modal .form-group{
+
+#store .modal .form-group{
    margin: 15px 0;
 }
 #store .empty{
