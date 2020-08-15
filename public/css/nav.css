@@ -63,7 +63,7 @@ filter: blur(20px);
 
 /* main logo  */
 #navigation .imgLogo{
-  width: 50px;
+  width: 60px;
   height: 40px;
   transition: 1s;
 }
@@ -498,7 +498,7 @@ transform: translateY(-5px) scale(1.05);
     width: 250px;
   }
   #navigation .imgLogo{
-    width: 43px;
+    width: 55px;
   }
   /* #navigation .navbar-collapse {
     left: -72vw!important;
@@ -527,9 +527,7 @@ transform: translateY(-5px) scale(1.05);
   #navigation .navbar-brand .Logo{
     width: 260px;
   }
-  #navigation .imgLogo{
-    width: 40px;
-  }
+  
 }
 @media(max-width:375px){
   #navigation .navbar-collapse {
@@ -539,9 +537,7 @@ transform: translateY(-5px) scale(1.05);
   #navigation .navbar-brand .Logo{
     width: 235px;
   }
-  #navigation .imgLogo{
-    width: 40px;
-  }
+  
 }
 @media(max-width:350px){
   #navigation .navbar-collapse {
