@@ -151,10 +151,7 @@
    text-align: center;
    animation: 1s ease;
 }
-#store .btn-cart:hover{
-   animation: bounce 1s ease-in-out;
 
-}
 /* bounce animation of cart  */
 #store .bounce{
    animation: bounce 1s ease-in-out;
@@ -210,7 +207,7 @@
    /*padding: 50px*/
    background-color: #171b24;
    width: 400px;
-   min-height: 101.25vh;
+   /* min-height: 101.25vh; */
    color: #FFF;
    overflow-x: hidden;
    position: absolute;
@@ -352,6 +349,7 @@
 /* card layout  */
 #store .cart{
    margin-top: 100px!important;
+   margin-left: 10px;
 }
 #store .card{
     position: relative;
@@ -504,28 +502,16 @@
     cursor:pointer;
 
  }
- 
-#store .card .inside:hover {
-    width: 100%;
-    right: 0;
-    top: 0;
-    border-radius: 0;
-    height: 100%;
-    cursor:pointer;
+ #store .card .inside .contents .icon2 {
+   position: absolute;
+   right: 15px;
+   top: 15px;
+   color: white;
+   opacity: 1;
+   cursor:pointer;
+   border-radius: 50%;
+}
 
- }
- 
-#store .card .inside:hover .icon {
-    opacity: 0;
-    right: 15px;
-    top: 15px;
- }
- 
-#store .card .inside:hover .contents {
-    opacity: 1;
-    transform: scale(1);
-    transform: translateY(0);
- }
  
 #store .card .inside .contents {
     padding: 5%;
@@ -543,7 +529,26 @@
 #store .card .inside .contents p {
     font-size: 13px;
  }
+ #store .card .ins {
+   width: 100%;
+   right: 0;
+   top: 0;
+   border-radius: 0;
+   height: 100%;
+   cursor:pointer;
+}
 
+#store .card .ins .icon {
+   opacity: 0;
+   right: 15px;
+   top: 15px;
+}
+
+#store .card .ins .contents {
+   opacity: 1;
+   transform: scale(1);
+   transform: translateY(0);
+}
  /* donate for small screen  */
  #store .donate h2 .closedonation{
    position: absolute;
@@ -611,10 +616,15 @@
       z-index: 999;
    }
 }
-@media(min-width:992px) and (max-width:1040px){
+
+@media(min-width:992px) and (max-width:1090px){
+   #store .card{
+      margin-top: 38px;
+   }
    #store .donate{
       width: 330px;
       height: 100vh;
+      
    }
    #store .denomination{
       width: 49.5%;
@@ -626,6 +636,7 @@
       right: -100%;
       transition: ease-in-out .5s;
       position: fixed;
+      min-height: 100vh;
    }
    #store .col-sm-12{
       display: flex!important;
@@ -662,8 +673,7 @@
 @media(max-width:575px){
    #store .card{
       transform: scaleX(1)!important;
-      margin-right: 1px!important;
-      margin-right: 15px!important;
+      margin-bottom: 70px;
   }
   
 }

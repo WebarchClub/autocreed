@@ -37,17 +37,6 @@
     max-width: 100%;
     height: auto;
     }
-    .section_title {
-    margin-bottom: 40px;
-    }
-    
-    .section_title h2 {
-    color: white;
-    font-size: 25px;
-    font-weight: 700;
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-    }
     
     .brand_border .fa.fa-minus {
     color: #fff;
@@ -62,15 +51,11 @@
     }
     
     
-    .section_title p {
+    .section_title p:last-of-type {
     color: white;
     font-size: 18px;
     line-height: 25px;
     padding: 14px 0;
-    }
-    
-    .choose_us .section_title {
-    margin-top: 45px;
     }
     #service .single_service {
     padding: 32px;
@@ -124,7 +109,7 @@
     position: relative;
     }
     #service .single_service {
-    background: #1f4068 none repeat scroll 0 0;
+    background: #4f8a8b none repeat scroll 0 0;            
     }
   
     
@@ -281,7 +266,9 @@
       animation: slide 1s linear infinite;
   }
   
-  
+ .i2 {
+   height: 190px;
+ } 
   
   
   /* ----------------------------------------------

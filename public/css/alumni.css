@@ -235,30 +235,3 @@ body{
   font-size: 70%;
 }
 /*******************************ALUMNI PAGE STYLING ENDS**************************/
-/**********************************HEADING STYLING**************************************/
-@font-face {
-font-family: 'Iceland';
-font-style: normal;
-font-weight: 400;
-src: local('Iceland'), local('Iceland-Regular'), url(https://themes.googleusercontent.com/static/fonts/iceland/v3/F6LYTZLHrG9BNYXRjU7RSw.woff) format('woff');
-}
-
-#about .heading{
-text-align:center;
-font-size:5em;
-font-family:Iceland;
-margin: 10px !important;
-}
-#about .blue{
-color: white !important;
-
-}
-#about a:hover{
-color: aqua !important;
-}
-@media screen and (max-width: 990px) {
-  #about .heading{
-  font-size: 40px;
-}
-}
-/*********************************HEADING STYLING ENDS*******************************/

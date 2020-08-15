@@ -50,7 +50,7 @@ $(".remove").hide();
 
       $($(this).siblings()[2]).show();
       $(this).hide();
-      $('.btn-cart').removeClass("bounce2").addClass("bounce2");
+      $('.btn-cart').addClass("bounce2");
       
   });
   // choosing number of products to be bought (+/-)
@@ -108,4 +108,10 @@ $('.plus').click(function () {
     $('.closedonation').click(function(){
             // $('.donate').hide();
         $('.donate').css("right", "-100%");
+    });
+    $('.icon2').click(function(){ 
+      $('.inside').removeClass('ins');  
+    }); 
+    $('.icon').click(function(){ 
+      $(this).closest('.inside').addClass('ins');  
     });
