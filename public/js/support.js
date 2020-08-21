@@ -2,7 +2,7 @@ var $input = $(".input");
 var price;
 // hide cart content when there's no product in it
 $(".button").hide();
-$("#item").hide();
+$(".item").hide();
 $(".remove").hide();
 
 
@@ -20,7 +20,7 @@ $(".remove").hide();
        // unhides/hides everything that was previously unhidden/hidden by pressing remove
        $(".empty").hide();
       
-       $("#item").show();
+       $(".item").show();
 
         // shows total cost 
        $("#cost").show();
@@ -42,7 +42,7 @@ $(".remove").hide();
       //hides/unhides
       $(".empty").show();
 
-      $("#item").hide(); // hides everything in the cart
+      $(".item").hide(); // hides everything in the cart
       
       $("#cost").hide();
       $("#total").hide();
