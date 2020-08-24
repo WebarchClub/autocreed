@@ -2,7 +2,7 @@ var $input = $(".input");
 var price;
 // hide cart content when there's no product in it
 $(".button").hide();
-$("#item").hide();
+$(".item").hide();
 $(".remove").hide();
 
 
@@ -20,7 +20,7 @@ $(".remove").hide();
        // unhides/hides everything that was previously unhidden/hidden by pressing remove
        $(".empty").hide();
       
-       $("#item").show();
+       $(".item").show();
 
         // shows total cost 
        $("#cost").show();
@@ -34,7 +34,7 @@ $(".remove").hide();
        $input.val("1"); //sets value of number of products to 1
 
 
-       $('.btn-cart').removeClass("bounce").addClass("bounce");
+       $('.btn-cart').removeClass("bounce2").addClass("bounce");
   });
 
   //function to remove product from the cart
@@ -42,7 +42,7 @@ $(".remove").hide();
       //hides/unhides
       $(".empty").show();
 
-      $("#item").hide(); // hides everything in the cart
+      $(".item").hide(); // hides everything in the cart
       
       $("#cost").hide();
       $("#total").hide();
@@ -50,7 +50,7 @@ $(".remove").hide();
 
       $($(this).siblings()[2]).show();
       $(this).hide();
-      $('.btn-cart').addClass("bounce2");
+      $('.btn-cart').removeClass("bounce").addClass("bounce2");
       
   });
   // choosing number of products to be bought (+/-)
@@ -114,4 +114,4 @@ $('.plus').click(function () {
     }); 
     $('.icon').click(function(){ 
       $(this).closest('.inside').addClass('ins');  
-    });
+    }); 
