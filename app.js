@@ -10,7 +10,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // MONGODB SETUP
 mongoose.set("debug", true);
-var url = process.env.DATABASEURL || "mongodb://localhost/store";
+// var url = process.env.DATABASEURL || "mongodb://localhost/store";
+var url = "mongodb+srv://Hrithik:assassin@cluster0-rd4ag.mongodb.net/Store?retryWrites=true&w=majority";
 mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.Promise = Promise;
 // MONGODB SETUP
@@ -35,7 +36,7 @@ var itemSchema = new mongoose.Schema({
     },
     image: {
         type: String,
-        default: "https://image.flaticon.com/icons/png/512/86/86165.png"
+        default: "https://images.unsplash.com/photo-1500962573706-c381a5d62537?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1191&q=80"
     }
 });
 var Item = mongoose.model("Item", itemSchema);

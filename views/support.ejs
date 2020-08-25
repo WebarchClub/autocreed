@@ -83,22 +83,7 @@
       </button>
       
       <ul class="dropdown-menu">
-        <!-- <li class="ml-3" id="item">Item</li>   -->
         <span class="empty">Your cart is empty.</span>
-  
-        <!-- <li class="ml-2" class="item">
-  
-          <a href="#">
-           <span class="product"></span><span class="selectedPrice"></span> <img class="selectedImage">
-          </a>
-          <div class="number">
-            <span class="minus">-</span>
-            <input type="text" value="1" name="numberOfProducts" class="input">
-            <span class="plus">+</span>
-          </div>
-          
-         </li> -->
-         
         <span id="total"></span><span id="cost"></span>
         <div class="button">
             <button class="btn place" data-toggle="modal" data-target="#form">Place order</button>
@@ -165,76 +150,29 @@
       <!-- card layout  -->
       <div class="container">
           <div class="row">
-                <!--col-xl-4 col-lg-4 col-md-9 col-sm-12  -->
-              <div class=" col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-3 d-flex justify-content-center ">
+              <% items.forEach((item) => { %>
+                <div class=" col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-3 d-flex justify-content-center ">
                   <div class="card">
                       <div class="imgBox">
-                          <img src="images/nike101.png" alt="" class="img-fluid">
+                          <img src="<%= item.image %>" alt="<%= item.name %>" class="img-fluid">
                       </div>
                       <div class="contentBx">
-                          <h3 class="productName">Item1</h3>
-                          <h2 class="price">₹<span class="productPrice">450</span></h2>
-                          <a href="#" class="buy" title="Add to my cart!">Buy Now</a>
-                          <a href="#" class="remove" title="Remove from my cart!">Remove</a>
+                          <h3 class="productName"><%= item.name %></h3>
+                          <h2 class="price">₹<span class="productPrice"><%= item.price %></span></h2>
+                          <a href="#" id="<%= item._id %>" class="buy" title="Add to my cart!">Buy Now</a>
+                          <a href="#" id="<%= item._id %>" class="remove" title="Remove from my cart!">Remove</a>
                       </div>
                       <div class="inside">
                         <div class="icon"><i class="material-icons">info_outline</i></div>
                         <div class="contents">
                           <h2>Description:</h2>
                           <div class="icon2"><i class="material-icons">close</i></div>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                             Dignissimos repellendus excepturi quia omnis, numquam maiores ut?
-                              Laborum, id sint. Expedita.</p>
+                          <p><%= item.description %></p>
                         </div>
                       </div>
                   </div>
-              </div>     
-              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-3 d-flex justify-content-center ">
-                <div class="card">
-                    <div class="imgBox">
-                        <img src="images/nike101.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="contentBx">
-                        <h3 class="productName">Item2</h3>
-                        <h2 class="price">₹<span class="productPrice">250</span></h2>
-                        <a href="#" class="buy" title="Add to my cart!">Buy Now</a>
-                        <a href="#" class="remove" title="Remove from my cart!">Remove</a>
-                    </div>
-                    <div class="inside">
-                      <div class="icon"><i class="material-icons">info_outline</i></div>
-                      <div class="contents">
-                        <h2>Description:</h2>
-                        <div class="icon2"><i class="material-icons">close</i></div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                           Dignissimos repellendus excepturi quia omnis, numquam maiores ut?
-                            Laborum, id sint. Expedita.</p>
-                      </div>
-                    </div>
-                </div>
-            </div> 
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-3 d-flex justify-content-center ">
-              <div class="card">
-                  <div class="imgBox">
-                      <img src="images/nike101.png" alt="" class="img-fluid">
-                  </div>
-                  <div class="contentBx">
-                      <h3 class="productName">Item2</h3>
-                      <h2 class="price">₹<span class="productPrice">250</span></h2>
-                      <a href="#" class="buy" title="Add to my cart!">Buy Now</a>
-                      <a href="#" class="remove" title="Remove from my cart!">Remove</a>
-                  </div>
-                  <div class="inside">
-                    <div class="icon"><i class="material-icons">info_outline</i></div>
-                    <div class="contents">
-                      <h2>Description:</h2>
-                      <div class="icon2"><i class="material-icons">close</i></div>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                         Dignissimos repellendus excepturi quia omnis, numquam maiores ut?
-                          Laborum, id sint. Expedita.</p>
-                    </div>
-                  </div>
               </div>
-          </div>
+              <% }); %>
             
           </div>
       </div>
