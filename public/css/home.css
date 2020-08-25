@@ -9,7 +9,7 @@
   font-weight: 800;
   transform-origin: center;
   transform: rotate(-90deg);
-  font-size: 6em;
+  font-size: 5.5em;
   font-family: 'Exo 2', sans-serif;
   letter-spacing: 15px;
 }
@@ -19,7 +19,7 @@
 }
 @media(max-width: 576px){
   .section-title h1{
-    font-size: 5em;
+    font-size: 4.5em;
     padding: 1.5em;
     letter-spacing: 25px;
   }
@@ -123,7 +123,7 @@ box-sizing: border-box;
 box-sizing: border-box;
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px)and (min-width: 501px){
 .carousel-item {
   height: 45vh; 
   background-attachment: scroll;
@@ -131,7 +131,22 @@ box-sizing: border-box;
 
 
 }
-@media (min-width: 768px){
+@media (max-width: 500px) and (min-width:376px) {
+  .carousel-item {
+    height: 42vh; 
+    background-attachment: scroll;
+  }
+  }
+
+
+  @media (max-width: 375px)  {
+    .carousel-item {
+      height: 40vh; 
+      background-attachment: scroll;
+    }
+    }
+    
+@media (min-width: 768px) {
 .carousel-item {
   height: 90vh; 
 }
@@ -143,275 +158,72 @@ box-sizing: border-box;
     text-align: center;  
     min-height: 70vh; 
 }
-#mission_title{
-    color: #016A86;
-    font-weight: 800;
-}
-#mission .jumbotron a{
-    color: #00f;
-    box-shadow: 5px 5px 5px black;
+.page-heading{
+  text-align: center !important;
+  line-height: 1em;
+  font-size: 4.5em !important;
 }
 #mission .jumbotron p{
-    color: whitesmoke;
-    word-wrap: normal;
-}
-
-
-#mission .jumbotron p:first-of-type{
-  font-size: 1.8em;
+  color: whitesmoke;
+  word-wrap: normal;
+  text-align: justify;
 }
 s
 #mission .jumbotron hr{
-    background-color: rgb(207, 144, 9);
+  background-color: rgb(207, 144, 9);
 }
 #mission .jumbotron{
-
-    background-color: #53535365;
+  background-color: transparent;
 }
-
-#mission #mission_img{
-    height: 50%;
-} 
-/* ==================MISSION================== */
-
-/*--------------ACHIEVEMENTS SECTION---------*/
-#achievements{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    background-color: #161616;
-    color:white;
-    font-family: Arial, sans-serif;
-    border-radius: 8px;
+#mission .brief p{
+  font-size: 1.5em;
 }
-#achievements-container{
-    padding:none;
-
+#mission .sub p{
+  font-size: 1.5em;
 }
-#achievements-container {
-    min-width:1000px;
-    height:600px;
-    display: block;
-    position: relative;
-    background-color:#121213;
-    border-radius: 4px;
-    padding: 32px 24px;
-    text-decoration: none;
-    z-index: 0;
-    overflow: hidden;
-    background-image: url("/images/achievementsimage.png");
-    background-size:auto 42em;
-    background-repeat: no-repeat;
-    background-blend-mode: luminosity;
-    background-position: center;
-    
+#mission .more{
+  height: 100%;
+  width: 100%;
+}
+#mission .more:hover{
+  background-color: rgba(150, 150, 150, 0.2);
+}
+#mission i{
+  font-size: 5em;
+  color: #fff;
+  animation: GrowShrink 2s infinite ease-out;
+}
+@keyframes GrowShrink{
+  from{
+    transform: scale(1);
   }
-#achievements .achievements-header{
-    text-align: center;
-    padding:20px;
-    padding-top:none;
-    color: #3700b3;
-    
+  50%{
+    transform: scale(1.2);
+  }
+  to{
+    transform: scale(1);
+  }
+  }
+@media(max-width: 768px){
+  .page-heading{
+    font-size: 3.8em !important;
+  }
+  #mission .sub{
+    font-size: 1em;
+  }
 }
-#achievements .achievements-header h1{
-    font-weight: bold;
-    font-size: 5em;
-}
-
-#achievements .achievements-body .col-12{
-    text-align: center;
-    padding-top:7px;
-}
-#achievements .achievements-body .row{
-    
-    padding-top:20px;
-    padding-bottom: 15px;
-}
-@media (max-width: 768px) { 
-    #achievements-container{
-        background-size: auto 34em ;
-    }
-    #achievements{
-        overflow-x: hidden;
-    }
-    #achievements-container{
-        width:50%;
-        
-    }
-    #achievements .achievements-header h1{
-        font-weight: bold;
-        font-size: 4em;
-        padding-bottom: none;
-    }
-    #achievements .achievements-header{
-        
-        padding-top:65px;
-    }
-    #achievements .achievements-body .row{
-    
-        padding-top:12px;
-        padding-bottom: 15px;
-    }
-}
-@media (min-width: 768px){
-    #achievements{
-        width:50%;
-        
-    }
-}
-
-@media (max-width: 576px) { 
-    #achievements-container{
-        background-size: auto 32em ;
-        font-size: 14px;
-        
-    }
-    #achievements{
-        overflow-x: hidden;
-    }
-    #achievements-container{
-        width:50%;
-        
-    }
-    #achievements .achievements-header h1{
-        font-weight: bold;
-        font-size: 3em;
-        padding-bottom: none;
-    }
-    #achievements .achievements-header{
-        
-        padding-top:80px;
-    }
-    #achievements .achievements-body .row{
-        font-size: 0.9em;
-        padding-top:10px;
-        padding-bottom: 10px;
-    }
- }
-
- @media (max-width: 376px){
-     #achievements .achievements-header h1{
-         font-size: 2.2em;
-     }
-
-     #achievements .achievements-body .row{
-         font-size: 0.6em;
-     }
- }
-
-/*---------------------------------END OF ACHIEVEMENTS SECTION--------------------------------*/
-
-/*************** sponsers ***************/
-#sponsors {
-    margin: 2rem 0;
-}
-
-#sponsors #demo {    
-    background: linear-gradient(112deg, #0000FF 50%, white 50%);
-    max-width: 1300px;
-    margin: auto
-}
-
-#sponsors .sponsors-caption {
-    position: initial;
-    z-index: 10;
-    padding: 5rem 8rem;
-    color: black;
-    text-align: center;
-    font-size: 1.5rem;   
-    line-height: 2rem
-}
-
-@media(max-width:767px) {
-    #sponsors .sponsors-caption {
-        position: initial;
-        z-index: 10;
-        padding: 3rem 2rem;
-        color: black;
-        text-align: center;
-        font-size: 0.7rem;        
-        line-height: 1.5rem
-    }
-}
-
-#sponsors .sponsors-caption img {
-    width: 17rem;
-   height: 8rem;
-    margin-top: 2rem
-}
-
-@media(max-width:767px) {
-    #sponsors .sponsors-caption img {
-        width: 4rem;        
-        margin-top: 1rem
-    }
-}
-
-#sponsors h1 {
-    font-size: 4em;
-    letter-spacing: 10px;
-    margin-bottom: 1em;
-    color: blue;
-    font-family: Arial, sans-serif;
-    text-align: center; 
-}
-#sponsors i {
-    background-color: black;
-    padding: 1.4rem
-}
-
-@media(max-width:767px) {
-    #sponsors i {
-        padding: 0.8rem
-    }
-}
-
-#sponsors .carousel-control-prev {
-    justify-content: flex-start
-}
-
-#sponsors .carousel-control-next {
-    justify-content: flex-end
-}
-
-#sponsors .carousel-control-prev,
-#sponsors .carousel-control-next {
-    transition: none;
-    opacity: unset
-}
-@media(max-width:990px) {
-    #sponsors .sponsors-caption img {
-        width: 10rem;
-       height: 5rem;
-        margin-top: 2rem
-    }    
-}
-@media(max-width:900px){
-    #sponsors .button {
-        display: none;
-    }
-}
-@media (max-width: 576px){
-    #sponsors{
-        margin: 0;
-    }
-    #sponsors h1{
-        font-size: 3.5em;
-    }
-}
-
-@media (max-width: 376px){
-    #sponsors h1{
-        font-size: 2em;
-    }
-}
-/* ******************sponsors section ends here************************** */
-
-@media(min-width: 992px){
-  #mission .jumbotron p:last-of-type{
-    font-size: 1.2em;
+@media(max-width: 474px){
+  .page-heading{
+    font-size: 3em !important;
+  }
+  #mission .sub{
+    font-size: 0.8em;
+  }
+  #mission .brief{
+    font-size: 0.8em !important;
+  }
+  #mission i{
+    font-size: 3.5em;
   }
 }
 /* ==============Mission ends=========================== */
