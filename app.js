@@ -10,8 +10,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // MONGODB SETUP
 mongoose.set("debug", true);
-// var url = process.env.DATABASEURL || "mongodb://localhost/store";
-var url = "mongodb+srv://Hrithik:assassin@cluster0-rd4ag.mongodb.net/Store?retryWrites=true&w=majority";
+var url = process.env.DATABASEURL || "mongodb://localhost/store";
 mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.Promise = Promise;
 // MONGODB SETUP
