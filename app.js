@@ -8,6 +8,7 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
+
 // MONGODB SETUP
 mongoose.set("debug", true);
 var url = process.env.DATABASEURL || "mongodb://localhost/store";

@@ -44,7 +44,7 @@ $(".remove").hide();
 
        $('.btn-cart').removeClass("bounce2").addClass("bounce");
   });
-
+  
   //function to remove product from the cart
   $('.remove').click(function(){
     var items = $(".item");
