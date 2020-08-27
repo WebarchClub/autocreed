@@ -138,6 +138,10 @@
 }
 #store .dropdown-menu{
    width: 300px!important;
+   position: absolute;
+}
+#store .margin{
+   top: 100px!important;
 }
 #store .btn-cart{
    background:#111;
@@ -387,7 +391,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
+    padding: 60px 0 20px 0;
     
 }
 #store .card .imgBox img{

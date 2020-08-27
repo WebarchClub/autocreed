@@ -75,9 +75,11 @@ $(".remove").hide();
 // choosing number of products to be bought (+/-)
 $("ul.dropdown-menu").on("click", ".minus", function(){
   var basePrice = Number($($($(this).parent()).siblings()[0]).children()[1].id);
-  price -= basePrice;
-  $("#cost").text(price);
-  $($(this).siblings()[0]).val(Number($($(this).siblings()[0]).val())-1);
+  if($($(this).siblings()[0]).val()>1){
+    price -= basePrice;
+    $("#cost").text(price);
+    $($(this).siblings()[0]).val(Number($($(this).siblings()[0]).val())-1);
+  }
   return false;
 });
 $("ul.dropdown-menu").on("click", ".plus", function(){
@@ -136,3 +138,14 @@ $("ul.dropdown-menu").on("click", ".plus", function(){
     $('.icon').click(function(){ 
       $(this).closest('.inside').addClass('ins');  
     }); 
+
+    //handle cart when more than 3 products are added
+    $('.btn-cart').click(function(){ 
+      if($('.dropdown ul li').length >2){
+        // $('.dropdown-menu').css("top", "100px");
+        $('.dropdown-menu').addClass('margin');  
+      }
+      else{
+        $('.dropdown-menu').removeClass('margin');  
+      }
+    });
