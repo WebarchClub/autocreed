@@ -24,7 +24,7 @@
       rel="stylesheet">
     <title>AutoCreed</title>
     <link rel="icon" href="/images/ACR_Logo_TB.png" type="image/ico" />
-    <link rel="stylesheet" href="/css/<%= page %>.css">
+    <link rel="stylesheet" href="/css/<%= typeof page !== 'undefined' ? page : '' %>.css">
     <link rel="stylesheet" href="/css/nav.css">
 </head>
 <body>

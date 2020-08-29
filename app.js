@@ -3,10 +3,12 @@ const app = express();
 const axios = require("axios");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const methodOverride = require("method-override");
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(methodOverride("_method"));
 
 
 // MONGODB SETUP
@@ -28,7 +30,7 @@ var itemSchema = new mongoose.Schema({
     },
     description: {
         type: String,
-        default: "Awesome Product to make you look cool"
+        default: "Awesome Product!!"
     },
     inCart: {
         type: Boolean,
@@ -83,6 +85,49 @@ app.put("/support/items/:id", (req,res) => {
     }).catch((err) => {console.log(err)});
 });
 // ============================SHOP==========================
+// ===================ADMIN===================================
+app.get("/admin/shop", (req,res) => {
+    Item.find().then((item) => {
+        res.render("admin/index", {items: item});
+    }).catch((err) => console.log(err));
+});
+app.post("/admin/shop", (req,res) => {
+    console.log(req.body);
+    var name = req.body.name;
+    var desc = req.body.description;
+    var price = req.body.price;
+    var image = req.body.image;
+    var item = {name: name, image: image, price: price, description: desc};
+    Item.create(item).then(() => {
+		res.redirect("/admin/shop");
+    }).catch((err) => {console.log(err)});
+});
+
+app.get("/admin/shop/new", (req,res) => {
+    res.render("admin/new");
+});
+
+app.get("/admin/shop/:id/edit", (req,res) => {
+    Item.findById(req.params.id).then((item) => {
+        res.render("admin/edit", {item: item});
+    }).catch((err) => console.log(err));
+});
+
+app.put("/admin/shop/:id", (req,res) => {
+    var name = req.body.name;
+    var desc = req.body.description;
+    var price = req.body.price;
+    var image = req.body.image;
+    var item = {name: name, image: image, price: price, description: desc};
+    Item.findByIdAndUpdate(req.params.id, item).then(() => {
+        res.redirect("/admin/shop");
+    }).catch((err) => console.log(err));
+});
+
+app.delete("/admin/shop/:id", (req,res) => {
+    Item.findByIdAndRemove(req.params.id).then(() => res.redirect("/admin/shop")).catch((err) => console.log(err));
+});
+// ===================ADMIN===================================
 app.get("/contact", (req,res) => {
     res.render("contact", {page: "contact"});
 });
