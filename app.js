@@ -1,9 +1,18 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const axios = require("axios");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
+const Razorpay = require("razorpay");
+
+// RAZORPAY SETUP
+var razorpay = new Razorpay({
+    key_id: process.env.KEYID,
+    key_secret: process.env.KEYSECRET
+});
+// RAZORPAY SETUP
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
