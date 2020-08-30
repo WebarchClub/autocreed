@@ -33,7 +33,7 @@
           </div>
           <div class="modal-footer border-top-0 d-flex justify-content-center">
             <button class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancel</button>
-            <button type="submit" class="btn btn-proceed">Proceed</button>
+            <a id="cart-proceed" class="btn btn-proceed" onclick="displayRazorpay()">Proceed</a>
           </div>
         </form>
       </div>
@@ -69,7 +69,7 @@
             </div>
             <div class="modal-footer border-top-0 d-flex justify-content-center">
               <button class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancel</button>
-              <button type="submit" class="btn btn-proceed">Proceed</button>
+              <a id="donate-proceed" class="btn btn-proceed" onclick="displayRazorpay()">Proceed</a>
             </div>
           </form>
         </div>
@@ -177,4 +177,63 @@
           </div>
       </div>
      </section>
+
+     <script>
+        function loadScript(src){
+          return new Promise(resolve => {
+            const script = document.createElement("script");
+            script.src = src;
+            script.onload = () => {
+              resolve(true);
+            }
+            script.onerror = () => {
+              resolve(false);
+            }
+            document.body.appendChild(script);
+          });
+        }
+
+        async function displayRazorpay(){
+          const res = await loadScript("https://checkout.razorpay.com/v1/checkout.js");
+          if(!res){
+            alert("Razorpay failed to load.");
+            return
+          }
+
+          const data = await $.ajax({
+            method: "POST",
+            url: "/razorpay",
+            data: { name: "John", location: "Boston" }
+          });
+
+          console.log(data);
+
+          var name = $($($("#cart-proceed").parent()).parent()[0][0]).val() || $($($("#donate-proceed").parent()).parent()[0][0]).val();
+          var email = $($($("#cart-proceed").parent()).parent()[0][1]).val() || $($($("#donate-proceed").parent()).parent()[0][1]).val();
+          var phone = $($($("#cart-proceed").parent()).parent()[0][3]).val() || "";
+          var address = $($($("#cart-proceed").parent()).parent()[0][2]).val();
+
+          const options = {
+            "key": "rzp_test_cbfbUof1Zr5VTX",
+            "currency": data.currency,
+            "amount": data.amount.toString(),
+            "name": "Mercer Corps",
+            "description": "Donations",
+            "image": "https://pbs.twimg.com/profile_images/642335556953767936/AJXCS4Ge.png",
+            "order_id": data.id,
+            "handler": function (response){
+                alert(response.razorpay_payment_id);
+                alert(response.razorpay_order_id);
+                alert(response.razorpay_signature)
+            },
+            "prefill": {
+                "name": name,
+                "email": email,
+                "contact": phone
+            }
+          };
+          const paymentObject = new Razorpay(options);
+          paymentObject.open();
+        }
+     </script>
 <%- include("partials/footer") %>

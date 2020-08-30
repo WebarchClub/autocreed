@@ -6,6 +6,8 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const Razorpay = require("razorpay");
+const shortid = require("shortid");
+const crypto = require("crypto");
 
 // RAZORPAY SETUP
 var razorpay = new Razorpay({
@@ -79,6 +81,9 @@ app.get("/gallery", (req,res) => {
 app.get("/sponsors", (req, res) => {
     res.render("sponsors", { page: "sponsors" });
 });
+app.get("/contact", (req,res) => {
+    res.render("contact", {page: "contact"});
+});
 // ==========================SHOP=========================
 app.get("/support", (req,res) => {
     Item.find().then((item) => {
@@ -137,9 +142,34 @@ app.delete("/admin/shop/:id", (req,res) => {
     Item.findByIdAndRemove(req.params.id).then(() => res.redirect("/admin/shop")).catch((err) => console.log(err));
 });
 // ===================ADMIN===================================
-app.get("/contact", (req,res) => {
-    res.render("contact", {page: "contact"});
+// ========================RAZORPAY=====================
+
+app.post("/razorpay", async (req, res) => {
+    console.log(req.body);
+    const payment_capture = 1;
+    const amount = 5;
+    const currency = "INR";
+    const options = {
+        amount: amount*100, 
+        currency, 
+        receipt: shortid.generate(), 
+        payment_capture
+    }
+    try{
+        const response = await razorpay.orders.create(options);
+        console.log(response);
+        res.json({
+            id: response.id,
+            currency: response.currency,
+            amount: response.amount
+        });
+    }
+    catch(err){
+        console.log(err);
+    }
 });
+
+// ========================RAZORPAY=====================
 // =================ROUTES======================
 
 
