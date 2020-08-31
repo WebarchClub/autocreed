@@ -200,18 +200,18 @@
             return
           }
 
-          const data = await $.ajax({
-            method: "POST",
-            url: "/razorpay",
-            data: { name: "John", location: "Boston" }
-          });
-
-          console.log(data);
-
           var name = $($($("#cart-proceed").parent()).parent()[0][0]).val() || $($($("#donate-proceed").parent()).parent()[0][0]).val();
           var email = $($($("#cart-proceed").parent()).parent()[0][1]).val() || $($($("#donate-proceed").parent()).parent()[0][1]).val();
           var phone = $($($("#cart-proceed").parent()).parent()[0][3]).val() || "";
           var address = $($($("#cart-proceed").parent()).parent()[0][2]).val();
+
+          const data = await $.ajax({
+            method: "POST",
+            url: "/razorpay",
+            data: { amount: Number($("#cost").text()), address: address, email: email, phone: phone }
+          });
+
+          console.log(data);
 
           const options = {
             "key": "rzp_test_cbfbUof1Zr5VTX",
@@ -230,6 +230,10 @@
                 "name": name,
                 "email": email,
                 "contact": phone
+            },
+            "notes": {
+              "address": address,
+              "name": name
             }
           };
           const paymentObject = new Razorpay(options);

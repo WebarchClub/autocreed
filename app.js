@@ -19,6 +19,7 @@ var razorpay = new Razorpay({
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 app.use(methodOverride("_method"));
 
 
@@ -28,6 +29,36 @@ var url = process.env.DATABASEURL || "mongodb://localhost/store";
 mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.Promise = Promise;
 // MONGODB SETUP
+
+// ===========================ORDERS SCHEMA==============================
+
+var orderSchema = new mongoose.Schema({
+    order_id: {
+        type: String,
+        required: true
+    },
+    amount: {
+        type: Number,
+        required: true
+    },
+    name:{
+        type: String,
+        required: true
+    },
+    address: {
+        type: String
+    },
+    email: {
+        type: String,
+        required: true
+    },
+    phone: {
+        type: Number
+    }
+});
+var Order = mongoose.model("Order", orderSchema);
+
+// ===========================ORDERS SCHEMA==============================
 
 // ==========================ITEMS SCHEMA=================================
 var itemSchema = new mongoose.Schema({
@@ -106,7 +137,6 @@ app.get("/admin/shop", (req,res) => {
     }).catch((err) => console.log(err));
 });
 app.post("/admin/shop", (req,res) => {
-    console.log(req.body);
     var name = req.body.name;
     var desc = req.body.description;
     var price = req.body.price;
@@ -143,11 +173,34 @@ app.delete("/admin/shop/:id", (req,res) => {
 });
 // ===================ADMIN===================================
 // ========================RAZORPAY=====================
+app.post("/verification", (req,res) => {
+    //do validation
+    const secret = "12345678";
+    const shasum = crypto.createHmac('sha256', secret)
+	shasum.update(JSON.stringify(req.body))
+    const digest = shasum.digest('hex')
+    if(digest === req.headers["x-razorpay-signature"]){
+        console.log("request is legit");
+        var order = req.body.payload.payment.entity;
+        Order.create({
+            order_id: order.order_id,
+            amount: order.amount,
+            name: order.notes.name,
+            address: order.notes.address,
+            email: order.email,
+            phone: order.contact
+        }).then((newOrder) => {console.log(newOrder)}).catch((err) => {console.log(err)});
+        res.json({status: "ok"});
+    }else{
+        console.log("Someone is messing up");
+    }
+});
+
 
 app.post("/razorpay", async (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     const payment_capture = 1;
-    const amount = 5;
+    const amount = req.body.amount;
     const currency = "INR";
     const options = {
         amount: amount*100, 
@@ -157,7 +210,6 @@ app.post("/razorpay", async (req, res) => {
     }
     try{
         const response = await razorpay.orders.create(options);
-        console.log(response);
         res.json({
             id: response.id,
             currency: response.currency,
