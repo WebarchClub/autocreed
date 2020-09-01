@@ -96,7 +96,8 @@ $("ul.dropdown-menu").on("click", ".plus", function(){
       $(".denomination-other input").removeClass("selected").val('');
       $(this).addClass("selected");
       $(this).children(":first").prop('checked', true);
-      $(".buttonDonate").text('Donate ₹' + $(this).children(":first").val())
+      // $(".buttonDonate").text('Donate ₹' + $(this).children(":first").val())
+      $(".buttonDonate").html(`Donate ₹<span>${$(this).children(":first").val()}</span>`);
   });
 
   $(".denomination-other input").on('keypress', function (event) {
@@ -110,7 +111,8 @@ $("ul.dropdown-menu").on("click", ".plus", function(){
     
     $(".denomination").removeClass("selected").prop('checked', false);
     $(this).addClass("selected");
-    $(".buttonDonate").text('Donate ₹' + $(this).val() + key );
+    // $(".buttonDonate").text('Donate ₹' + $(this).val() + key );
+    $(".buttonDonate").html(`Donate ₹<span>${$(this).val() + key}</span>`);
   });
 
   

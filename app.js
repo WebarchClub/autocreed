@@ -54,6 +54,14 @@ var orderSchema = new mongoose.Schema({
     },
     phone: {
         type: Number
+    },
+    comment: {
+        type: String
+    },
+    items: [String],
+    paymentSuccess: {
+        type: Boolean,
+        default: false
     }
 });
 var Order = mongoose.model("Order", orderSchema);
@@ -133,7 +141,7 @@ app.put("/support/items/:id", (req,res) => {
 // ===================ADMIN===================================
 app.get("/admin/shop", (req,res) => {
     Item.find().then((item) => {
-        res.render("admin/index", {items: item});
+        res.render("admin/items/index", {items: item});
     }).catch((err) => console.log(err));
 });
 app.post("/admin/shop", (req,res) => {
@@ -148,12 +156,12 @@ app.post("/admin/shop", (req,res) => {
 });
 
 app.get("/admin/shop/new", (req,res) => {
-    res.render("admin/new");
+    res.render("admin/items/new");
 });
 
 app.get("/admin/shop/:id/edit", (req,res) => {
     Item.findById(req.params.id).then((item) => {
-        res.render("admin/edit", {item: item});
+        res.render("admin/items/edit", {item: item});
     }).catch((err) => console.log(err));
 });
 
@@ -182,14 +190,8 @@ app.post("/verification", (req,res) => {
     if(digest === req.headers["x-razorpay-signature"]){
         console.log("request is legit");
         var order = req.body.payload.payment.entity;
-        Order.create({
-            order_id: order.order_id,
-            amount: order.amount,
-            name: order.notes.name,
-            address: order.notes.address,
-            email: order.email,
-            phone: order.contact
-        }).then((newOrder) => {console.log(newOrder)}).catch((err) => {console.log(err)});
+        // console.log(order.notes);
+        Order.findOneAndUpdate({order_id: order.order_id}, {paymentSuccess: true}, {new: true}).then((updatedOrder) => {console.log(updatedOrder)}).catch((err) => {console.log(err)});
         res.json({status: "ok"});
     }else{
         console.log("Someone is messing up");
@@ -210,6 +212,16 @@ app.post("/razorpay", async (req, res) => {
     }
     try{
         const response = await razorpay.orders.create(options);
+        Order.create({
+            order_id: response.id,
+            amount: response.amount,
+            name: req.body.name,
+            address: req.body.address,
+            email: req.body.email,
+            phone: req.body.phone,
+            comment: req.body.comment,
+            items: req.body.items
+        }).then((newOrder) => {console.log(newOrder)}).catch((err) => {console.log(err)});
         res.json({
             id: response.id,
             currency: response.currency,
@@ -221,7 +233,20 @@ app.post("/razorpay", async (req, res) => {
     }
 });
 
+app.get("/:id/success", (req,res) => {
+    Order.findOne({order_id: req.params.id}).then((order) => {
+        res.render("success", {order: order});
+    }).catch((err) => {console.log(err)});
+});
+
 // ========================RAZORPAY=====================
+// ===========================ORDERS======================
+app.get("/admin/orders", (req,res) => {
+    Order.find({paymentSuccess: true}).then(orders => {
+        res.render("admin/orders/index", {orders: orders});
+    }).catch(err => console.log(err));
+});
+// ===========================ORDERS======================
 // =================ROUTES======================
 
 
