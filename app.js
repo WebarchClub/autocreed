@@ -108,6 +108,12 @@ var Item = mongoose.model("Item", itemSchema);
 app.get("/", (req,res) => {
     res.render("home", {page: "home"});
 });
+app.get("/journey", (req,res) => {
+    res.render("journey", {page: "journey"});
+});
+app.get("/achievements", (req,res) => {
+    res.render("achievements", {page: "achievements"});
+});
 app.get("/team", (req,res) => {
     res.render("team", {page: "team"});
 });
