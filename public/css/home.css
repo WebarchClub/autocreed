@@ -9,7 +9,7 @@
   font-weight: 800;
   transform-origin: center;
   transform: rotate(-90deg);
-  font-size: 6em;
+  font-size: 5.5em;
   font-family: 'Exo 2', sans-serif;
   letter-spacing: 15px;
 }
@@ -19,7 +19,7 @@
 }
 @media(max-width: 576px){
   .section-title h1{
-    font-size: 5em;
+    font-size: 4.5em;
     padding: 1.5em;
     letter-spacing: 25px;
   }
@@ -99,30 +99,71 @@ box-sizing: border-box;
     text-align: center;  
     min-height: 70vh; 
 }
-#mission_title{
-    color: #016A86;
-    font-weight: 800;
-}
-#mission .jumbotron a{
-    color: #00f;
-    box-shadow: 5px 5px 5px black;
+.page-heading{
+  text-align: center !important;
+  line-height: 1em;
+  font-size: 4.5em !important;
 }
 #mission .jumbotron p{
-    color: whitesmoke;
-    word-wrap: normal;
-}
-#mission .jumbotron p:first-of-type{
-  font-size: 1.8em;
+  color: whitesmoke;
+  word-wrap: normal;
+  text-align: justify;
 }
 #mission .jumbotron hr{
-    background-color: rgb(207, 144, 9);
+  background-color: rgb(207, 144, 9);
 }
 #mission .jumbotron{
-    background-color: transparent;
+  background-color: transparent;
 }
-@media(min-width: 992px){
-  #mission .jumbotron p:last-of-type{
-    font-size: 1.2em;
+#mission .brief p{
+  font-size: 1.5em;
+}
+#mission .sub p{
+  font-size: 1.5em;
+}
+#mission .more{
+  height: 100%;
+  width: 100%;
+}
+#mission .more:hover{
+  background-color: rgba(150, 150, 150, 0.2);
+}
+#mission i{
+  font-size: 5em;
+  color: #fff;
+  animation: GrowShrink 2s infinite ease-out;
+}
+@keyframes GrowShrink{
+  from{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+  to{
+    transform: scale(1);
+  }
+  }
+@media(max-width: 768px){
+  .page-heading{
+    font-size: 3.8em !important;
+  }
+  #mission .sub{
+    font-size: 1em;
+  }
+}
+@media(max-width: 474px){
+  .page-heading{
+    font-size: 3em !important;
+  }
+  #mission .sub{
+    font-size: 0.8em;
+  }
+  #mission .brief{
+    font-size: 0.8em !important;
+  }
+  #mission i{
+    font-size: 3.5em;
   }
 }
 /* ==============Mission ends=========================== */

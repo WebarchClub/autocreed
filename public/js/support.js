@@ -1,26 +1,36 @@
-var $input = $(".input");
-var price;
+var price = 0;
 // hide cart content when there's no product in it
 $(".button").hide();
-$("#item").hide();
+$(".item").hide();
 $(".remove").hide();
 
 
 // function to add product to the cart and display it there
   $('.buy').click(function(){
-        name = $($(this).siblings()[0]).html();   
-        price = parseInt($($(this).siblings()[1].children[0]).html());  // store initial cost
-       $(".product").text(name);                       // displays product name in the cart
-       $(".selectedPrice").text("₹"+ price);             // displays product price in the cart
+        var $input = $(".input");
+        name = $($(this).siblings()[0]).html();
+        var itemPrice = parseInt($($(this).siblings()[1].children[0]).html());
+        price += itemPrice;  // store initial cost
+        $("ul.dropdown-menu").prepend(
+          `<li data="${this.id}" class="ml-2 item">  
+            <a href="#">
+            <span class="product">${name}</span><span id="${itemPrice}" class="selectedPrice">₹ ${itemPrice}</span> <img class="selectedImage" src="${$(this).parent().siblings()[0].children[0].src}">
+            </a>
+            <div class="number">
+              <span class="minus">-</span>
+              <input type="text" value="1" name="numberOfProducts" class="input">
+              <span class="plus">+</span>
+            </div>         
+         </li>`
+        );
     
        $("#total").text("Total cost: ₹");                 // displays "total cost" in the cart
        $("#cost").text(price);                             // displays cost in the cart
-       $(".selectedImage").attr("src", $(this).parent().siblings()[0].children[0].src);    // adds image in the cart
        
        // unhides/hides everything that was previously unhidden/hidden by pressing remove
        $(".empty").hide();
       
-       $("#item").show();
+       $(".item").show();
 
         // shows total cost 
        $("#cost").show();
@@ -31,40 +41,53 @@ $(".remove").hide();
        
        $($(this).siblings()[2]).show(); //shows remove button on card
 
-       $input.val("1"); //sets value of number of products to 1
 
-
-       $('.btn-cart').removeClass("bounce").addClass("bounce");
+       $('.btn-cart').removeClass("bounce2").addClass("bounce");
   });
-
+  
   //function to remove product from the cart
   $('.remove').click(function(){
-      //hides/unhides
-      $(".empty").show();
-
-      $("#item").hide(); // hides everything in the cart
-      
-      $("#cost").hide();
-      $("#total").hide();
-      $(".button").hide();
+    var items = $(".item");
+    var itemId = this.id;
+    for(const item of items){
+      if(itemId == item.attributes[0].value){
+        var rmPrice = Number($($($(item).children()[1])).children("input").val());
+        item.remove();
+      }
+    }
+    rmPrice *= Number($($(this).siblings()[1].children[0]).html());
+    price -= rmPrice;
+    $("#cost").text(price);
+      if(items.length==1){
+        //hides/unhides
+        $(".empty").show();      
+        $("#cost").hide();
+        $("#total").hide();
+        $(".button").hide();
+      }
 
       $($(this).siblings()[2]).show();
       $(this).hide();
-      $('.btn-cart').removeClass("bounce2").addClass("bounce2");
+      $('.btn-cart').removeClass("bounce").addClass("bounce2");
       
   });
-  // choosing number of products to be bought (+/-)
-  $('.minus').click(function () {
-    $input.val(Number($input.val())-1);
-    $("#cost").text(price*Number($input.val()));
-    return false;
+
+// choosing number of products to be bought (+/-)
+$("ul.dropdown-menu").on("click", ".minus", function(){
+  var basePrice = Number($($($(this).parent()).siblings()[0]).children()[1].id);
+  if($($(this).siblings()[0]).val()>1){
+    price -= basePrice;
+    $("#cost").text(price);
+    $($(this).siblings()[0]).val(Number($($(this).siblings()[0]).val())-1);
+  }
+  return false;
 });
-
-$('.plus').click(function () {
-    $input.val(Number($input.val())+1);
-    $("#cost").text(price*Number($input.val()));
-
-    return false;
+$("ul.dropdown-menu").on("click", ".plus", function(){
+  var basePrice = Number($($($(this).parent()).siblings()[0]).children()[1].id);
+  price += basePrice;
+  $("#cost").text(price);
+  $($(this).siblings()[1]).val(Number($($(this).siblings()[1]).val())+1);
+  return false;
 });
 
   //handling donation part
@@ -73,7 +96,8 @@ $('.plus').click(function () {
       $(".denomination-other input").removeClass("selected").val('');
       $(this).addClass("selected");
       $(this).children(":first").prop('checked', true);
-      $(".buttonDonate").text('Donate ₹' + $(this).children(":first").val())
+      // $(".buttonDonate").text('Donate ₹' + $(this).children(":first").val())
+      $(".buttonDonate").html(`Donate ₹<span>${$(this).children(":first").val()}</span>`);
   });
 
   $(".denomination-other input").on('keypress', function (event) {
@@ -87,7 +111,8 @@ $('.plus').click(function () {
     
     $(".denomination").removeClass("selected").prop('checked', false);
     $(this).addClass("selected");
-    $(".buttonDonate").text('Donate ₹' + $(this).val() + key );
+    // $(".buttonDonate").text('Donate ₹' + $(this).val() + key );
+    $(".buttonDonate").html(`Donate ₹<span>${$(this).val() + key}</span>`);
   });
 
   
@@ -108,4 +133,21 @@ $('.plus').click(function () {
     $('.closedonation').click(function(){
             // $('.donate').hide();
         $('.donate').css("right", "-100%");
+    });
+    $('.icon2').click(function(){ 
+      $('.inside').removeClass('ins');  
+    }); 
+    $('.icon').click(function(){ 
+      $(this).closest('.inside').addClass('ins');  
+    }); 
+
+    //handle cart when more than 3 products are added
+    $('.btn-cart').click(function(){ 
+      if($('.dropdown ul li').length >2){
+        // $('.dropdown-menu').css("top", "100px");
+        $('.dropdown-menu').addClass('margin');  
+      }
+      else{
+        $('.dropdown-menu').removeClass('margin');  
+      }
     });
