@@ -86,7 +86,7 @@
   
   /* main logo  */
   #navigation .imgLogo{
-    width: 50px;
+    width: 60px;
     height: 40px;
     transition: 1s;
   }
@@ -95,7 +95,6 @@
     height: 50px;
     margin-top: -5px;
     transition: 1s;
-    filter: none !important;
   }
   
   
@@ -176,6 +175,8 @@
     background: transparent;
   }
   
+  /* mobile navlink hover animation  */
+  
     
     #navigation .nav-link {
       padding-bottom: 15px;
@@ -206,7 +207,7 @@
     #navigation .nav-link-ltr:hover::before {
       width: 80%;
     }
-
+  
   /* navbar-toggler effects for small screens*/
   /* navbar slide right to left  */
   @media (max-width: 991px) {
@@ -485,7 +486,7 @@
       width: 250px;
     }
     #navigation .imgLogo{
-      width: 43px;
+      width: 55px;
     }
     /* #navigation .navbar-collapse {
       left: -72vw!important;
@@ -514,9 +515,7 @@
     #navigation .navbar-brand .Logo{
       width: 260px;
     }
-    #navigation .imgLogo{
-      width: 40px;
-    }
+    
   }
   @media(max-width:375px){
     #navigation .navbar-collapse {
@@ -526,9 +525,7 @@
     #navigation .navbar-brand .Logo{
       width: 235px;
     }
-    #navigation .imgLogo{
-      width: 40px;
-    }
+    
   }
   @media(max-width:350px){
     #navigation .navbar-collapse {
@@ -692,7 +689,7 @@
   #footer .footer-links a:active,
   #footer .footer-links a:focus,
   #footer .footer-links a:hover {
-    color: #223F99;
+    color: aqua;
     font-size: 102%;
     text-decoration: none;
     transition-duration: 400ms;

@@ -19,27 +19,27 @@
    transform: scale(1) rotate(0deg);
  }
 }
-#store.modal h2{
+#store .modal h2{
    font-family: 'Oswald', sans-serif;
    font-weight: 900;
 
 }
-#store.modal{
+#store .modal{
    font-family: 'Open Sans', sans-serif;
    
 }
 
-#store.modal label{
-   font-size: 18px;
+#store .modal label{
+   font-size: 16px;
    font-weight: 700;
+   
 }
-#store.modal input,#store.modal textarea{
-   font-size: 14px;
-   font-weight: 100;
-   width: 80%;
-   margin: 0 10%;
+#store .modal .btn-proceed{
+    background: #223F99;
+    color:#fff;
 }
-#store.modal .form-group{
+
+#store .modal .form-group{
    margin: 15px 0;
 }
 #store .empty{
@@ -138,6 +138,10 @@
 }
 #store .dropdown-menu{
    width: 300px!important;
+   position: absolute;
+}
+#store .margin{
+   top: 100px!important;
 }
 #store .btn-cart{
    background:#111;
@@ -207,16 +211,17 @@
    /*padding: 50px*/
    background-color: #171b24;
    width: 400px;
-   /* min-height: 101.25vh; */
+   min-height: 101.25vh;
    color: #FFF;
    overflow-x: hidden;
    position: absolute;
    top: 0px;
-   right: 0;
+   right: -100%;
+   transition: ease-in-out .5s;
    padding: 70px 0 0 0;
-   /* position: fixed; */
+   position: fixed;
    overflow-y: hidden;
-   /* z-index: -1; */
+   z-index: 999;
 }
 
 #store .donate p {
@@ -319,7 +324,6 @@
    background-color: #1e252d;
    padding: 25px;
 }
-
 #store .donate-black {
    padding: 25px;
 }
@@ -344,9 +348,6 @@
    color: rgba(255, 255, 255, 0.4);
    font-size: 12px;
 }
-
-
-/* card layout  */
 #store .cart{
    margin-top: 100px!important;
    margin-left: 10px;
@@ -390,7 +391,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
+    padding: 60px 0 20px 0;
     
 }
 #store .card .imgBox img{
@@ -552,7 +553,7 @@
  /* donate for small screen  */
  #store .donate h2 .closedonation{
    position: absolute;
-   top: 80px; 
+   top: 85px; 
    right: 0;
    color:white;
    background-color: #122936;
@@ -645,19 +646,6 @@
    #store .card{
       transform: scale(1)!important;
   }
-}
-@media(min-width:992px){
-   #store .donate-sm,#store .closedonation{
-      display: none!important;
-
-   }
-   #store .donate{
-      right:0!important;
-   }
-   #store .donate{
-      display: block!important;
-   }
-   
 }
 @media(min-width:575px) and (max-width:768px){
    #store .container{

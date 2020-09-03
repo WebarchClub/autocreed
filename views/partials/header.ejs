@@ -18,16 +18,13 @@
     <!-- AOS  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
     <!-- icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <title>AutoCreed</title>
     <link rel="icon" href="/images/ACR_Logo_TB.png" type="image/ico" />
-    <link rel="stylesheet" href="/css/<%= page %>.css">
+    <link rel="stylesheet" href="/css/<%= typeof page !== 'undefined' ? page : '' %>.css">
     <link rel="stylesheet" href="/css/nav.css">
 </head>
 <body>
