@@ -1,4 +1,5 @@
 /**********************************HEADING STYLING**************************************/
+@import url('http://fonts.googleapis.com/css2?family=Exo+2&display=swap');
 @font-face {
   font-family: 'Iceland';
   font-style: normal;
@@ -48,13 +49,13 @@
     background-size: 20px 20px;
   }
   #navigation .blurrer {
-    height: 140px;
+    height: 130px;
     top: -50px;
     left: -30px;
     right: -10px;
     position: absolute;
     overflow: hidden;
-    filter: blur(18px);
+    /* filter: blur(18px); */
     opacity: 1;
     z-index: -9999;
     background-color: rgba(0, 0, 0, 1);
@@ -62,14 +63,14 @@
     }
   /*navbar blur effect onscroll>50px*/
   #navigation .blurry .blurrer {
-  height: 140px;
+  height: 130px;
   top: -50px;
   left: -20px;
   right: -10px;
   position: absolute;
   overflow: hidden;
-  filter: blur(18px);
-  opacity: 0.92;
+  /* filter: blur(18px); */
+  opacity: 0.8;
   z-index: -9999;
   background-color: rgba(0, 0, 0, 1);
   background-size: cover;
@@ -80,20 +81,27 @@
   border: none;
   }
   #navigation:hover .blurry .blurrer{
-  opacity: 1;
-  filter: blur(20px);
+  opacity: 0.9;
+  /* filter: blur(20px); */
   }
   
   /* main logo  */
   #navigation .imgLogo{
-    width: 60px;
-    height: 40px;
+    width: 120px;
+    height: 60px;
+    transition: 1s;
+    margin-top: -20px;
+
+  }
+  #navigation .sidebarLogo{
+    width: 120px;
+    height: 70px;
     transition: 1s;
   }
   #navigation .Logo{
     width: 400px;
     height: 50px;
-    margin-top: -5px;
+    margin-top: -15px;
     transition: 1s;
   }
   
@@ -128,22 +136,28 @@
   }
   
   #navigation .nav-item{
-    font-size: 26px;
-    margin: 0 8px;
-    transition: all .3s ease-in-out;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+    margin: 10px 8px 0 8px;
+    transition: all .4s ease;
   }
   #navigation .dropdown-menu{
+    margin-top: -13px!important;
     background-color: black;
   }
   #navigation .dropdown-menu .dropdown-item{
     font-size: 20px;
+  }
+  #navigation .dropdown-menu:hover{
+    opacity: 0.85!important;
   }
   /* ----------------------------------------  */
   
   /* nav-links hover effect */
   /* add class 'circle' to <nav> */
   #navigation .nav-item:hover{
-  transform: translateY(-5px) scale(1.05);
+    transform: translateY(-3px) scale(1.05);
   }
   
   
@@ -153,8 +167,9 @@
     overflow: hidden;
     z-index: 1;
     transition: 0.5s ease-in;
-    color: #385097 !important;
-    filter: drop-shadow(0 0 5px #0035d3);
+    color: #fff;
+    /* color: #385097 !important; */
+    /* filter: drop-shadow(0 0 5px #0035d3); */
     
   }
   
@@ -181,7 +196,8 @@
     #navigation .nav-link {
       padding-bottom: 15px;
       text-decoration: none;
-      color: #223F99;
+      /* color: #223F99; */
+      color: #fff;
       display: inline-block;
       position: relative;
       opacity: 0.85;
@@ -196,7 +212,9 @@
       height: 3px;
       content: "";
       position: absolute;
-      background-color: #475c9c;
+      /* background-color: #475c9c; */
+      background-color: #fff;
+
     }
     
     #navigation .nav-link-ltr::before {
@@ -207,7 +225,10 @@
     #navigation .nav-link-ltr:hover::before {
       width: 80%;
     }
-  
+    #navigation .dropdown-item:hover{
+      background: #000;
+    }
+    
   /* navbar-toggler effects for small screens*/
   /* navbar slide right to left  */
   @media (max-width: 991px) {
@@ -218,7 +239,7 @@
     #navigation .nav-item{
       display: flex;
       justify-content: center;
-      margin: 10px 0; 
+      margin: 2px 0!important; 
       padding: 1px;
     } 
     #navigation .nav-item .nav-link{
@@ -241,7 +262,7 @@
         transition: all 0.3s ease;
         background-color: var(--navBg);
         position: fixed;
-        top: 0px;
+        overflow-y:scroll;
         left: -55vw!important;
         
         z-index: 1000;
@@ -270,7 +291,7 @@
         outline: 0;
         background: transparent !important;
         position: fixed;
-        top: 15px;
+        top: 22px;
         left: 0;
         font-weight: 900;
         z-index: 1000;
@@ -371,70 +392,43 @@
     }
   }
   @media(max-width:1248px){
-    #navigation .Logo{
-      width: 350px;
-      height: 45px;
-    }
     #navigation .imgLogo{
-      height: 36px;
+      height: 60px;
     }
     #navigation .nav-item{
       font-size: 27px;
-      margin: 0 3px;
+      margin: 10px 3px 0 3px;
     }
   }
   @media(max-width:1150px){
     #navigation .nav-item{
       font-size: 25px;
-      margin: 0 2px;
+      margin: 10px 2px 0 2px;
     }
   }
   @media(max-width:1090px){
-    #navigation .Logo{
-      width: 330px;
-      height: 42px;
-    }
     #navigation .imgLogo{
-      height: 33px;
+      height: 57px;
     }
     #navigation .nav-item{
-      font-size: 24px;
-      margin: 0 3px;
+      font-size: 25px;
+      margin: 11px 3px 0 3px;
     }
   }
   @media(max-width:1060px){
-    #navigation .Logo{
-      width: 320px;
-      height: 40px;
-    }
     #navigation .imgLogo{
-      height: 32px;
+      height: 55px;
     }
     #navigation .nav-item{
-      font-size: 23px;
-      margin: 0 1px;
+      font-size: 25px;
+      margin: 12px 1px 0 1px;
     }
   }
-  @media(max-width:1060px){
-    #navigation .Logo{
-      width: 320px;
-      height: 40px;
-    }
-    #navigation .imgLogo{
-      height: 32px;
-    }
-    #navigation .nav-item{
-      font-size: 22px;
-      margin: 0 1px;
-    }
-  }
+
   @media(max-width:992px){
-    #navigation .Logo{
-      width: 400px;
-      height: 45px;
-    }
     #navigation .navbar-brand .imgLogo{
-      height: 36px;
+      margin-top: 0px;
+      height: 55px;
     }
     #navigation .nav-item{
       font-size: 25px;
@@ -448,22 +442,9 @@
       display: none!important;
     }
   }
-  @media(max-width:800px){
-    #navigation .nav-item .Logo{
-      width: 300px;
-    } 
-    /* #navigation .navbar-collapse {
-      width: 70vw!important;
-      left: -70vw!important;
-    } */
-  }
   @media(max-width:726px){
-    #navigation .Logo{
-      width: 360px;
-      height: 42px;
-    }
     #navigation .navbar-brand .imgLogo{
-      height: 33px;
+      height: 54px;
     }
    
   }
@@ -473,36 +454,17 @@
       height: 40px;
     }
     #navigation .navbar-brand .imgLogo{
-      height: 30px;
+      height: 55px;
     }
   }
   @media(max-width:580px){
-    #navigation .navbar-brand .Logo{
-      width: 320px;
+    #navigation .navbar-brand{
+      transform: scale(0.96);
     }
   }
-  @media(max-width:568px){
-    #navigation .nav-item .Logo{
-      width: 250px;
-    }
-    #navigation .imgLogo{
-      width: 55px;
-    }
-    /* #navigation .navbar-collapse {
-      left: -72vw!important;
-      width: 72vw!important;
-    } */
-  }
-  @media(max-width:500px){
-    #navigation .navbar-brand .Logo{
-      width: 300px;
-    }
-   
-  }
+  
   @media(max-width:490px){
-    #navigation .navbar-brand .Logo{
-      width: 290px;
-    }
+    
     #navigation .navbar-collapse {
       left: -65vw!important;
       width: 65vw!important;
@@ -512,9 +474,6 @@
     #navigation .shift{
       left: 84vw!important;
     }
-    #navigation .navbar-brand .Logo{
-      width: 260px;
-    }
     
   }
   @media(max-width:375px){
@@ -522,21 +481,12 @@
       left: -70vw!important;
       width: 70vw!important;
     }
-    #navigation .navbar-brand .Logo{
-      width: 235px;
-    }
     
   }
   @media(max-width:350px){
     #navigation .navbar-collapse {
       left: -75vw!important;
       width: 75vw!important;
-    }
-    #navigation .navbar-brand .Logo{
-      width: 220px;
-    }
-    #navigation .imgLogo{
-      width: 40px;
     }
   }
   

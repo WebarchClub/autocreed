@@ -31,8 +31,9 @@ $(window).scroll(function() {
     
     if ($(document).scrollTop() > 50) {
       $('.navbar').addClass('blurry');
+      $('.dropdown-menu').css("opacity",0.75);
     } else {
       $('.navbar').removeClass('blurry');
-
+      $('.dropdown-menu').css("opacity",0.85);
     }
   });

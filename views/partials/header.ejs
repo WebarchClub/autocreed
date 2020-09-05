@@ -24,7 +24,7 @@
       rel="stylesheet">
     <title>AutoCreed</title>
     <link rel="icon" href="/images/ACR_Logo_TB.png" type="image/ico" />
-    <link rel="stylesheet" href="/css/<%= page %>.css">
+    <link rel="stylesheet" href="/css/<%= typeof page !== 'undefined' ? page : '' %>.css">
     <link rel="stylesheet" href="/css/nav.css">
 </head>
 <body>
@@ -32,8 +32,8 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-fade circle">
 
       <a class="navbar-brand text-left" href="/" id="logo" data-aos="zoom-in-right" data-aos-duration="1000">
-          <img src="/images/ACR_Logo_TB.png" class="d-inline-block align-top imgLogo" alt="logo" >
-              <img src="/images/LogoNew.png" alt="logo" class="Logo">
+          <img src="/images/ACR_Logo.png" class="d-inline-block align-top imgLogo" alt="logo" >
+              <!-- <img src="/images/LogoNew.png" alt="logo" class="Logo"> -->
         </a>
        <div class="blurrer"></div>
         
@@ -48,39 +48,60 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item" >
               <a class="nav-link text-center" href="/" id="sidebarLogo">
-                <img src="/images/LogoNew.png" alt="logo" class="Logo img-fluid">
+                <img src="/images/ACR_Logo.png" alt="logo" class="sidebarLogo img-fluid">
               </a>
             </li>
-            <li class="nav-item  active firstLink" data-aos="zoom-in-left" data-aos-delay="1000">
+            <!-- <li class="nav-item  active firstLink" >
               <a class="nav-link nav-link-ltr" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <!--for width < 992px-->
-            <li class="nav-item navbarsm" data-aos="zoom-in-left" data-aos-delay="4150">
-                 <a class="nav-link nav-link-ltr" href="/team">Team</a>
-            </li>
-            <li class="nav-item navbarsm" data-aos="zoom-in-left" data-aos-delay="1300">
-                 <a class="nav-link nav-link-ltr" href="/alumni">Alumni</a>
-            </li>
-            <!--for width > 992px-->
-            <li class="nav-item dropdown " data-aos="zoom-in-left" data-aos-delay="1300">
+            </li> -->
+            <li class="nav-item dropdown " >
               <a class="nav-link dropdown-toggle nav-link-ltr" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Members
+                ABOUT
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/team">Team</a>
-                <a class="dropdown-item" href="/alumni">Alumni</a>
+                <a class="dropdown-item" href="/journey">OUR JOURNEY</a>
+                <a class="dropdown-item" href="/achievements">ACHIEVEMENTS</a>
             </li>
-            <li class="nav-item" data-aos="zoom-in-left" data-aos-delay="1450">
-                 <a class="nav-link nav-link-ltr" href="/gallery">Gallery</a>
+            <!--for width < 992px-->
+
+            <li class="nav-item navbarsm" >
+              <a class="nav-link nav-link-ltr" href="/journey">OUR JOURNEY</a>
             </li>
-            <li class="nav-item" data-aos="zoom-in-down" data-aos-duration="1600">
-                <a class="nav-link nav-link-ltr" href="/sponsors">Sponsors</a>
+            <li class="nav-item navbarsm" >
+                  <a class="nav-link nav-link-ltr" href="/achievements">ACHIEVEMENTS</a>
             </li>
-            <li class="nav-item" data-aos="zoom-in-down" data-aos-duration="1750">
-                 <a class="nav-link nav-link-ltr" href="/support">Support</a>
+
+            <!------------------------------------->
+            <li class="nav-item" >
+              <a class="nav-link nav-link-ltr" href="/gallery">GALLERY</a>
             </li>
-            <li class="nav-item" data-aos="zoom-in-down" data-aos-duration="1900">
-                <a class="nav-link nav-link-ltr" href="/contact">Contact</a>
+
+            <!--for width < 992px-->
+            
+            <li class="nav-item navbarsm" >
+                 <a class="nav-link nav-link-ltr" href="/team">TEAM</a>
+            </li>
+            <li class="nav-item navbarsm" >
+                 <a class="nav-link nav-link-ltr" href="/alumni">ALUMNI</a>
+            </li>
+            <!--for width > 992px-->
+            <li class="nav-item dropdown " >
+              <a class="nav-link dropdown-toggle nav-link-ltr" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                MEMBERS
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/team">TEAM</a>
+                <a class="dropdown-item" href="/alumni">MEMBERS</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link nav-link-ltr" href="/sponsors">SPONSORS</a>
+            </li>
+            <li class="nav-item">
+                 <a class="nav-link nav-link-ltr" href="/support">SHOP</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-link-ltr" href="/contact">CONTACT</a>
            </li>
   
           </ul>
