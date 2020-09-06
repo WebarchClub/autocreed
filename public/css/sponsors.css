@@ -1,5 +1,5 @@
 #service {
-  padding-top: 50px;
+  padding-top: 100px;
 }
   
 a,
@@ -11,6 +11,8 @@ outline: none;
 }
 a.heading1 {
   color: white !important;
+  
+  
 }
 a.heading1:hover{
   color: turquoise !important;
@@ -38,17 +40,7 @@ max-width: 100%;
 height: auto;
 }
 
-.brand_border .fa.fa-minus {
-color: #fff;
-font-size: 8px;
-height: 2px;
-background: #e97171 none repeat scroll 0 0;
-width: 100px;
-}
-.brand_border .fas.fa-handshake {
-font-size: 20px;
-color:blue;
-}
+
 
 
 .section_title p:last-of-type {
@@ -104,6 +96,11 @@ position: relative;
 background: #4f8a8b none repeat scroll 0 0;            
 }
 
+.page-heading {
+  font-family: 'Exo 2', sans-serif !important;
+  font-size: 40px !important;
+  
+}
 
 /****************SOCIAL ICONS*****************/
 
@@ -261,6 +258,10 @@ to {
 .i2 {
 height: 190px;
 } 
+
+.i3 {
+  margin-left: 100px;
+}
 
 
 /* ----------------------------------------------
@@ -433,7 +434,20 @@ height: 190px;
   transform: translateX(-50%);
   display: block;
 }
+@media only screen and (min-width: 1399px){
+.navindex{
+  margin-left: 130px;
+}
+}
 
+@media screen and (max-width: 990px) {
+  .page-heading{
+    font-size: 30px !important;
+  }
+}
+
+
+      
 /* lined tabs */
 
 .lined .nav-link {
