@@ -10,10 +10,11 @@ const shortid = require("shortid");
 const crypto = require("crypto");
 
 // RAZORPAY SETUP
-var razorpay = new Razorpay({
+/*var razorpay = new Razorpay({
     key_id: process.env.KEYID,
     key_secret: process.env.KEYSECRET
 });
+*/
 // RAZORPAY SETUP
 
 app.set("view engine", "ejs");
