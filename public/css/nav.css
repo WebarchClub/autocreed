@@ -90,8 +90,8 @@
     width: 120px;
     height: 60px;
     transition: 1s;
-    margin-top: -20px;
-
+    margin: -20px 0 0 10px;
+    transform: scale(1.15);
   }
   #navigation .sidebarLogo{
     width: 120px;
