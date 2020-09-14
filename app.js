@@ -95,9 +95,9 @@ var Item = mongoose.model("Item", itemSchema);
 // =========================================ITEMS SCHEMA=======================
 
 // Item.create({
-//     name: "Bronze KeyChain",
-//     price: 50,
-//     description: "Bronze Brings Out Your Status"
+//     name: "Ruby KeyChain",
+//     price: 1000,
+//     description: "Ruby Brings Out Your Status"
 // }).then((newItem) => {console.log(newItem)}).catch((err) => {console.log(err)});
 
 // Item.find().then((item) => {console.log(item)}).catch((err) => {console.log(err)});
