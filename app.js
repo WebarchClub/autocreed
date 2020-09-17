@@ -5,15 +5,15 @@ const axios = require("axios");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
-const Razorpay = require("razorpay");
-const shortid = require("shortid");
+// const Razorpay = require("razorpay");
+// const shortid = require("shortid");
 const crypto = require("crypto");
 
 // RAZORPAY SETUP
-var razorpay = new Razorpay({
-    key_id: process.env.KEYID,
-    key_secret: process.env.KEYSECRET
-});
+// var razorpay = new Razorpay({
+//     key_id: process.env.KEYID,
+//     key_secret: process.env.KEYSECRET
+// });
 // RAZORPAY SETUP
 
 app.set("view engine", "ejs");
