@@ -8,9 +8,12 @@
   }
   
   .page-heading{
+  padding-top: 20px;
   text-align:center;
-  font-size:5em;
-  font-family:Iceland;
+  font-size:2.5em;
+  letter-spacing:5px;
+  font-weight: 550;
+  font-family:sans-serif;
   margin: 10px !important;
   }
   .page-heading .blue{
