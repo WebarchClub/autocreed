@@ -1,6 +1,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@900&display=swap');
 /* ===========================Layout==================== */
 
+/* News Carousel */
+
+#newsheading{
+  text-align: center;  
+  min-height: 0vh; 
+}
+.page-heading{
+text-align: center !important;
+line-height: 1em;
+font-size: 4.5em !important;
+bottom: 10em;
+}
+#newsheading .jumbotron p{
+color: whitesmoke;
+word-wrap: normal;
+text-align: justify;
+}
+
+#newsheading .jumbotron{
+  background-color: transparent;
+}
+#newsIndicators .carousel-indicators{
+   width: 14px; 
+   height: 14px; 
+   border-radius: 100%;
+  } 
+
+@media (min-width: 768px) {
+
+    /* show 3 items */
+    #newsCarousel .carousel-inner .active,
+    #newsCarousel .carousel-inner .active +  .carousel-item,
+    #newsCarousel .carousel-inner .active +  .carousel-item +  .carousel-item  {
+        display: block;
+    }
+    
+    #newsCarousel .carousel-inner  .carousel-item.active:not( .carousel-item-right):not( .carousel-item-left),
+    #newsCarousel .carousel-inner  .carousel-item.active:not( .carousel-item-right):not( .carousel-item-left) +  .carousel-item,
+    #newsCarousel .carousel-inner  .carousel-item.active:not( .carousel-item-right):not( .carousel-item-left) +  .carousel-item +  .carousel-item {
+        transition: none;
+    }
+    
+    #newsCarousel .carousel-inner  .carousel-item-next,
+    #newsCarousel .carousel-inner  .carousel-item-prev {
+      position: relative;
+      visibility: visible;
+
+      /* transform: translate3d(0, 0, 0); */
+    }
+    
+    #newsCarousel .carousel-inner  .active.carousel-item +  .carousel-item +  .carousel-item +  .carousel-item {
+        position: absolute;
+        align-items: center;
+        top: 0;
+        right: -25%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* left or forward direction */
+     .active.carousel-item-left +  .carousel-item-next.carousel-item-left,
+     .carousel-item-next.carousel-item-left +  .carousel-item,
+     .carousel-item-next.carousel-item-left +  .carousel-item +  .carousel-item{
+        position: relative;
+        /* transform: translate3d(-100%, 0, 0); */
+        visibility: visible;
+    }
+    
+    /* farthest right hidden item must be abso position for animations */
+    #newsCarousel .carousel-inner  .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 60;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* right or prev direction */
+     .active.carousel-item-right +  .carousel-item-prev.carousel-item-right,
+     .carousel-item-prev.carousel-item-right +  .carousel-item,
+     .carousel-item-prev.carousel-item-right + .carousel-item +  .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+
+}
+
+
+/*===================================================*/
+
 .section-head{
   background-color: rgba(150, 150, 150, 0.2);
   color: #fff;
@@ -15,11 +110,6 @@
   letter-spacing: 15px;
 }
 #key-events .section-title h1{
-  transform-origin: center;
-  transform: rotate(90deg);
-}
-
-#News .section-title h1{
   transform-origin: center;
   transform: rotate(90deg);
 }
