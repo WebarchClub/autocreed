@@ -35,54 +35,56 @@
 <!-- ============================================================================================================= -->
 
 <section id="News">
-      <div class="col-14 align-items-stretch" style="background: rgba(0, 0, 0, 0.2);">
-        <section id="mission">
-          <div class="jumbotron">
-            <p class="page-heading">News Updates</p>
-          </div>
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm">
-                      <a href=""><img class="d-block w-100" src="https://picsum.photos/200/300" alt="First slide"></a>
+  <div class="col-14 align-items-stretch">
+    <section id="newsheading">
+      <div class="jumbotron">
+        <p class="page-heading">News Updates</p>
+      </div>
+
+            <div class="container-fluid">
+                <div id="newsCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="9000">
+                  <ol  class="carousel-indicators">
+                    <li data-target="#newsIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#newsIndicators" data-slide-to="1"></li>
+                    <li data-target="#newsIndicators" data-slide-to="2"></li>
+                    <li data-target="#newsIndicators" data-slide-to="3"></li>
+                  </ol>
+                    <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                        <div  class="carousel-item col-md-3 active">
+                            <img class="img-fluid mx-auto d-block" src="https://picsum.photos/200/300" alt="slide 1">
+                        </div>
+                        <div  class="carousel-item col-md-3">
+                            <img class="img-fluid mx-auto d-block" src="https://picsum.photos/200/300" alt="slide 2">
+                        </div>
+                        <div  class="carousel-item col-md-3">
+                            <img class="img-fluid mx-auto d-block" src="https://picsum.photos/200/300" alt="slide 3">
+                        </div>
+                        <div  class="carousel-item col-md-3">
+                            <img class="img-fluid mx-auto d-block" src="https://picsum.photos/200/300" alt="slide 4">
+                        </div>
+                        <div  class="carousel-item col-md-3">
+                            <img class="img-fluid mx-auto d-block" src="https://picsum.photos/200/300" alt="slide 5">
+                        </div>
+                        <div  class="carousel-item col-md-3">
+                            <img class="img-fluid mx-auto d-block" src="https://picsum.photos/200/300" alt="slide 6">
+                        </div>
+                        <div  class="carousel-item col-md-3">
+                            <img class="img-fluid mx-auto d-block" src="https://picsum.photos/200/300" alt="slide 7">
+                        </div>
+                        <div  class="carousel-item col-md-3">
+                            <img class="img-fluid mx-auto d-block" src="https://picsum.photos/200/300" alt="slide 7">
+                        </div>
                     </div>
-                    <div class="col-sm">
-                      <a href=""><img class="d-block w-100" src="https://picsum.photos/200/250" alt="First slide"></a>
-                    </div>
-                    <div class="col-sm">
-                      <a href=""><img class="d-block w-100" src="https://picsum.photos/200/220" alt="First slide"></a>
-                    </div>
-                  </div>
+                    <a class="carousel-control-prev" href="#newsCarousel" role="button" data-slide="prev">
+                        <i class="fa fa-chevron-left fa-lg text-muted"></i>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next text-faded" href="#newsCarousel" role="button" data-slide="next">
+                        <i class="fa fa-chevron-right fa-lg text-muted"></i>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
-              </div>
-              <div class="carousel-item">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm">
-                      <img class="d-block w-100" src="https://picsum.photos/200/300" alt="First slide">
-                    </div>
-                    <div class="col-sm">
-                      <img class="d-block w-100" src="https://picsum.photos/200/250" alt="First slide">
-                    </div>
-                    <div class="col-sm">
-                      <img class="d-block w-100" src="https://picsum.photos/200/220" alt="First slide">  
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-            
-              </div>
             </div>
-          </div>
         </section>
       </div>
 </section>
