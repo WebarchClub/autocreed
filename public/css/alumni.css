@@ -1,6 +1,15 @@
 body{
   letter-spacing: 0.0625em;
 }
+h1.heading{
+  color: whitesmoke;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  font-size: 4em;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-top: 90px;
+}
 
 #about .outer-border {
 	border: 2px solid #223F99;
