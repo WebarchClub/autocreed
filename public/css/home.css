@@ -5,94 +5,41 @@
 
 #newsheading{
   text-align: center;  
-  min-height: 0vh; 
+  min-height: 0.5vh; 
 }
-.page-heading{
+
+#newsheading .jumbotron p{
+color: whitesmoke;
+font-style: normal;
+word-wrap: normal;
+text-align: justify;
 text-align: center !important;
 line-height: 1em;
 font-size: 4.5em !important;
-bottom: 10em;
-}
-#newsheading .jumbotron p{
-color: whitesmoke;
-word-wrap: normal;
-text-align: justify;
 }
 
-#newsheading .jumbotron{
+#newsheading .jumbotron {
   background-color: transparent;
 }
-#newsIndicators .carousel-indicators{
-   width: 14px; 
-   height: 14px; 
-   border-radius: 100%;
-  } 
 
-@media (min-width: 768px) {
-
-    /* show 3 items */
-    #newsCarousel .carousel-inner .active,
-    #newsCarousel .carousel-inner .active +  .carousel-item,
-    #newsCarousel .carousel-inner .active +  .carousel-item +  .carousel-item  {
-        display: block;
-    }
-    
-    #newsCarousel .carousel-inner  .carousel-item.active:not( .carousel-item-right):not( .carousel-item-left),
-    #newsCarousel .carousel-inner  .carousel-item.active:not( .carousel-item-right):not( .carousel-item-left) +  .carousel-item,
-    #newsCarousel .carousel-inner  .carousel-item.active:not( .carousel-item-right):not( .carousel-item-left) +  .carousel-item +  .carousel-item {
-        transition: none;
-    }
-    
-    #newsCarousel .carousel-inner  .carousel-item-next,
-    #newsCarousel .carousel-inner  .carousel-item-prev {
-      position: relative;
-      visibility: visible;
-
-      /* transform: translate3d(0, 0, 0); */
-    }
-    
-    #newsCarousel .carousel-inner  .active.carousel-item +  .carousel-item +  .carousel-item +  .carousel-item {
-        position: absolute;
-        align-items: center;
-        top: 0;
-        right: -25%;
-        z-index: -1;
-        display: block;
-        visibility: visible;
-    }
-    
-    /* left or forward direction */
-     #newsCarousel .active.carousel-item-left +  .carousel-item-next.carousel-item-left,
-     #newsCarousel .carousel-item-next.carousel-item-left +  .carousel-item,
-     #newsCarousel .carousel-item-next.carousel-item-left +  .carousel-item +  .carousel-item{
-        position: relative;
-        /* transform: translate3d(-100%, 0, 0); */
-        visibility: visible;
-    }
-    
-    /* farthest right hidden item must be abso position for animations */
-    #newsCarousel .carousel-inner  .carousel-item-prev.carousel-item-right {
-        position: absolute;
-        top: 0;
-        left: 60;
-        z-index: -1;
-        display: block;
-        visibility: visible;
-    }
-    
-    /* right or prev direction */
-     #newsCarousel .active.carousel-item-right +  .carousel-item-prev.carousel-item-right,
-     #newsCarousel .carousel-item-prev.carousel-item-right +  .carousel-item,
-     #newsCarousel .carousel-item-prev.carousel-item-right + .carousel-item +  .carousel-item {
-        position: relative;
-        transform: translate3d(100%, 0, 0);
-        visibility: visible;
-        display: block;
-        visibility: visible;
-    }
-
+#newsheading .container{
+  margin-top: 0em;
 }
 
+#newsCarousel {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+@media(max-width: 576px){
+  #newsCarousel .carousel-item{
+    margin-bottom: 10em;
+  }
+}
+@media(max-width: 386px){
+  #newsCarousel .carousel-item{
+    margin-bottom: 10em;
+  }
+}
 
 /*===================================================*/
 
