@@ -2,10 +2,26 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Lato', sans-serif !important;
+}
+h1.heading{
+	color: whitesmoke;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-size: 4em;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: 90px;
 }
 
-h5{
-	font-size:1.1em;
+#team-name{
+	font-size:1.0em;
+	font-weight:500;
+}
+
+#team-role{
+	font-size:0.9em;
+	font-weight:400;
 }
 
 /* #third-card
@@ -77,10 +93,11 @@ h5{
 
 .background-div-4{
 	background-color: black;
-    border: 2px solid red;
-    padding-bottom: 40px;
+	border: 2px solid red;
+	padding-top:50px;
+    padding-bottom: 50px;
     border-radius: 15px;
-    margin-left: 400px;
+    margin-left: 400px; /* 400px prev */
     margin-right: 400px;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -139,25 +156,26 @@ h5{
 
 /* Labels - Vertical */
 
-.book .cover{
-	position: absolute;
-    margin-top: 40px;
-    left: 0px;
-    width: 37.5px;
-    height: 200px;
+.book .cover {
+    position: absolute;
+    margin-top: 18px;
+    left: 110px;
+    width: 60px;
+    height: 318px;
     background: rgb(158, 124, 38);
     border-radius: 9px;
 }
 
-  .cover h2{
-	transform: rotate(-90deg);
+
+.cover h2 {
+    transform: rotate(-90deg);
     font-size: 22.5px;
-    padding-top: 5px;
-    margin-top: 108px;
+    padding-top: 6px;
+    margin-top: 160px;
     padding-bottom: 10px;
     letter-spacing: 3px;
     font-weight: 700;
-  }
+}
 
   .book .labels{
 	position: absolute;
@@ -168,39 +186,44 @@ h5{
 
   .cover-2{
 	position: absolute;
-    margin-top: 45px;
-    left: 0px;
-    width: 37.5px;
-    height: 200px;
-	background: rgb(0, 162, 255);
+    margin-top: 18px;
+    left: 110px;
+    width: 60px;
+    height: 318px;
+    background: rgb(0, 162, 255);
     border-radius: 9px;
-  }
+}
 
-  .cover-2 h2{
+.cover-2 h2{
 	transform: rotate(-90deg);
     font-size: 22.5px;
     padding-top: 5px;
-    margin-top: 142.5px;
+	/* margin-top: 142.5px; */
+	margin-top:185px;
     padding-bottom: 10px;
     letter-spacing: 1.25px;
     font-weight: 700;
   }
 
   /* Bigger Vertical Label */ 
+  
+
   .cover-3{
 	position: absolute;
-    margin-top: 45px;
-    left: 0px;
-    width: 37.5px;
-    height: 200px;
-    background: green;
+    margin-top: 18px;
+    left: 110px;
+    width: 60px;
+    height: 318px;
+    background:green;
     border-radius: 9px;
   }
+
   .cover-3 h2{
 	transform: rotate(-90deg);
     font-size: 22.5px;
     padding-top: 5px;
-    margin-top: 135px;
+	/* margin-top: 135px; */
+	margin-top:185px;
     padding-bottom: 10px;
     letter-spacing: 2px;
     font-weight: 700;
@@ -214,11 +237,11 @@ h5{
 }
 
 #team-pic {
-	border-radius:50%;
-	height: 75px;
-	width: 75px;
-	/* height: 225px; */
-	/* border-radius: 12.5px; */
+	border-radius:30px;
+	/* height: 75px;
+	width: 75px; */
+	height:150px;
+	width:150px;
 }
 
 .team {
@@ -272,18 +295,8 @@ h5{
 	/* margin: 0 auto; */
 }
 
-@media(max-width:1200px)
+@media(max-width:1300px)
 {
-	.background-div {
-		background-color: black;
-		border: 2px solid red;
-		border-radius: 15px;
-		padding-top: 50px;
-		padding-bottom: 50px;
-		margin-left: 300px;
-		margin-right: 300px;
-		margin-bottom: 25px;
-	}
 	.background-div-4
 	{
 		background-color: black;
@@ -297,11 +310,38 @@ h5{
 	}
 }
 
+@media(max-width:1200px)
+{
+	.background-div {
+		background-color: black;
+		border: 2px solid red;
+		border-radius: 15px;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		margin-left: 300px;
+		margin-right: 300px;
+		margin-bottom: 25px;
+	}
+}
+
 @media (max-width: 1024px) {
 
-	#team-pic{
+	/* #team-pic{
 		height:100px;
 		width:100px;
+	} */
+
+
+	.book .cover, .cover-2, .cover-3{
+		left:0px;
+	}
+
+	.cover h2, .cover-2 h2, .cover-3 h2{
+		font-size:30px;
+	}
+
+	.cover-2 h2, .cover-3 h2{
+		margin-top:200px;
 	}
 
 	.team-main-section {
@@ -370,8 +410,8 @@ h5{
 		border:2px solid red;
 		padding-bottom:60px;
 		border-radius:15px;
-		margin-left:150px;
-		margin-right:150px;
+		margin-left:148px;
+		margin-right:148px;
 		margin-bottom:40px;
 	}
 	
@@ -550,8 +590,8 @@ h5{
 		border:2px solid red;
 		padding-bottom:50px;
 		border-radius:15px;
-		margin-left:75px;
-		margin-right:75px;
+		margin-left:73px;
+		margin-right:73px;
 		margin-bottom:85px;
 	}
 	
@@ -617,10 +657,17 @@ h5{
 	}
 
 
-	.background-div, .background-div-1, .background-div-2, .background-div-3, .background-div-4
+	.background-div, .background-div-1, .background-div-2, .background-div-3 , .background-div-4
 	{
 		margin-left:40px;
 		margin-right:40px;
 	}
+
+
+	
+	/* .top-label-3 h2{
+		padding-top:8px;
+		font-size:25px;
+	} */
 
 }
