@@ -31,6 +31,12 @@
 	object-fit: cover;
 	transition: transform 400ms ease-out;
 }
+@media(max-width: 440px){
+	#gallery .gallery-item{
+		width: 75%;
+		margin: 1rem 0.4em !important;
+	}
+}
 
 #gallery .gallery-image:hover {
 	transform: scale(1.15);
