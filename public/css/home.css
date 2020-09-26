@@ -73,23 +73,30 @@ background-attachment: fixed;
 	transform: translateX(0);
 	transform: translate3d(0, 0, 0);
 }
+
+/* .carousel-control-prev, .carousel-control-next {
+  display: none;/* IE support 
+} 
+*/
+
 .carousel-caption{
 position: absolute;
 text-align: left;
 top: 38%;
 left: 5%;
-max-width: 60%;
-}
-.carousel-control-prev, .carousel-control-next {
-  display: none;/* IE support */
+max-width: 65%;
 }
 .h4-res{
-  font-size: 2vw;
+  font-size: 1.8vw;
+  position: absolute;
+  left: 10%;
 }
 .ml11 {
   font-weight: 500;
-  font-size: 6vw;
+  font-size: 5.5vw;
   font-family:'Lato', sans-serif;
+  position: absolute;
+  left: 10%;
 }
 
 .ml11 .text-wrapper {
@@ -98,10 +105,6 @@ max-width: 60%;
   padding-top: 0.1em;
   padding-right: 0.05em;
   padding-bottom: 0.15em;
-}
-.ml11 .line1 { 
-  top: 0; 
-  left: 0;
 }
 .ml11 .letter {
   display: inline-block;
