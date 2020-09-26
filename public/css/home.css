@@ -95,7 +95,7 @@ height: auto;
 }
 @media (max-width: 500px) and (min-width:376px) {
   .carousel-item {
-    height: 55vh; 
+    height: 50vh; 
     background-attachment: scroll;
   }
   .h4-res{
