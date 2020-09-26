@@ -32,6 +32,9 @@
     padding:15px;
 }
 @media (max-width:650px){
+    #achievements-header h1{
+        font-size: 3em;
+    }
     #achievements-section{
         height:800px;
     }
@@ -73,5 +76,10 @@
     #achievement-image2{
         margin-top:30px;
         width:70%;
+    }
+}
+@media (max-width:440px){
+    #achievements-header h1{
+        font-size: 2em;
     }
 }

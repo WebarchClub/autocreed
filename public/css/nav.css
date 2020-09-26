@@ -434,6 +434,9 @@
     }
   }
   @media(max-width:580px){
+    #navigation .nav-link{
+      font-size: 0.8em;
+    }
     #navigation .navbar-brand{
       transform: scale(0.96);
     }
