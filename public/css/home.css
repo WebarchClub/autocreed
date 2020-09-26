@@ -81,13 +81,14 @@ background-attachment: fixed;
 
 .carousel-caption{
 position: absolute;
-text-align: left;
-top: 38%;
+text-align: justify;
+top: 42%;
 left: 5%;
 max-width: 65%;
+height: auto;
 }
 .h4-res{
-  font-size: 1.8vw;
+  font-size: 2vw;
   position: absolute;
   left: 10%;
 }
@@ -116,29 +117,51 @@ max-width: 65%;
   height: 45vh; 
   background-attachment: scroll;
 }
-
-
+.h4-res{
+  font-size: 2.7vw;
+}
+.carousel-caption{
+  top: 38%;
+  }
 }
 @media (max-width: 500px) and (min-width:376px) {
   .carousel-item {
     height: 42vh; 
     background-attachment: scroll;
   }
+  .h4-res{
+    font-size: 2.9vw;
   }
-
+  .carousel-caption{
+    top: 36%;
+    }
+  }
 
   @media (max-width: 375px)  {
     .carousel-item {
       height: 40vh; 
       background-attachment: scroll;
     }
+    .h4-res{
+      font-size: 3.4vw;
+    }
+    .carousel-caption{
+      top: 34%;
+      }
     }
     
 @media (min-width: 768px) {
 .carousel-item {
-  height: 90vh; 
+  height: 95vh; 
 }
 }
+.carousel-caption.fadeIn {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
  /*============Carousel ends=====================*/
 
 /* ==============Mission=========================== */
