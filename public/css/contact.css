@@ -68,7 +68,8 @@ ul.actions li:last-child {
   text-align: center;
 }
 .contactp{
-	font-size: 18px !important;
+  font-size: 18px !important;
+  text-align: justify;
 }
 
 /* Checkbox */
@@ -111,7 +112,7 @@ body {
 }
 
 .section2 {
-    width: 1200px;
+    width: 1100px;
     margin: 25px auto;
 }
 .section2 .col2 {
@@ -137,6 +138,9 @@ body {
 }
 .section2 .sec2addr p:first-child {
 	margin-bottom: 10px;
+}
+.section2 .sec2addr p:last-child{
+  text-align: justify;
 }
 
 

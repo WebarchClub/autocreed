@@ -402,6 +402,13 @@ height: 190px;
 
   }
 
+@media(max-width: 576px){
+  .single_service-body p{
+    font-size: 0.8em;
+    line-height: 1.1em;
+  }
+}
+
 @media(max-width: 490px){
   .page-heading{
     line-height: 0.8em;
