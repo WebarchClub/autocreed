@@ -1,3 +1,8 @@
+
+ function goToTop(){
+  window.scrollTo(0, 0);
+}
+
 var price = 0;
 // hide cart content when there's no product in it
 $(".button").hide();

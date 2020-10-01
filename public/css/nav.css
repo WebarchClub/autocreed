@@ -1,25 +1,7 @@
 /**********************************HEADING STYLING**************************************/
 @import url('http://fonts.googleapis.com/css2?family=Exo+2&display=swap');
-@font-face {
-  font-family: 'Iceland';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Iceland'), local('Iceland-Regular'), url(https://themes.googleusercontent.com/static/fonts/iceland/v3/F6LYTZLHrG9BNYXRjU7RSw.woff) format('woff');
-  }
-  
-  .page-heading{
-  text-align:center;
-  font-size:5em;
-  font-family:Iceland;
-  margin: 10px !important;
-  }
-  .page-heading .blue{
-  color: white !important;
-  
-  }
-  .page-heading a:hover{
-  color: aqua !important;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
   /*********************************HEADING STYLING ENDS*******************************/
 
   :root {
@@ -35,18 +17,11 @@
       width: 100%;
       margin: 0px;
       padding: 0px;
-      overflow-x: hidden; 
+      overflow-x: hidden;
+      font-family: 'Lato', sans-serif !important; 
   }
   body{
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px;
+    background: rgba(5, 5, 5, 0.9);
   }
   #navigation .blurrer {
     height: 130px;
@@ -90,8 +65,8 @@
     width: 120px;
     height: 60px;
     transition: 1s;
-    margin: -20px 0 0 10px;
-    transform: scale(1.15);
+    margin-top: -20px;
+
   }
   #navigation .sidebarLogo{
     width: 120px;
@@ -136,11 +111,20 @@
   }
   
   #navigation .nav-item{
-    font-family: 'Exo 2', sans-serif;
-    font-size: 28px;
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
     letter-spacing: 0.5px;
     margin: 10px 8px 0 8px;
     transition: all .4s ease;
+  }
+  #navigation .dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+  #navigation .dropdown-item:hover>.dropdown-menu {
+    display: block;
+  }  
+  #navigation .dropdown>.dropdown-toggle:active {
+    pointer-events: none;
   }
   #navigation .dropdown-menu{
     margin-top: -13px!important;
@@ -262,7 +246,7 @@
         transition: all 0.3s ease;
         background-color: var(--navBg);
         position: fixed;
-        overflow-y:scroll;
+        overflow:hidden;
         left: -55vw!important;
         
         z-index: 1000;
@@ -277,6 +261,7 @@
     }
     #navigation .navbar-collapse.show {
         left: 0%!important;
+        overflow: hidden;
     }
   
   
@@ -458,6 +443,9 @@
     }
   }
   @media(max-width:580px){
+    #navigation .nav-link{
+      font-size: 0.8em;
+    }
     #navigation .navbar-brand{
       transform: scale(0.96);
     }

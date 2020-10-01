@@ -27,6 +27,8 @@ $(".navbar-toggler").click(function () {
 //     }
 // });
 //  navbar bg changed after scrolling 50px
+
+
 $(window).scroll(function() {
     
     if ($(document).scrollTop() > 50) {

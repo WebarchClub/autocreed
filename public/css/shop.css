@@ -48,11 +48,12 @@
     display: flex;
     justify-content: center;
 }
-
 #store .dropdown ul
 {
     list-style-type: none;
     z-index: 999;
+    position: fixed;
+    overflow: scroll;
 }
 
 #store .dropdown ul li
@@ -60,6 +61,7 @@
     margin: 5px;
     padding: 5px 0 2px 5px;
     border: 1px solid rgb(180, 180, 180);
+    
 }    
 #store .dropdown ul li a{
    text-decoration: none;
@@ -141,7 +143,7 @@
    position: absolute;
 }
 #store .margin{
-   top: 100px!important;
+   margin-top: 100px!important;
 }
 #store .btn-cart{
    background:#111;
@@ -349,8 +351,13 @@
    font-size: 12px;
 }
 #store .cart{
-   margin-top: 100px!important;
+   z-index: 999;
    margin-left: 10px;
+   position: fixed;
+   top: 100px;
+}
+#store .shop{
+   margin-top: 150px;
 }
 #store .card{
     position: relative;
@@ -560,6 +567,9 @@
    cursor: pointer;
 
  }
+ #store .donate-sm{
+    
+ }
  #store .donate-sm h2 {
    display: inline!important;
     position: absolute;
@@ -633,6 +643,9 @@
    }
 }
 @media(max-width:992px){
+   #store .shop{
+      margin-top: 165px;
+   }
    #store .donate{
       right: -100%;
       transition: ease-in-out .5s;

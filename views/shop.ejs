@@ -78,8 +78,8 @@
         </div>
       </div>
     </div>
-  
-      <div class="dropdown text-left cart">
+      
+      <div class="dropdown text-left cart" onclick="goToTop()">
         <button class="btn btn-cart" type="button" data-toggle="dropdown">
             <i class="fas fa-shopping-cart fa-2x"></i><sub id="clickme">0</sub>
             <span class="caret "></span>
@@ -101,7 +101,7 @@
       <!-- <div class="sidenav">
         <h2>Donate Us</h2>
       </div> -->
-      <div class="donate">
+      <div class="donate" id="donate-section">
         <div class="donate-black">
           <h2><span>$</span> Donate<span class="closedonation"><i class="fas fa-times"></i></span></h2>
           <p>Your contribution is vital to the success of our initiative.</p>
@@ -151,7 +151,7 @@
   
   
       <!-- card layout  -->
-      <div class="container">
+      <div class="container shop">
           <div class="row">
               <% items.forEach((item) => { %>
                 <div class=" col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-3 d-flex justify-content-center ">
