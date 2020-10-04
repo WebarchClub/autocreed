@@ -80,6 +80,7 @@ $("ul.dropdown-menu").on("click", ".minus", function(){
     $("#cost").text(price);
     $($(this).siblings()[0]).val(Number($($(this).siblings()[0]).val())-1);
   }
+  // alert(  $($(this).siblings()[0]).val());
   return false;
 });
 $("ul.dropdown-menu").on("click", ".plus", function(){
@@ -143,6 +144,10 @@ $("ul.dropdown-menu").on("click", ".plus", function(){
 
     //handle cart when more than 3 products are added
     $('.btn-cart').click(function(){ 
+      $('html, body').animate({
+        scrollTop: 0
+      }, 100);
+      // return false;
       if($('.dropdown ul li').length >2){
         // $('.dropdown-menu').css("top", "100px");
         $('.dropdown-menu').addClass('margin');  

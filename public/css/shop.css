@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,700,300');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
 /* modal  */
+#store{
+   scroll-behavior: smooth;
+}
 #store .opacity-animate{
    animation:opt-animation4 1s;
  animation-fill-mode: forwards
@@ -48,11 +51,12 @@
     display: flex;
     justify-content: center;
 }
-
 #store .dropdown ul
 {
     list-style-type: none;
     z-index: 999;
+    position: fixed;
+    overflow: scroll;
 }
 
 #store .dropdown ul li
@@ -60,6 +64,7 @@
     margin: 5px;
     padding: 5px 0 2px 5px;
     border: 1px solid rgb(180, 180, 180);
+    
 }    
 #store .dropdown ul li a{
    text-decoration: none;
@@ -141,7 +146,7 @@
    position: absolute;
 }
 #store .margin{
-   top: 100px!important;
+   margin-top: 170px!important;
 }
 #store .btn-cart{
    background:#111;
@@ -349,8 +354,13 @@
    font-size: 12px;
 }
 #store .cart{
-   margin-top: 100px!important;
+   z-index: 999;
    margin-left: 10px;
+   position: fixed;
+   top: 100px;
+}
+#store .shop{
+   margin-top: 150px;
 }
 #store .card{
     position: relative;
@@ -633,6 +643,9 @@
    }
 }
 @media(max-width:992px){
+   #store .shop{
+      margin-top: 165px;
+   }
    #store .donate{
       right: -100%;
       transition: ease-in-out .5s;

@@ -227,6 +227,7 @@ h1.heading{
   z-index: 1;
   overflow: hidden;
   width: 180px;
+  height: 180px;
   border-radius: 8rem;
 }
 #about .one:hover:before {
