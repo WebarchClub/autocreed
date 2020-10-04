@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,700,300');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
 /* modal  */
+#store{
+   scroll-behavior: smooth;
+}
 #store .opacity-animate{
    animation:opt-animation4 1s;
  animation-fill-mode: forwards
@@ -143,7 +146,7 @@
    position: absolute;
 }
 #store .margin{
-   margin-top: 100px!important;
+   margin-top: 170px!important;
 }
 #store .btn-cart{
    background:#111;

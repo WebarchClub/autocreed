@@ -1,8 +1,3 @@
-
- function goToTop(){
-  window.scrollTo(0, 0);
-}
-
 var price = 0;
 // hide cart content when there's no product in it
 $(".button").hide();
@@ -149,6 +144,10 @@ $("ul.dropdown-menu").on("click", ".plus", function(){
 
     //handle cart when more than 3 products are added
     $('.btn-cart').click(function(){ 
+      $('html, body').animate({
+        scrollTop: 0
+      }, 100);
+      // return false;
       if($('.dropdown ul li').length >2){
         // $('.dropdown-menu').css("top", "100px");
         $('.dropdown-menu').addClass('margin');  
