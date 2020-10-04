@@ -10,10 +10,10 @@
 
     <title>Autocreed || Items</title>
   </head>
-  <body>
-    <h1 class="text-center display-1 text-primary">Thank You <%= order.name %>,</h1>
-    <h2 class="text-center display-2 text-primary">Here are your details:-</h2>
-    <ul class="text-primary">
+  <body class="bg-dark">
+    <h1 class="text-center display-1 text-light">Thank You <%= order.name %>,</h1>
+    <h2 class="text-center display-2 text-light">Here are your details:-</h2>
+    <ul class="text-light">
         <li><h3><b>Id: </b><%= order.order_id %></h3></li>
         <li><h3><b>Amount: </b><%= order.amount %></h3></li>
         <li><h3><b>Name: </b><%= order.name %></h3></li>
@@ -22,12 +22,16 @@
         <li><h3><b>Phone: </b><%= order.phone %></h3></li>
         <li><h3><b>Comment: </b><%= order.comment %></h3></li>
     </ul>
-    <h4 class="text-primary display-4">Here's what you bought:-</h4>
-    <ol class="text-primary">
+    <% if(order.items.length){ %>
+      <h4 class="text-light display-4">Here's what you bought:-</h4>
+      <ol class="text-light">
         <% order.items.forEach((item) => { %>
             <li><%= item %></li>
         <% }); %>
-    </ol>
+      </ol>
+    <% }else{ %>
+      <h4 class="text-light display-4">Thank You for Donating!!</h4>
+    <% } %>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
