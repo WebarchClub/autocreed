@@ -491,14 +491,12 @@
   }
   
   #footer #autocreedLogo {
-    margin-left: 50;
-    margin-top: 8px;
-    margin-bottom: 12px;
-    height: 70px;
+    height: 175px;
   }
   
   #footer #address {
-    padding-top: 5%;
+    width: 80%;
+    margin-left: 10%;
   }
   
   #footer #address p {
@@ -516,16 +514,8 @@
   }
   
   #footer .social-icons {
-    padding-top: 15%;
     text-align: center;
   }
-  
-  @media(max-width: 815px) {
-    #footer .social-icons {
-        padding-top: 0;
-    }
-  }
-  
   #footer .social-icons ul {
     list-style-type: none;
     text-align: center;
