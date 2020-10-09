@@ -362,6 +362,12 @@
 #store .shop{
    margin-top: 150px;
 }
+#store .shop .row .container .jumbotron{
+   background-color: #223F99;
+   color: #fff;
+   font-variant: small-caps;
+   text-align: center;
+}
 #store .card{
     position: relative;
     width: 320px;

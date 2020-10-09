@@ -153,29 +153,37 @@
       <!-- card layout  -->
       <div class="container shop">
           <div class="row">
-              <% items.forEach((item) => { %>
-                <div class=" col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-3 d-flex justify-content-center ">
-                  <div class="card">
-                      <div class="imgBox">
-                          <img src="<%= item.image %>" alt="<%= item.name %>" class="img-fluid">
-                      </div>
-                      <div class="contentBx">
-                          <h3 class="productName"><%= item.name %></h3>
-                          <h2 class="price">₹<span class="productPrice"><%= item.price %></span></h2>
-                          <a href="#" id="<%= item._id %>" class="buy" title="Add to my cart!">Buy Now</a>
-                          <a href="#" id="<%= item._id %>" class="remove" title="Remove from my cart!">Remove</a>
-                      </div>
-                      <div class="inside">
-                        <div class="icon"><i class="material-icons">info_outline</i></div>
-                        <div class="contents">
-                          <h2>Description:</h2>
-                          <div class="icon2"><i class="material-icons">close</i></div>
-                          <p><%= item.description %></p>
+              <% if(items){
+                 items.forEach((item) => { %>
+                  <div class=" col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-3 d-flex justify-content-center ">
+                    <div class="card">
+                        <div class="imgBox">
+                            <img src="<%= item.image %>" alt="<%= item.name %>" class="img-fluid">
                         </div>
-                      </div>
+                        <div class="contentBx">
+                            <h3 class="productName"><%= item.name %></h3>
+                            <h2 class="price">₹<span class="productPrice"><%= item.price %></span></h2>
+                            <a href="#" id="<%= item._id %>" class="buy" title="Add to my cart!">Buy Now</a>
+                            <a href="#" id="<%= item._id %>" class="remove" title="Remove from my cart!">Remove</a>
+                        </div>
+                        <div class="inside">
+                          <div class="icon"><i class="material-icons">info_outline</i></div>
+                          <div class="contents">
+                            <h2>Description:</h2>
+                            <div class="icon2"><i class="material-icons">close</i></div>
+                            <p><%= item.description %></p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <% });
+               }else{ %>
+                <div class="container">
+                  <div class="jumbotron no-items">
+                    <h2 class="display-2">Comming Soon.</h2>
                   </div>
-              </div>
-              <% }); %>
+                </div>
+              <% } %>
             
           </div>
       </div>
