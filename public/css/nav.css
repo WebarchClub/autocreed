@@ -63,7 +63,6 @@
   /* main logo  */
   #navigation .imgLogo{
     width: 120px;
-    height: 60px;
     transition: 1s;
     margin-top: -20px;
 
@@ -210,7 +209,7 @@
       width: 80%;
     }
     #navigation .dropdown-item:hover{
-      background: #000;
+      color: #000;
     }
     
   /* navbar-toggler effects for small screens*/
@@ -378,7 +377,7 @@
   }
   @media(max-width:1248px){
     #navigation .imgLogo{
-      height: 60px;
+      height: 100%;
     }
     #navigation .nav-item{
       font-size: 27px;
@@ -393,7 +392,7 @@
   }
   @media(max-width:1090px){
     #navigation .imgLogo{
-      height: 57px;
+      height: 100%;
     }
     #navigation .nav-item{
       font-size: 25px;
@@ -402,7 +401,7 @@
   }
   @media(max-width:1060px){
     #navigation .imgLogo{
-      height: 55px;
+      height: 100%;
     }
     #navigation .nav-item{
       font-size: 25px;
@@ -413,7 +412,7 @@
   @media(max-width:992px){
     #navigation .navbar-brand .imgLogo{
       margin-top: 0px;
-      height: 55px;
+      height: 100%;
     }
     #navigation .nav-item{
       font-size: 25px;
@@ -429,7 +428,7 @@
   }
   @media(max-width:726px){
     #navigation .navbar-brand .imgLogo{
-      height: 54px;
+      height: 100%;
     }
    
   }
@@ -439,7 +438,7 @@
       height: 40px;
     }
     #navigation .navbar-brand .imgLogo{
-      height: 55px;
+      height: 100%;
     }
   }
   @media(max-width:580px){

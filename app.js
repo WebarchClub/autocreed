@@ -123,6 +123,18 @@ app.get("/alumni", (req,res) => {
 app.get("/gallery", (req,res) => {
     res.render("gallery", { page: "gallery"});
 });
+app.get("/gallery/1", (req,res) => {
+    res.render("photo1", { page: "gallery"});
+});
+app.get("/gallery/2", (req,res) => {
+    res.render("photo2", { page: "gallery"});
+});
+app.get("/gallery/3", (req,res) => {
+    res.render("photo3", { page: "gallery"});
+});
+app.get("/gallery/4", (req,res) => {
+    res.render("photo4", { page: "gallery"});
+});
 app.get("/sponsors", (req, res) => {
     res.render("sponsors", { page: "sponsors" });
 });
