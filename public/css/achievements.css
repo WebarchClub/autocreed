@@ -1,6 +1,15 @@
 #achievements-section{
     height:600px;
-   
+}
+#finish{
+    position: absolute;
+    left: 0;
+    right: 0;
+    max-width: 50%;
+    margin-left:auto;
+    margin-right:auto;
+    opacity: 0.2;
+    z-index: -1;
 }
 #achievements-header h1{
     color: whitesmoke;
@@ -10,6 +19,7 @@
     letter-spacing: 3px;
     text-align: center;
     margin-top: 100px;
+    z-index: 2;
 }
 .achievements-body{
     margin-top:40px;
@@ -17,6 +27,7 @@
     justify-content: space-around;
     align-items: flex-end;
     flex-wrap: wrap;
+    z-index: 2;
 }
 
 #achievement-image1 img{
