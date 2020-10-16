@@ -375,7 +375,7 @@
   }
   @media(max-width:1248px){
     #navigation .imgLogo{
-      height: 100%;
+      height: 45px;
     }
     #navigation .nav-item{
       font-size: 27px;
@@ -390,7 +390,7 @@
   }
   @media(max-width:1090px){
     #navigation .imgLogo{
-      height: 100%;
+      height: 45px;
     }
     #navigation .nav-item{
       font-size: 25px;
@@ -399,7 +399,7 @@
   }
   @media(max-width:1060px){
     #navigation .imgLogo{
-      height: 100%;
+      height: 45px;
     }
     #navigation .nav-item{
       font-size: 25px;
@@ -410,7 +410,7 @@
   @media(max-width:992px){
     #navigation .navbar-brand .imgLogo{
       margin-top: 0px;
-      height: 100%;
+      height: 45px;
     }
     #navigation .nav-item{
       font-size: 25px;
@@ -426,7 +426,7 @@
   }
   @media(max-width:726px){
     #navigation .navbar-brand .imgLogo{
-      height: 100%;
+      height: 45px;
     }
    
   }
@@ -436,7 +436,7 @@
       height: 40px;
     }
     #navigation .navbar-brand .imgLogo{
-      height: 100%;
+      height: 45px;
     }
   }
   @media(max-width:580px){
@@ -466,15 +466,22 @@
       left: -70vw!important;
       width: 70vw!important;
     }
-    
+    #navigation .navbar-brand .imgLogo{
+      height: 35px;
+    }
   }
   @media(max-width:350px){
     #navigation .navbar-collapse {
       left: -75vw!important;
       width: 75vw!important;
     }
+    
   }
-  
+  @media(max-width:280px){
+    #navigation .navbar-brand .imgLogo{
+      height: 30px;
+    }
+  }
   /****************************** FOOTER ******************************/
   
   #footer {
