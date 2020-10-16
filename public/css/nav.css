@@ -62,10 +62,8 @@
   
   /* main logo  */
   #navigation .imgLogo{
-    width: 120px;
+    width: 100%;
     transition: 1s;
-    margin-top: -20px;
-
   }
   #navigation .sidebarLogo{
     width: 120px;
