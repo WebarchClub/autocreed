@@ -26,7 +26,7 @@ app.use(methodOverride("_method"));
 
 // MONGODB SETUP
 mongoose.set("debug", true);
-var url = process.env.DATABASEURL || "mongodb://localhost/store";
+var url = process.env.DATABASEURL || "mongodb://localhost:27017/store";
 mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.Promise = Promise;
 // MONGODB SETUP
@@ -96,9 +96,9 @@ var Item = mongoose.model("Item", itemSchema);
 // =========================================ITEMS SCHEMA=======================
 
 // Item.create({
-//     name: "Bronze KeyChain",
-//     price: 50,
-//     description: "Bronze Brings Out Your Status"
+//     name: "Ruby KeyChain",
+//     price: 1000,
+//     description: "Ruby Brings Out Your Status"
 // }).then((newItem) => {console.log(newItem)}).catch((err) => {console.log(err)});
 
 // Item.find().then((item) => {console.log(item)}).catch((err) => {console.log(err)});
@@ -124,6 +124,18 @@ app.get("/alumni", (req,res) => {
 app.get("/gallery", (req,res) => {
     res.render("gallery", { page: "gallery"});
 });
+app.get("/gallery/1", (req,res) => {
+    res.render("photo1", { page: "gallery"});
+});
+app.get("/gallery/2", (req,res) => {
+    res.render("photo2", { page: "gallery"});
+});
+app.get("/gallery/3", (req,res) => {
+    res.render("photo3", { page: "gallery"});
+});
+app.get("/gallery/4", (req,res) => {
+    res.render("photo4", { page: "gallery"});
+});
 app.get("/sponsors", (req, res) => {
     res.render("sponsors", { page: "sponsors" });
 });
@@ -131,15 +143,15 @@ app.get("/contact", (req,res) => {
     res.render("contact", {page: "contact"});
 });
 // ==========================SHOP=========================
-app.get("/support", (req,res) => {
+app.get("/shop", (req,res) => {
     Item.find().then((item) => {
-        res.render("support", {
-            page: "support",
+        res.render("shop", {
+            page: "shop",
             items: item
         });
     }).catch((err) => {console.log(err)});
 });
-app.put("/support/items/:id", (req,res) => {
+app.put("/shop/items/:id", (req,res) => {
     Item.findOneAndUpdate({_id: req.params.id}, req.body, {new: true}).then((item) => {
         res.json(item);
     }).catch((err) => {console.log(err)});

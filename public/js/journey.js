@@ -3,7 +3,8 @@
 
 var timelineSwiper = new Swiper ('.timeline .swiper-container', {
     direction: 'vertical',
-    loop: false,
+    autoplay: 4000,
+    loop: true,
     speed: 1600,
     pagination: '.swiper-pagination',
     paginationBulletRender: function (swiper, index, className) {

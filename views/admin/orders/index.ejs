@@ -10,7 +10,7 @@
 
     <title>Autocreed || Orders</title>
   </head>
-  <body>
+  <body class="text-light bg-dark">
     <h1>Orders: </h1>
     <ol>
         <% orders.forEach(order => { %>
@@ -23,13 +23,17 @@
                     <li><b>Contact: </b><%= order.phone %></li>
                     <li><b>Comment: </b><%= order.comment %></li>
                     <li><b>Email: </b><%= order.email %></li>
-                    <li><b>Items Bought:-</b>
+                    <% if(order.items.length){ %>
+                      <li><b class="text-primary">Items Bought:-</b>
                         <ol>
                         <% order.items.forEach(item => { %>
                             <li><%= item %></li>
                         <% }); %>
                         </ol>
-                    </li>
+                      </li>
+                    <% }else{ %>
+                      <li class="text-success">DONATION</li>
+                    <% } %>
                 </ul>
             </li>
         <% }); %>
